@@ -15,7 +15,8 @@ namespace TennisExplorer.Infrastructure
         public static void ConfigureDependencies(IServiceCollection services)
         {
             services.AddSingleton<TennisMatchRetriever>();
-            services.AddSingleton<IHtmlDownloader, HtmlDownloader>();
+            RegisterServiceIfNotPresent<IHtmlDownloader, HtmlDownloader>(services);
+            
             services.AddScoped<ITennisMatchService, TennisMatchService>();
             services.AddScoped<FavoriteService>();
             services.AddScoped<FavoriteRepository>();
@@ -55,6 +56,20 @@ namespace TennisExplorer.Infrastructure
         {
             _services.AddSingleton(instance.GetType(), instance);
             _provider = BuildServiceProvider();
+        }
+
+        private static void RegisterServiceIfNotPresent<IService, TService>(IServiceCollection services) where TService : class, IService where IService : class
+        {
+            // only register the TService if it was not registered (by the test env)
+            if (!IsServiceTypeRegistered(services, typeof(IService)))
+            {
+                services.AddScoped<IService, TService>();
+            }
+        }
+
+        private static bool IsServiceTypeRegistered(IServiceCollection services, Type serviceType)
+        {
+            return services.Any(descriptor => descriptor.ServiceType == serviceType);
         }
 
         private static IServiceProvider BuildServiceProvider()

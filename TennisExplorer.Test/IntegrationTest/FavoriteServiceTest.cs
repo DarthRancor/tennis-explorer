@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using TennisExplorer.Entity;
 using TennisExplorer.Infrastructure;
-using TennisExplorer.Service;
+using TennisExplorer.Services;
 using TennisExplorer.Test.TestData;
 
 namespace TennisExplorer.Test.IntegrationTest

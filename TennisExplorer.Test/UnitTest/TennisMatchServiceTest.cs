@@ -2,7 +2,7 @@
 using System.Threading.Tasks;
 using System.Linq;
 using System;
-using TennisExplorer.Service;
+using TennisExplorer.Services;
 using TennisExplorer.Infrastructure;
 
 namespace TennisExplorer.Test.UnitTest

@@ -2,7 +2,7 @@
 using System.IO;
 using System.Reflection;
 using TennisExplorer.Infrastructure;
-using TennisExplorer.Service;
+using TennisExplorer.Services;
 using TennisExplorer.Test.Infrastructure;
 
 namespace TennisExplorer.Test
