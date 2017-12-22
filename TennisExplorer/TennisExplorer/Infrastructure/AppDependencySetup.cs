@@ -1,7 +1,9 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;
+using Neleus.DependencyInjection.Extensions;
 using System;
 using System.Linq;
+using System.Reflection;
 using TennisExplorer.Entity.Repository;
 using TennisExplorer.Services;
 
@@ -48,13 +50,24 @@ namespace TennisExplorer.Infrastructure
         public static object Resolve(string name)
         {
             var names = _services.Select(d => d.ServiceType.Name).ToList();
-            var test = names.FirstOrDefault(n => n.Contains("Fresh"));
+            var test = names.Where(n => n.Contains(name)).ToList();
+            var navigation = names.Where(n => n.Contains(FreshMvvm.Constants.DefaultNavigationServiceName)).ToList();
             return _services.Where(d => d.ServiceType.Name == name).FirstOrDefault();
         }
 
-        public static void Register(object instance)
+        public static void Register(object instance, string name)
         {
-            _services.AddSingleton(instance.GetType(), instance);
+            // _services.AddByName<IService>()
+            MethodInfo addByNameMethod = _services.GetType().GetMethod("AddByName");
+            MethodInfo addByNameGenericMethod = addByNameMethod.MakeGenericMethod(instance.GetType());
+            var servicesByNameBuilder = addByNameGenericMethod.Invoke(_services, null);
+
+            // .Add<ServiceA>("key1")
+            MethodInfo addMethod = servicesByNameBuilder.GetType().GetMethod("Add");
+            MethodInfo addMethodGenericMethod = addMethod.MakeGenericMethod(instance.GetType());
+            var addedMethod = addMethodGenericMethod.Invoke(servicesByNameBuilder, new object[] { name });
+
+            //_services.AddSingleton(instance.GetType(), instance);
             _provider = BuildServiceProvider();
         }
 

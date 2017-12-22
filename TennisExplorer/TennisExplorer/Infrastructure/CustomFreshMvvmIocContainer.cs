@@ -16,7 +16,7 @@ namespace TennisExplorer.Infrastructure
 
         public IRegisterOptions Register<RegisterType>(RegisterType instance, string name) where RegisterType : class
         {
-            AppDependencySetup.Register(instance);
+            AppDependencySetup.Register(instance, name);
             return new CustomRegisterOptions();
         }
 

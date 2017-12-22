@@ -17,7 +17,7 @@ namespace TennisExplorer.Infrastructure
 
         public MasterDetailNavigationContainer()
         {
-            NavigationServiceName = nameof(CustomFreshMvvmIocContainer);
+            NavigationServiceName = Constants.DefaultNavigationServiceName;
 
             InitializeNavigationEntries();
             CreateMenuPage("Menu");
