@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TennisExplorer.Pages.TodaysMatchesPage"
+             xmlns:custom="clr-namespace:TennisExplorer.CustomElements"
+             Title="Matches Today">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <custom:LabelTextVisibilityConverter x:Key="labelTextVisibilityConverter" />
+            <custom:LabelTextHighlighterConverter x:Key="labelTextHighlighterConverter" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <ContentPage.Content>
+        <StackLayout>
+            <ListView ItemsSource="{Binding Matches}" SeparatorVisibility="Default" SeparatorColor="Black" HasUnevenRows="True">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Padding="0,5,0,5">
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="{Binding Players}" FontSize="Large" FontAttributes="Bold" 
+                                        BackgroundColor="{Binding ., Converter={StaticResource labelTextHighlighterConverter}}" />
+                                    <Label FontSize="Medium" VerticalTextAlignment="Center" 
+                                        Text="{Binding Tour, StringFormat=' ({0})'}"
+                                        IsVisible="{Binding Tour, Converter={StaticResource labelTextVisibilityConverter}}"/>
+                                </StackLayout>
+                                <Label Text="{Binding Time}" FontSize="Medium" StyleClass="Inverse" />
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

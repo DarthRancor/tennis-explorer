@@ -1,0 +1,3021 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="de">
+<head>
+
+	<title>Tennis / Bevorstehende Video-Übertragungen / LiveTV</title>
+
+	<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=ISO-8859-1">
+
+
+	<meta name="viewport" content="width=device-width">
+	<META name="keywords" content="tv im internet, tv live, kostenlos tv, live fussball, live sport, kostenlos fussball">
+
+	<META name="description" content="Ïîëíîå ðàñïèñàíèå ïðÿìûõ îíëàéí âèäåî òðàíñëÿöèé. Âåñü Tennis â ïðÿìîì ýôèðå. Ðàñïèñàíèå íà íåäåëþ. Ìîæíî ñìîòðåòü îíëàéí áåç ðåãèñòðàöèè.">
+
+
+	<meta name="application-name" content="LiveTV.sx" />
+	<meta name="msapplication-tooltip" content="LiveTV bietet euch alle Sportereignisse LIVE und KOSTENLOS im Internet an!" />
+	<meta name="msapplication-starturl" content="//livetv.sx/dex/" />
+	<meta name="msapplication-navbutton-color" content="#2861a9" />
+
+	<link rel="SHORTCUT ICON" href="//cdn.livetvcdn.net/favicon.ico">
+
+	<LINK href="//cdn.livetvcdn.net/css/main.css?75" type="text/css" rel="stylesheet">
+
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+
+	<script type="text/javascript" src="//cdn.livetvcdn.net/js/translit.js?1"></script>
+	<script type="text/javascript" src="//cdn.livetvcdn.net/js/int.js?60"></script>
+	<script type="text/javascript" src="//cdn.livetvcdn.net/js/overlay.js"></script>
+
+
+	<link rel="alternate" type="application/rss+xml" title="Alle Übertragungen" href="//cdn.livetvcdn.net/rss/upcoming_de.xml" />
+
+
+	<meta property="og:image" content="//cdn.livetvcdn.net/img/oglogo.png" />
+	<link rel="alternate" hreflang="bg" href="//livetv.sx/bgx/allupcomingsports/4/" />
+	<link rel="alternate" hreflang="en" href="//livetv.sx/enx/allupcomingsports/4/" />
+	<link rel="alternate" hreflang="es" href="//livetv.sx/esx/allupcomingsports/4/" />
+	<link rel="alternate" hreflang="fr" href="//livetv.sx/frx/allupcomingsports/4/" />
+	<link rel="alternate" hreflang="it" href="//livetv.sx/itx/allupcomingsports/4/" />
+	<link rel="alternate" hreflang="pl" href="//livetv.sx/plx/allupcomingsports/4/" />
+	<link rel="alternate" hreflang="pt" href="//livetv.sx/ptx/allupcomingsports/4/" />
+	<link rel="alternate" hreflang="ru" href="//livetv.sxx/allupcomingsports/4/" />
+	<link rel="alternate" hreflang="sr" href="//livetv.sx/rsx/allupcomingsports/4/" />
+	<link rel="alternate" hreflang="tr" href="//livetv.sx/trx/allupcomingsports/4/" />
+	<link rel="alternate" hreflang="uk" href="//livetv.sx/uax/allupcomingsports/4/" />
+
+</head>
+
+<body OnBlur="
+						dactiv = 0;
+					"
+	  OnFocus="
+						if(dinitedlong==1){
+
+							reloadliveblock();
+							dinitedlong = 0;
+							setTimeout(initdlong, 300000);
+
+						}
+
+						dactiv = 1;
+					">
+
+	<script>
+
+		var dinited = 0;
+		var dinitedlong = 0;
+		var dactiv = 1;
+
+		function initd() { dinited = 1; }
+
+		function initdlong() { dinitedlong = 1; }
+
+		setTimeout(initd, 5000);
+
+		setTimeout(initdlong, 300000);
+
+	</script>
+
+	<div id="bugoverlay"></div>
+	<script>function loginform() { loginform_old(); }</script>
+
+	<div id="facebox" style="display: none;">
+
+		<div>
+
+			<h2>Benutzername</h2>
+
+
+			<form OnSubmit="this.action='/redirects/signin.php?rdv=' + Math.random();" method="post">
+
+				<input type="hidden" name="authorization">
+
+				<table cellpadding=6 cellspacing=1 align="center" width=320>
+					<tr>
+						<td>
+							E-Mail-Adresse:
+
+						</td>
+						<td>
+							<input id="lgn" type="text" name="login">
+						</td>
+					</tr>
+					<tr>
+						<td>
+							Passwort:
+						</td>
+						<td>
+							<input type="password" name="password">
+						</td>
+					</tr>
+					<tr>
+						<td colspan=2 align="center">
+
+							<button type="button" class="close" style="font-size: 12px;">Schließen</button>
+
+							&nbsp;
+
+							<input type="submit" value="Einloggen">
+
+							<br><br>
+
+							<nobr>
+								<button style="cursor: pointer; width: 170px;" OnClick="document.location = '//livetv.sx/redirects/fb.php?click';" type="button" class="fb_button">Mit Facebook einloggen</button>
+							</nobr>
+
+						</td>
+					</tr>
+				</table>
+
+
+				<br>
+				<a class="small" href=/dex/passwordrestore />Passwort vergessen? <img src=//cdn.livetvcdn.net/img/s_b.gif></a>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<a class="small" href=/dex/signup />Registrieren <img src=//cdn.livetvcdn.net/img/s_b.gif></a>
+
+
+			</form>
+
+		</div>
+
+	</div>
+
+
+	<table cellpadding=0 cellspacing=0 width="100%" bgcolor="#c8c8c8">
+		<tr>
+			<td style="display: block;"></td>
+			<td width=1300>
+
+				<table width="100%" bgcolor="#f0f0f0" cellpadding=0 cellspacing=0 style="box-shadow: 0 0 10px #000000;">
+					<tr>
+						<td height=101>
+
+							<table background="//cdn.livetvcdn.net/img/h_bg.gif" width="100%" height="100%" cellpadding=0 cellspacing=0>
+								<tr>
+									<td height=101 width=262><a href="/dex/"><img alt="LiveTV / Sportereignisse LIVE und KOSTENLOS" src="//cdn.livetvcdn.net/img/logo_de.jpg"></a></td>
+
+									<td valign="top">
+
+										<table width="100%" height="100%" cellpadding=0 cellspacing=0>
+											<tr>
+												<td align="center" height=70 valign="top">
+
+													<table cellpadding=0 cellspacing=1><tr><td></td></tr></table>
+
+												</td>
+											</tr>
+											<tr>
+												<td valign="top">
+
+													<table cellpadding=0 cellspacing=0 style="position: relative; left: -1px;">
+														<tr>
+															<td width=1>
+
+
+																<div style="position: relative; left: -248px; top: -9px; z-index: 98;">
+
+																	<div id="bsefo">
+																		<form action="/dex/megasearch/">
+																			<nobr>
+																				<input type="text" class="binput" name="msq" id="reserc" size=50>
+																				&nbsp;
+																				<input type="submit" class="binput" value="Suchen">
+																			</nobr>
+																		</form>
+																		<br><span class="date">Zum Beispiel:  &nbsp;<a class="small" href="/dex/megasearch/?msq=www.google.com%2Fintl%2Fen%2Fpolicies%2Fterms%2F">www.google.com/intl/en/policies/terms/</a> &nbsp;<a class="small" href="/dex/megasearch/?msq=bayern">bayern</a> &nbsp;<a class="small" href="/dex/megasearch/?msq=trabzonspor">trabzonspor</a> &nbsp;<a class="small" href="/dex/megasearch/?msq=manchester+city">manchester city</a> &nbsp;<a class="small" href="/dex/megasearch/?msq=liverpool">liverpool</a>
+																	</div>
+
+																	<input id="premese" size=20 type="text" value="Suche">
+
+
+
+																</div>
+															</td>
+															<td>
+
+																<nobr><a class="menu" href="/dex/allupcoming/"><b>ÜBERTRAGUNGEN</b></a></nobr>
+															</td>
+															<td width=30>&nbsp;</td>
+															<td class="small">
+																<nobr><a class="menu" href="/dex/livescore/"><b>LIVE SCORE</b></a></nobr>
+															</td>
+															<td width=30>&nbsp;</td>
+
+															<td>
+																<a class="menu" href="/dex/results/"><nobr><b>ERGEBNISSE</b></nobr></a>
+															</td>
+															<td width=30>&nbsp;</td>
+															<td>
+																<a class="menu" href="/dex/video/"><nobr><b>VIDEO-ARCHIV</b></nobr></a>
+															</td>
+															<td width=30>&nbsp;</td>
+
+															<td>
+
+																<a class="menu" href="/dex/bets/"><nobr><b>WETTEN</b></nobr></a>
+
+															</td>
+															<td width=30>&nbsp;</td>
+															<td>
+
+																<a class="menu" href="/dex/fanclubs/"><nobr><b>FANCLUBS</b></nobr></a>
+
+															</td>
+
+														</tr>
+													</table>
+
+												</td>
+											</tr>
+										</table>
+
+									</td>
+
+									<td width=216 background="//cdn.livetvcdn.net/img/h2_bg.gif" valign="top">
+
+										<table width="100%" cellpadding=0 cellspacing=0>
+											<tr>
+
+
+												<td align="center" height=36>
+
+													<table align="center">
+														<tr>
+															<td width=16>
+
+																<a href="#" OnClick="loginform(); return false;"><img alt="Einloggen" src="//cdn.livetvcdn.net/img/a_p.gif"></a>
+
+															</td>
+															<td valign="top">
+
+																<a class="headtext" href="#" OnClick="loginform(); return false;">Einloggen</a>
+
+															</td>
+															<td width=5>
+																&nbsp;
+
+															</td>
+															<td width=16>
+																<a href="/dex/signup/"><img alt="Registrieren" src="//cdn.livetvcdn.net/img/a_r.gif"></a>
+
+															</td>
+															<td valign="top">
+																<a class="headtext" href="/dex/signup/">Registrieren</a>
+
+															</td>
+														</tr>
+													</table>
+
+
+												</td>
+											</tr>
+											<tr>
+												<td align="center" height=23>
+
+
+
+													<div id="addlng" style="display: none; position: absolute;">
+
+														<table bgcolor="#ffffff" style="opacity: .92; filter:Alpha(Opacity=92 Style=0);" width=160>
+															<tr>
+																<td bgcolor="#1f4c85">
+
+																	<table>
+																		<tr>
+																			<td>
+
+																				<a href="/lng.php?bg"><img width=22 height=15 src="//cdn.livetvcdn.net/img/f_bg.gif"></a>
+
+																			</td>
+																			<td align="left">
+
+																				<a class="headtext" href="/lng.php?bg">&#1041;&#1098;&#1083;&#1075;&#1072;&#1088;&#1089;&#1082;&#1080;</a>
+
+																			</td>
+																		</tr>
+																		<tr>
+																			<td>
+
+																				<a href="/lng.php?de"><img width=22 height=15 src="//cdn.livetvcdn.net/img/f_de.gif"></a>
+
+																			</td>
+																			<td align="left">
+
+																				<a class="headtext" href="/lng.php?de">Deutsch</a>
+
+																			</td>
+																		</tr>
+																		<tr>
+																			<td>
+
+																				<a href="/lng.php?en"><img width=22 height=15 src="//cdn.livetvcdn.net/img/f_en.gif"></a>
+
+																			</td>
+																			<td align="left">
+
+																				<a class="headtext" href="/lng.php?en">English</a>
+
+																			</td>
+																		</tr>
+																		<tr>
+																			<td>
+
+																				<a href="/lng.php?es"><img width=22 height=15 src="//cdn.livetvcdn.net/img/f_es.gif"></a>
+
+																			</td>
+																			<td align="left">
+
+																				<a class="headtext" href="/lng.php?es">Espa&#241;ol</a>
+
+																			</td>
+																		</tr>
+																		<tr>
+																			<td>
+
+																				<a href="/lng.php?fr"><img width=22 height=15 src="//cdn.livetvcdn.net/img/f_fr.gif"></a>
+
+																			</td>
+																			<td align="left">
+
+																				<a class="headtext" href="/lng.php?fr">Fran&#231;ais</a>
+
+																			</td>
+																		</tr>
+																		<tr>
+																			<td>
+
+																				<a href="/lng.php?it"><img width=22 height=15 src="//cdn.livetvcdn.net/img/f_it.gif"></a>
+
+																			</td>
+																			<td align="left">
+
+																				<a class="headtext" href="/lng.php?it">Italiano</a>
+
+																			</td>
+																		</tr>
+																		<!--
+																		<tr>
+																			<td>
+
+																				<a href="/lng.php?kz"><img width=22 height=15 src="//cdn.livetvcdn.net/img/f_kz.gif"></a>
+
+																			</td>
+																			<td align="left">
+
+																				<a class="headtext" href="/lng.php?kz">&#1178;&#1072;&#1079;&#1072;&#1179;&#1096;&#1072;</a>
+
+																			</td>
+																		</tr>-->
+																		<tr>
+																			<td>
+
+																				<a href="/lng.php?pl"><img width=22 height=15 src="//cdn.livetvcdn.net/img/f_pl.gif"></a>
+
+																			</td>
+																			<td align="left">
+
+																				<a class="headtext" href="/lng.php?pl">Polski</a>
+
+																			</td>
+																		</tr>
+																		<tr>
+																			<td>
+
+																				<a href="/lng.php?pt"><img width=22 height=15 src="//cdn.livetvcdn.net/img/f_pt.gif"></a>
+
+																			</td>
+																			<td align="left">
+
+																				<a class="headtext" href="/lng.php?pt">Portugu&#234;s</a>
+
+																			</td>
+																		</tr>
+																		<tr>
+																			<td>
+
+																				<a href="/lng.php?ru"><img width=22 height=15 src="//cdn.livetvcdn.net/img/f_ru.gif"></a>
+
+																			</td>
+																			<td align="left">
+
+																				<a class="headtext" href="/lng.php?ru">&#1056;&#1091;&#1089;&#1089;&#1082;&#1080;&#1081;</a>
+
+																			</td>
+																		</tr>
+																		<tr>
+																			<td>
+
+																				<a href="//lng.php?rs"><img width=22 height=15 src="//cdn.livetvcdn.net/img/f_rs.gif"></a>
+
+																			</td>
+																			<td align="left">
+
+																				<a class="headtext" href="/lng.php?rs">Srpski</a>
+
+																			</td>
+																		</tr>
+																		<tr>
+																			<td>
+
+																				<a href="/lng.php?tr"><img width=22 height=15 src="//cdn.livetvcdn.net/img/f_tr.gif"></a>
+
+																			</td>
+																			<td align="left">
+
+																				<a class="headtext" href="/lng.php?tr">T&#252;rk&#231;e</a>
+
+																			</td>
+																		</tr>
+																		<tr>
+																			<td>
+
+																				<a href="/lng.php?ua"><img width=22 height=15 src="//cdn.livetvcdn.net/img/f_ua.gif"></a>
+
+																			</td>
+																			<td align="left">
+
+																				<a class="headtext" href="/lng.php?ua">&#1059;&#1082;&#1088;&#1072;&#1111;&#1085;&#1089;&#1100;&#1082;&#1072;</a>
+
+																			</td>
+																		</tr>
+																	</table>
+
+																</td>
+															</tr>
+														</table>
+
+													</div>
+
+
+
+													<a href="/lng.php?ru"><img width=22 height=15 alt="&#1056;&#1091;&#1089;&#1089;&#1082;&#1080;&#1081;" src="//cdn.livetvcdn.net/img/f_ru.gif"></a><a href="/lng.php?en"><img width=22 height=15 alt="English" src="//cdn.livetvcdn.net/img/f_en.gif"></a><a href="/lng.php?de"><img width=22 height=15 alt="Deutsch" src="//cdn.livetvcdn.net/img/f_de.gif"></a><a href="/lng.php?fr"><img width=22 height=15 alt="Fran&#231;ais" src="//cdn.livetvcdn.net/img/f_fr.gif"></a><a href="/lng.php?es"><img width=22 height=15 alt="Espa&#241;ol" src="//cdn.livetvcdn.net/img/f_es.gif"></a><a href="/lng.php?pt"><img width=22 height=15 alt="Portugu&#234;s" src="//cdn.livetvcdn.net/img/f_pt.gif"></a><a href="/lng.php?tr"><img width=22 height=15 alt="T&#252;rk&#231;e" src="//cdn.livetvcdn.net/img/f_tr.gif"></a>
+
+
+													<a OnClick="document.getElementById('addlng').style.display = 'block';" href="#null"><img src="//cdn.livetvcdn.net/img/plusflag.gif"></a>
+
+
+
+												</td>
+											</tr>
+											<tr>
+												<td align="center" height=26 valign=bottom>
+
+													<table cellpadding=0 cellspacing=0>
+														<tr>
+															<td>
+
+																<a class=menu href="/dex/forum/"><b>FORUM</b></a>
+
+
+															</td>
+															<td width=10>
+
+																&nbsp;
+
+															</td>
+															<td>
+
+																<a class="menu" href="/dex/faq/"><b>FAQ</b></a>
+
+															</td>
+															<td width=10>
+
+																&nbsp;
+
+															</td>
+
+															<td>
+
+																<a class=menu href="/dex/feedback/"><b>KONTAKT</b></a>
+
+															</td>
+														</tr>
+													</table>
+
+												</td>
+											</tr>
+										</table>
+
+									</td>
+								</tr>
+							</table>
+
+						</td>
+					</tr>
+					<tr>
+						<td>
+
+							<table width="100%" cellpadding=0 cellspacing=4 style="margin-bottom: 5px;">
+								<tr>
+									<td>
+
+										<table width="100%" cellpadding=0 cellspacing=0>
+											<tr>
+												<td colspan=3>
+
+
+													<table height=76 width="100%" cellpadding=3 cellspacing=1>
+														<tr>
+															<td id="bbp1" valign="top" background="//cdn.livetvcdn.net/img/lbg5.gif" width="33%" style="background-repeat: repeat-x;">
+
+
+																<span style="margin-left: 8px; " class="bbtitle">Neues auf LiveTV</span>
+
+																<table cellpadding=2 cellspacing=2 width="96%" align="center" style="margin-top: 7px;">
+
+																	<tr>
+																		<td>
+
+																			<a class="mtwhite" href="/de/showvideo/461184_blaz_kavcic_thomas_fabbiano/">Highlights Blaz Kavcic &ndash; Thomas Fabbiano</a>
+
+																		</td>
+																	</tr>
+
+																	<tr>
+																		<td>
+
+																			<a class="mtwhite" href="/de/showvideo/461186_volgar_gazprom_sibir/">Highlights Volgar Gazprom &ndash; Sibir</a>
+
+																		</td>
+																	</tr>
+
+																</table>
+
+
+															</td>
+															<td valign="top" background="//cdn.livetvcdn.net/img/lbg5.gif" width="33%" style="background-repeat: repeat-x;">
+
+
+																<span style="margin-left: 8px; " class="bbtitle">
+																	Spiele Ihrer Mannschaften
+																	&nbsp;
+																	<a class="headtext" href="/dex/myteams/"><img height=8 src="//cdn.livetvcdn.net/img/myteams_de.png"></a>
+																</span>
+
+																<table cellpadding=2 cellspacing=2 width="96%" align="center" style="margin-top: 7px;">
+
+																	<tr>
+																		<td align="center">
+
+																			<span class="liveb1">
+																				Um diesen Block zu sehen müssen Sie <a class="mtwhite" href="/dex/signup/">sich registrieren</a>
+																				oder <a class="mtwhite" href="#" OnClick="loginform(); return false;">einloggen</a>
+																			</span>
+
+																		</td>
+																	</tr>
+																</table>
+
+															</td>
+															<td valign="top" background="//cdn.livetvcdn.net/img/lbg5.gif" width="33%" style="background-repeat: repeat-x;">
+
+
+																<span style="margin-left: 8px; " class="bbtitle">Beste Wetten für Heute</span>
+
+																<div id="bbbetday">
+																	<table cellpadding=2 cellspacing=2 width="92%" align="center" style="margin-top: 7px;">
+																		<tr>
+																			<td rowspan=2 align="center">
+
+																				<a OnClick="bbbet(2893742, 0, 'de'); return false;" href="#"><img src="//cdn.livetvcdn.net/img/bbs1.gif"></a>
+
+																			</td>
+																			<td align="center">
+
+																				<a class="mtwhite" href="/dex/betinfo/2893742_arsenal_manchester_utd/">Arsenal &ndash; Manchester Utd</a>
+
+																			</td>
+																			<td rowspan=2 align="center">
+
+																				<a OnClick="bbbet(2893742, 1, 'de'); return false;" href="#"><img src="//cdn.livetvcdn.net/img/bbs2.gif"></a>
+
+																			</td>
+																		</tr>
+																		<tr>
+																			<td align="center">
+
+																				<span class="liveb1">
+																					<span class="bbtitle"><b>1</b></span>
+																					2.1
+																					&nbsp;&nbsp;&nbsp;
+
+																					<span class="bbtitle"><b>X</b></span>
+																					3.75
+																					&nbsp;&nbsp;&nbsp;
+
+																					<span class="bbtitle"><b>2</b></span>
+																					3.9
+																				</span>
+
+																			</td>
+																		</tr>
+																	</table>
+																</div>
+
+
+															</td>
+														</tr>
+													</table>
+
+
+
+													<script>
+
+														function bbbet(betid, next, lng) {
+
+															$('#bbbetday').fadeOut();
+
+															$.post("/ajax/bbbet.php", { betid: betid, next: next, lng: lng }, function (data) {
+
+																$('#bbbetday').hide();
+																$('#bbbetday').html(data);
+																$('#bbbetday').fadeIn();
+
+															});
+
+														}
+
+														function nnnws(nwsid, next, lng) {
+
+															$('#nnnwshour').fadeOut();
+
+															$('#bbp1').css('background-image', 'url(//cdn.livetvcdn.net/img/lbg5.gif)');
+
+															$.post("/ajax/nnnws.php", { nwsid: nwsid, next: next, lng: lng }, function (data) {
+
+																$('#nnnwshour').hide();
+																$('#nnnwshour').html(data);
+																$('#nnnwshour').fadeIn();
+
+															});
+
+														}
+
+													</script>
+												</td>
+											</tr>
+											<tr height="19">
+												<td width="210">
+
+													&nbsp;&nbsp;&nbsp;<span class="date">Ihre eingestellte Zeit: 11:06 (<a class="small" href="/dex/userinfoedit/#timezone">UTC +2</a>)</span>
+
+												</td>
+												<td align="center"></td>
+												<td align="right" valign="top" width="60">
+
+													<script>
+
+														lft = document.body.clientWidth - 560;
+														document.write('<div class="tif" id="livescorebar" style="z-index: 1; text-align: left; width: 500px; height: 146px; left: ' + lft + 'px; display: none; position: absolute;">&nbsp;</div>');
+													</script>
+
+													<a href="#" OnClick="$('#livescorebar').load('/ajax/blueblockset.php?lng=de&' + Math.random()); $('#livescorebar').show(); return false;"><img style="margin-right: 1px; margin-top: 1px;" src="//cdn.livetvcdn.net/img/bbset.gif">
+												</td>
+											</tr>
+
+										</table>
+
+									</td>
+								</tr>
+							</table>
+
+
+							<script type="text/javascript">
+
+								if (get_cookie('lq') != '1') {
+
+									document.cookie = "lq=1;path=/;expires=Tue, 09 May 2017 12:06:27 +0300"
+
+									document.write('<scr' + 'ipt charset="utf-8" src="//cip.livetvcdn.net/export/cip.php?lng=de"></scr' + 'ipt>');
+
+								}
+
+								if (get_cookie('apr') == '') {
+
+									var pixelRatio = !!window.devicePixelRatio ? window.devicePixelRatio : 1;
+
+									document.cookie = "apr=" + pixelRatio + ";path=/;expires=Wed, 2 Dec 2030 00:00:00"
+
+								}
+
+								if (get_cookie('brow') == '') {
+
+									navigator.sayswho = (function () {
+										var ua = navigator.userAgent, tem,
+											M = ua.match(/(opera|chrome|safari|firefox|msie|trident(?=\/))\/?\s*(\d+)/i) || [];
+										if (/trident/i.test(M[1])) {
+											tem = /\brv[ :]+(\d+)/g.exec(ua) || [];
+											return 'IE ' + (tem[1] || '');
+										}
+										if (M[1] === 'Chrome') {
+											tem = ua.match(/\b(OPR|Edge)\/(\d+)/);
+											if (tem != null) return tem.slice(1).join(' ').replace('OPR', 'Opera');
+										}
+										M = M[2] ? [M[1], M[2]] : [navigator.appName, navigator.appVersion, '-?'];
+										if ((tem = ua.match(/version\/(\d+)/i)) != null) M.splice(1, 1, tem[1]);
+										return M.join(' ');
+									})();
+
+									var browser = (navigator.sayswho.substring(0, 3));
+
+									document.cookie = "brow=" + browser + ";path=/;expires=Wed, 2 Dec 2030 00:00:00";
+
+								}
+
+							</script>
+
+						</td>
+					</tr>
+					<tr>
+						<td>
+
+							<table width="100%" cellpadding=0 cellspacing=0>
+								<tr>
+									<td width=245 valign="top">
+
+										<script type="text/javascript">
+
+											setInterval(reloadliveblock, 3600000);
+
+											function reloadliveblock() {
+
+												$('#upcoming').load('/ajax/leftblock.php?lng=de');
+
+											}
+
+										</script>
+
+
+										<table width=245 cellpadding=0 cellspacing=0>
+											<tr>
+												<td height=25 background="//cdn.livetvcdn.net/img/title_de_upcoming.gif" align=right></td>
+											</tr>
+											<tr>
+												<td background="//cdn.livetvcdn.net/img/l_bg.gif">
+
+
+													<table align="center" cellpadding=3 style="margin-top: 6px; margin-bottom: 6px;">
+														<tr>
+
+															<td><a href="/dex/allupcomingsports/1/"><img id="s1" title="Fußball" alt="Fußball" width=34 height=34 src="//cdn.livetvcdn.net/img/sport1.gif" style="cursor: pointer;"></a></td>
+															<td><a href="/dex/allupcomingsports/2/"><img id="s2" title="Eishockey" alt="Eishockey" width=34 height=34 src="//cdn.livetvcdn.net/img/sport2.gif" style="cursor: pointer;"></a></td>
+															<td><a href="/dex/allupcomingsports/3/"><img id="s3" title="Basketball" alt="Basketball" width=34 height=34 src="//cdn.livetvcdn.net/img/sport3.gif" style="cursor: pointer;"></a></td>
+															<td><a href="/dex/allupcomingsports/4/"><img id="s4" title="Tennis" alt="Tennis" width=34 height=34 src="//cdn.livetvcdn.net/img/sport4.gif" style="cursor: pointer;"></a></td>
+															<td><a href="/dex/allupcomingsports/5/"><img id="s5" title="Volleyball" alt="Volleyball" width=34 height=34 src="//cdn.livetvcdn.net/img/sport5.gif" style="cursor: pointer;"></a></td>
+														</tr>
+														<tr>
+															<td><img title="Boxen (keine Übertragung)" alt="Boxen (keine Übertragung)" width=34 height=34 src="//cdn.livetvcdn.net/img/s6.gif"></td>
+															<td><a href="/dex/allupcomingsports/7/"><img id="s7" title="Rennen" alt="Rennen" width=34 height=34 src="//cdn.livetvcdn.net/img/sport7.gif" style="cursor: pointer;"></a></td>
+															<td><img title="Wintersport (keine Übertragung)" alt="Wintersport (keine Übertragung)" width=34 height=34 src="//cdn.livetvcdn.net/img/s8.gif"></td>
+															<td><a href="/dex/allupcomingsports/0/"><img id="s9" title="Laufsport, Leichtathletik..." alt="Laufsport, Leichtathletik..." width=34 height=34 src="//cdn.livetvcdn.net/img/sport9.gif" style="cursor: pointer;"></a></td>
+															<td><div id="lbcfg" class="tif" style="margin: 9px; position: absolute;"></div><img OnClick="$('#lbcfg').load('/ajax/leftblockset.php', {lng: 'de'}, function(){$('#lbcfg').fadeIn(160);});" title="Íàñòðîèòü îòîáðàæåíèå òðàíñëÿöèé" width=34 height=34 src="//cdn.livetvcdn.net/img/setup.gif" style="cursor: pointer;"></td>
+
+
+														</tr>
+													</table>
+
+
+												</td>
+											</tr>
+											<tr>
+												<td background="//cdn.livetvcdn.net/img/l_bg.gif">
+
+													<span id="upcoming">
+														<table width=230 style="margin-left: 7px;" cellspacing=0>
+															<tr bgcolor="#f0f0f0">
+																<td height=22>
+
+																	<img alt="" src="//cdn.livetvcdn.net/img/s_ev.gif">
+
+																</td>
+																<td width="94%">
+
+																	<span class="date">Heute (7 Mai, Sonntag)</span>
+
+																</td>
+															</tr>
+															<tr><td OnMouseOver="$('#cv526237').show();" OnMouseOut="$('#cv526237').hide();" colspan=2 height=38 valign=top>  <table cellpadding=1 cellspacing=2 width="100%"><tr><td width=34 align="center" valign="top"> <img width=27 height=25 alt="Tischtennis. TT Cup" src="//cdn.livetvcdn.net/img/icons/TT Cup.gif"> </td><td> <a class="live" href="/dex/eventinfo/526237_tt_cup/">TT Cup</a><br><a class="live" href="/dex/eventinfo/526237_tt_cup/"><img src=//cdn.livetvcdn.net/img/live.gif></a><span class="live"> &nbsp;  </span><br> <span class="evdesc">7:30 (TT Cup)</span> </td></tr></table> </td></tr>
+															<tr><td OnMouseOver="$('#cv527319').show();" OnMouseOut="$('#cv527319').hide();" colspan=2 height=38 valign=top>  <table cellpadding=1 cellspacing=2 width="100%"><tr><td width=34 align="center" valign="top"> <img width=27 height=25 alt="Motorsport. Moto GP" src="//cdn.livetvcdn.net/img/icons/motogp.gif"> </td><td> <a class="bottomgray" href="/dex/eventinfo/527319_spanish_grand_prix/">Gro&#223;er Preis von Spanien</a><br> <span class="evdesc">8:40 (Moto GP)</span> </td></tr></table> </td></tr>
+															<tr><td OnMouseOver="$('#cv527478').show();" OnMouseOut="$('#cv527478').hide();" colspan=2 height=38 valign=top>  <table cellpadding=1 cellspacing=2 width="100%"><tr><td width=34 align="center" valign="top"> <img width=27 height=25 alt="Australian Football. AFL" src="//cdn.livetvcdn.net/img/icons/afl.gif"> </td><td> <a class="live" href="/dex/eventinfo/527478_fremantle_essendon/">Fremantle &ndash;  Essendon</a><br><a class="live" href="/dex/eventinfo/527478_fremantle_essendon/"><img src=//cdn.livetvcdn.net/img/live.gif></a><span class="live"> &nbsp;  </span><br> <span class="evdesc">8:40 (AFL)</span> </td></tr></table> </td></tr>
+															<tr><td OnMouseOver="$('#cv528433').show();" OnMouseOut="$('#cv528433').hide();" colspan=2 height=38 valign=top>  <table cellpadding=1 cellspacing=2 width="100%"><tr><td width=34 align="center" valign="top"> <img width=27 height=25 alt="Leichtathletik. Marathonlauf" src="//cdn.livetvcdn.net/img/icons/marathon.gif"> </td><td> <a class="live" href="/dex/eventinfo/528433_prague_marathon/">Prag-Marathon</a><br><a class="live" href="/dex/eventinfo/528433_prague_marathon/"><img src=//cdn.livetvcdn.net/img/live.gif></a><span class="live"> &nbsp;  </span><br> <span class="evdesc">9:00 (Marathonlauf)</span> </td></tr></table> </td></tr>
+															<tr><td OnMouseOver="$('#cv528416').show();" OnMouseOut="$('#cv528416').hide();" colspan=2 height=38 valign=top>  <table cellpadding=1 cellspacing=2 width="100%"><tr><td width=34 align="center" valign="top"> <img width=27 height=25 alt="Motorsport. Porsche" src="//cdn.livetvcdn.net/img/icons/porsche.gif"> </td><td> <a class="bottomgray" href="/dex/eventinfo/528416_porsche_carrera_cup/">Porsche Carrera Cup</a><br> <span class="evdesc">9:00 (Porsche)</span> </td></tr></table> </td></tr>
+															<tr><td OnMouseOver="$('#cv525967').show();" OnMouseOut="$('#cv525967').hide();" colspan=2 height=38 valign=top>  <table cellpadding=1 cellspacing=2 width="100%"><tr><td width=34 align="center" valign="top"> <img width=27 height=25 alt="Fu&#223;ball. Japanische J2 League" src="//cdn.livetvcdn.net/img/icons/jp.gif"> </td><td> <a class="bottomgray" href="/dex/eventinfo/525967_tokyo_verdy_yokohama_fc/">Tokyo Verdy &ndash;  Yokohama FC</a><br> <span class="evdesc">9:00 (Japanische J2 League)</span> </td></tr></table> </td></tr>
+															<tr><td OnMouseOver="$('#cv525968').show();" OnMouseOut="$('#cv525968').hide();" colspan=2 height=38 valign=top>  <table cellpadding=1 cellspacing=2 width="100%"><tr><td width=34 align="center" valign="top"> <img width=27 height=25 alt="Fu&#223;ball. Japanische J2 League" src="//cdn.livetvcdn.net/img/icons/jp.gif"> </td><td> <a class="bottomgray" href="/dex/eventinfo/525968_machida_zelvia_shonan_bellmare/">Machida Zelvia &ndash;  Shonan Bellmare</a><br> <span class="evdesc">9:00 (Japanische J2 League)</span> </td></tr></table> </td></tr>
+															<tr><td OnMouseOver="$('#cv525969').show();" OnMouseOut="$('#cv525969').hide();" colspan=2 height=38 valign=top>  <table cellpadding=1 cellspacing=2 width="100%"><tr><td width=34 align="center" valign="top"> <img width=27 height=25 alt="Fu&#223;ball. Japanische J2 League" src="//cdn.livetvcdn.net/img/icons/jp.gif"> </td><td> <a class="bottomgray" href="/dex/eventinfo/525969_gifu_oita_trinita/">Gifu &ndash;  Oita Trinita</a><br> <span class="evdesc">9:00 (Japanische J2 League)</span> </td></tr></table> </td></tr>
+															<tr><td OnMouseOver="$('#cv525970').show();" OnMouseOut="$('#cv525970').hide();" colspan=2 height=38 valign=top>  <table cellpadding=1 cellspacing=2 width="100%"><tr><td width=34 align="center" valign="top"> <img width=27 height=25 alt="Fu&#223;ball. Japanische J2 League" src="//cdn.livetvcdn.net/img/icons/jp.gif"> </td><td> <a class="bottomgray" href="/dex/eventinfo/525970_kyoto_kamatamare_sanuki/">Kyoto &ndash;  Kamatamare Sanuki</a><br> <span class="evdesc">9:00 (Japanische J2 League)</span> </td></tr></table> </td></tr>
+															<tr><td OnMouseOver="$('#cv525971').show();" OnMouseOut="$('#cv525971').hide();" colspan=2 height=38 valign=top>  <table cellpadding=1 cellspacing=2 width="100%"><tr><td width=34 align="center" valign="top"> <img width=27 height=25 alt="Fu&#223;ball. Japanische J2 League" src="//cdn.livetvcdn.net/img/icons/jp.gif"> </td><td> <a class="bottomgray" href="/dex/eventinfo/525971_ehime_renofa/">Ehime &ndash;  Renofa</a><br> <span class="evdesc">9:00 (Japanische J2 League)</span> </td></tr></table> </td></tr>
+															<tr><td OnMouseOver="$('#cv525972').show();" OnMouseOut="$('#cv525972').hide();" colspan=2 height=38 valign=top>  <table cellpadding=1 cellspacing=2 width="100%"><tr><td width=34 align="center" valign="top"> <img width=27 height=25 alt="Fu&#223;ball. Japanische J2 League" src="//cdn.livetvcdn.net/img/icons/jp.gif"> </td><td> <a class="bottomgray" href="/dex/eventinfo/525972_roasso_kumamoto_thespa_kusatsu/">Roasso Kumamoto &ndash;  Thespa Kusatsu</a><br> <span class="evdesc">9:00 (Japanische J2 League)</span> </td></tr></table> </td></tr>
+															<tr><td OnMouseOver="$('#cv527155').show();" OnMouseOut="$('#cv527155').hide();" colspan=2 height=38 valign=top>  <table cellpadding=1 cellspacing=2 width="100%"><tr><td width=34 align="center" valign="top"> <img width=27 height=25 alt="Fu&#223;ball. Australische A-League" src="//cdn.livetvcdn.net/img/icons/au.gif"> </td><td> <a class="live" href="/dex/eventinfo/527155_sydney_melbourne_victory/">Sydney &ndash;  Melbourne Victory</a><br><a class="live" href="/dex/eventinfo/527155_sydney_melbourne_victory/"><img src=//cdn.livetvcdn.net/img/live.gif></a><span class="live"> &nbsp; 1:1  </span><br> <span class="evdesc">9:15 (Australische A-League)</span> </td></tr></table> </td></tr>
+															<tr><td OnMouseOver="$('#cv512874').show();" OnMouseOut="$('#cv512874').hide();" colspan=2 height=38 valign=top>  <table cellpadding=1 cellspacing=2 width="100%"><tr><td width=34 align="center" valign="top"> <img width=27 height=25 alt="Fu&#223;ball. Chinesische Super League" src="//cdn.livetvcdn.net/img/icons/cn.gif"> </td><td> <a class="live" href="/dex/eventinfo/512874_tianjin_teda_liaoning/">Tianjin Teda &ndash;  Liaoning</a><br><a class="live" href="/dex/eventinfo/512874_tianjin_teda_liaoning/"><img src=//cdn.livetvcdn.net/img/live.gif></a><span class="live"> &nbsp; 0:0  </span><br> <span class="evdesc">9:30 (Chinesische Super League)</span> </td></tr></table> </td></tr>
+															<tr><td OnMouseOver="$('#cv528778').show();" OnMouseOut="$('#cv528778').hide();" colspan=2 height=38 valign=top>  <table cellpadding=1 cellspacing=2 width="100%"><tr><td width=34 align="center" valign="top"> <img width=27 height=25 alt="Unihockey. Weltmeisterschaft" src="//cdn.livetvcdn.net/img/icons/flor.gif"> </td><td> <a class="live" href="/dex/eventinfo/528778_norway_u_19_estonia_u_19/">Norwegen U-19 &ndash;  Estland U-19</a><br><a class="live" href="/dex/eventinfo/528778_norway_u_19_estonia_u_19/"><img src=//cdn.livetvcdn.net/img/live.gif></a><span class="live"> &nbsp; 9:1  </span><br> <span class="evdesc">9:30 (Weltmeisterschaft)</span> </td></tr></table> </td></tr>
+															<tr><td OnMouseOver="$('#cv514869').show();" OnMouseOut="$('#cv514869').hide();" colspan=2 height=38 valign=top>  <table cellpadding=1 cellspacing=2 width="100%"><tr><td width=34 align="center" valign="top"> <img width=27 height=25 alt="Fu&#223;ball. Japanische J League" src="//cdn.livetvcdn.net/img/icons/jp.gif"> </td><td> <a class="live" href="/dex/eventinfo/514869_sagan_tosu_yokohama_marinos/">Sagan Tosu &ndash;  Yokohama Marinos</a><br><a class="live" href="/dex/eventinfo/514869_sagan_tosu_yokohama_marinos/"><img src=//cdn.livetvcdn.net/img/live.gif></a><span class="live"> &nbsp; 1:0  </span><br> <span class="evdesc">10:00 (Japanische J League)</span> </td></tr></table> </td></tr>
+															<tr><td OnMouseOver="$('#cv528369').show();" OnMouseOut="$('#cv528369').hide();" colspan=2 height=38 valign=top>  <table cellpadding=1 cellspacing=2 width="100%"><tr><td width=34 align="center" valign="top"> <img width=27 height=25 alt="Futsal. Russland" src="//cdn.livetvcdn.net/img/icons/mfrsl.gif"> </td><td> <a class="live" href="/dex/eventinfo/528369_gazprom_yugra_tyumen/">Gazprom-Yugra &ndash;  Tyumen</a><br><a class="live" href="/dex/eventinfo/528369_gazprom_yugra_tyumen/"><img src=//cdn.livetvcdn.net/img/live.gif></a><span class="live"> &nbsp; 2:0  </span><br> <span class="evdesc">10:00 (Russland)</span> </td></tr></table> </td></tr>
+															<tr><td OnMouseOver="$('#cv528370').show();" OnMouseOut="$('#cv528370').hide();" colspan=2 height=38 valign=top>  <table cellpadding=1 cellspacing=2 width="100%"><tr><td width=34 align="center" valign="top"> <img width=27 height=25 alt="Futsal. Russland" src="//cdn.livetvcdn.net/img/icons/mfrsl.gif"> </td><td> <a class="live" href="/dex/eventinfo/528370_sibiryak_progress/">Sibiryak &ndash;  Progress</a><br><a class="live" href="/dex/eventinfo/528370_sibiryak_progress/"><img src=//cdn.livetvcdn.net/img/live.gif></a><span class="live"> &nbsp; 3:0  </span><br> <span class="evdesc">10:00 (Russland)</span> </td></tr></table> </td></tr>
+															<tr><td OnMouseOver="$('#cv527395').show();" OnMouseOut="$('#cv527395').hide();" colspan=2 height=38 valign=top>  <table cellpadding=1 cellspacing=2 width="100%"><tr><td width=34 align="center" valign="top"> <img width=27 height=25 alt="Tennis. ATP Challenger Tour" src="//cdn.livetvcdn.net/img/icons/tennis.gif"> </td><td> <a class="live" href="/dex/eventinfo/527395_atp_challenger_ostrava/">ATP Challenger, Ostrava</a><br><a class="live" href="/dex/eventinfo/527395_atp_challenger_ostrava/"><img src=//cdn.livetvcdn.net/img/live.gif></a><span class="live"> &nbsp;  </span><br> <span class="evdesc">10:00 (ATP Challenger Tour)</span> </td></tr></table> </td></tr>
+															<tr><td OnMouseOver="$('#cv528762').show();" OnMouseOut="$('#cv528762').hide();" colspan=2 height=38 valign=top>  <table cellpadding=1 cellspacing=2 width="100%"><tr><td width=34 align="center" valign="top"> <img width=27 height=25 alt="Tennis. ATP Challenger Tour" src="//cdn.livetvcdn.net/img/icons/tennis.gif"> </td><td> <a class="live" href="/dex/eventinfo/528762_marco_cecchinato_stefano_travaglia/">Marco Cecchinato &ndash;  Stefano Travaglia</a><br><a class="live" href="/dex/eventinfo/528762_marco_cecchinato_stefano_travaglia/"><img src=//cdn.livetvcdn.net/img/live.gif></a><span class="live"> &nbsp; 0:1  </span><br> <span class="evdesc">10:00 (ATP Challenger Tour)</span> </td></tr></table> </td></tr>
+															<tr><td OnMouseOver="$('#cv528781').show();" OnMouseOut="$('#cv528781').hide();" colspan=2 height=38 valign=top>  <table cellpadding=1 cellspacing=2 width="100%"><tr><td width=34 align="center" valign="top"> <img width=27 height=25 alt="Unihockey. Weltmeisterschaft" src="//cdn.livetvcdn.net/img/icons/flor.gif"> </td><td> <a class="live" href="/dex/eventinfo/528781_germany_u_19_austria_u_19/">Deutschland U-19 &ndash;  &#214;sterreich U-19</a><br><a class="live" href="/dex/eventinfo/528781_germany_u_19_austria_u_19/"><img src=//cdn.livetvcdn.net/img/live.gif></a><span class="live"> &nbsp;  </span><br> <span class="evdesc">10:00 (Weltmeisterschaft)</span> </td></tr></table> </td></tr>
+															<tr><td OnMouseOver="$('#cv528396').show();" OnMouseOut="$('#cv528396').hide();" colspan=2 height=38 valign=top>  <table cellpadding=1 cellspacing=2 width="100%"><tr><td width=34 align="center" valign="top"> <img width=27 height=25 alt="Fu&#223;ball. Indonesische Super League" src="//cdn.livetvcdn.net/img/icons/id.gif"> </td><td> <a class="live" href="/dex/eventinfo/528396_surabaya_united_gresik_united/">Surabaya United &ndash;  Gresik United</a><br><a class="live" href="/dex/eventinfo/528396_surabaya_united_gresik_united/"><img src=//cdn.livetvcdn.net/img/live.gif></a><span class="live"> &nbsp;  </span><br> <span class="evdesc">10:00 (Indonesische Super League)</span> </td></tr></table> </td></tr>
+															<tr><td OnMouseOver="$('#cv528791').show();" OnMouseOut="$('#cv528791').hide();" colspan=2 height=38 valign=top>  <table cellpadding=1 cellspacing=2 width="100%"><tr><td width=34 align="center" valign="top"> <img width=27 height=25 alt="Tennis. ITF Tour" src="//cdn.livetvcdn.net/img/icons/tennis.gif"> </td><td> <a class="live" href="/dex/eventinfo/528791_itf_tour_santa_margherita_di_pula/">ITF Tour, Santa Margherita Di Pula</a><br><a class="live" href="/dex/eventinfo/528791_itf_tour_santa_margherita_di_pula/"><img src=//cdn.livetvcdn.net/img/live.gif></a><span class="live"> &nbsp;  </span><br> <span class="evdesc">10:00 (ITF Tour)</span> </td></tr></table> </td></tr>
+															<tr><td OnMouseOver="$('#cv527904').show();" OnMouseOut="$('#cv527904').hide();" colspan=2 height=38 valign=top>  <table cellpadding=1 cellspacing=2 width="100%"><tr><td width=34 align="center" valign="top"> <img width=27 height=25 alt="Motorsport. DTM" src="//cdn.livetvcdn.net/img/icons/dtm.gif"> </td><td> <a class="bottomgray" href="/dex/eventinfo/527904_dtm_hockenheim/">DTM Hockenheim</a><br> <span class="evdesc">10:00 (DTM)</span> </td></tr></table> </td></tr>
+															<tr><td OnMouseOver="$('#cv527320').show();" OnMouseOut="$('#cv527320').hide();" colspan=2 height=38 valign=top>  <table cellpadding=1 cellspacing=2 width="100%"><tr><td width=34 align="center" valign="top"> <img width=27 height=25 alt="Motorsport. Rallycross" src="//cdn.livetvcdn.net/img/icons/race-nac.gif"> </td><td> <a class="live" href="/dex/eventinfo/527320_rx_hockenheim/">RX Hockenheim</a><br><a class="live" href="/dex/eventinfo/527320_rx_hockenheim/"><img src=//cdn.livetvcdn.net/img/live.gif></a><span class="live"> &nbsp;  </span><br> <span class="evdesc">10:00 (Rallycross)</span> </td></tr></table> </td></tr>
+															<tr><td OnMouseOver="$('#cv525486').show();" OnMouseOut="$('#cv525486').hide();" colspan=2 height=38 valign=top>  <table cellpadding=1 cellspacing=2 width="100%"><tr><td width=34 align="center" valign="top"> <img width=27 height=25 alt="Gewichtheben. IPK" src="//cdn.livetvcdn.net/img/icons/mpc.gif"> </td><td> <a class="live" href="/dex/eventinfo/525486_world_cup_ipc/">IPK Weltcup</a><br><a class="live" href="/dex/eventinfo/525486_world_cup_ipc/"><img src=//cdn.livetvcdn.net/img/live.gif></a><span class="live"> &nbsp;  </span><br> <span class="evdesc">10:00 (IPK)</span> </td></tr></table> </td></tr>
+															<tr><td OnMouseOver="$('#cv528297').show();" OnMouseOut="$('#cv528297').hide();" colspan=2 height=38 valign=top>  <table cellpadding=1 cellspacing=2 width="100%"><tr><td width=34 align="center" valign="top"> <img width=27 height=25 alt="Fu&#223;ball. Rum&#228;nische Liga II" src="//cdn.livetvcdn.net/img/icons/ro.gif"> </td><td> <a class="live" href="/dex/eventinfo/528297_targoviste_sepsi/">Targoviste &ndash;  Sepsi</a><br><a class="live" href="/dex/eventinfo/528297_targoviste_sepsi/"><img src=//cdn.livetvcdn.net/img/live.gif></a><span class="live"> &nbsp; 1:0  </span><br> <span class="evdesc">10:00 (Rum&#228;nische Liga II)</span> </td></tr></table> </td></tr>
+															<tr><td OnMouseOver="$('#cv528350').show();" OnMouseOut="$('#cv528350').hide();" colspan=2 height=38 valign=top>  <table cellpadding=1 cellspacing=2 width="100%"><tr><td width=34 align="center" valign="top"> <img width=27 height=25 alt="Fu&#223;ball. Tschechische U-21 Liga" src="//cdn.livetvcdn.net/img/icons/cz.gif"> </td><td> <a class="live" href="/dex/eventinfo/528350_slavia_praha_u_21_bohemians_1905_u_21/">Slavia Praha U-21 &ndash;  Bohemians 1905 U-21</a><br><a class="live" href="/dex/eventinfo/528350_slavia_praha_u_21_bohemians_1905_u_21/"><img src=//cdn.livetvcdn.net/img/live.gif></a><span class="live"> &nbsp; 2:0  </span><br> <span class="evdesc">10:15 (Tschechische U-21 Liga)</span> </td></tr></table> </td></tr>
+															<tr><td OnMouseOver="$('#cv527109').show();" OnMouseOut="$('#cv527109').hide();" colspan=2 height=38 valign=top>  <table cellpadding=1 cellspacing=2 width="100%"><tr><td width=34 align="center" valign="top"> <img width=27 height=25 alt="Basketball. PBA Commissioner's Cup" src="//cdn.livetvcdn.net/img/icons/pba.gif"> </td><td> <a class="live" href="/dex/eventinfo/527109_blackwater_elite_mahindra_enforcers/">Blackwater Elite &ndash;  Mahindra Enforcers</a><br><a class="live" href="/dex/eventinfo/527109_blackwater_elite_mahindra_enforcers/"><img src=//cdn.livetvcdn.net/img/live.gif></a><span class="live"> &nbsp; 48:41  </span><br> <span class="evdesc">10:30 (PBA Commissioner's Cup)</span> </td></tr></table> </td></tr>
+															<tr><td OnMouseOver="$('#cv528096').show();" OnMouseOut="$('#cv528096').hide();" colspan=2 height=38 valign=top>  <table cellpadding=1 cellspacing=2 width="100%"><tr><td width=34 align="center" valign="top"> <img width=27 height=25 alt="Fu&#223;ball. 2. Fu&#223;ball-Liga. Slowakei" src="//cdn.livetvcdn.net/img/icons/sk.gif"> </td><td> <a class="live" href="/dex/eventinfo/528096_zilina_ii_liptovsky_mikulas/">Zilina II &ndash;  Liptovsky Mikulas</a><br><a class="live" href="/dex/eventinfo/528096_zilina_ii_liptovsky_mikulas/"><img src=//cdn.livetvcdn.net/img/live.gif></a><span class="live"> &nbsp;  </span><br> <span class="evdesc">10:30 (Slowakei)</span> </td></tr></table> </td></tr>
+															<tr><td OnMouseOver="$('#cv527394').show();" OnMouseOut="$('#cv527394').hide();" colspan=2 height=38 valign=top>  <table cellpadding=1 cellspacing=2 width="100%"><tr><td width=34 align="center" valign="top"> <img width=27 height=25 alt="Tennis. WTA Tour" src="//cdn.livetvcdn.net/img/icons/tennis.gif"> </td><td> <a class="live" href="/dex/eventinfo/527394_wta_tour_madrid/">WTA Tour, Madrid</a><br><a class="live" href="/dex/eventinfo/527394_wta_tour_madrid/"><img src=//cdn.livetvcdn.net/img/live.gif></a><span class="live"> &nbsp;  </span><br> <span class="evdesc">11:00 (WTA Tour)</span> </td></tr></table> </td></tr>
+															<tr><td OnMouseOver="$('#cv527392').show();" OnMouseOut="$('#cv527392').hide();" colspan=2 height=38 valign=top>  <table cellpadding=1 cellspacing=2 width="100%"><tr><td width=34 align="center" valign="top"> <img width=27 height=25 alt="Tennis. ATP Tour" src="//cdn.livetvcdn.net/img/icons/tennis.gif"> </td><td> <a class="live" href="/dex/eventinfo/527392_atp_tour_munich/">ATP Tour, M&#252;nchen</a><br><a class="live" href="/dex/eventinfo/527392_atp_tour_munich/"><img src=//cdn.livetvcdn.net/img/live.gif></a><span class="live"> &nbsp;  </span><br> <span class="evdesc">11:00 (ATP Tour)</span> </td></tr></table> </td></tr>
+															<tr><td OnMouseOver="$('#cv527321').show();" OnMouseOut="$('#cv527321').hide();" colspan=2 height=38 valign=top>  <table cellpadding=1 cellspacing=2 width="100%"><tr><td width=34 align="center" valign="top"> <img width=27 height=25 alt="Motorsport. Moto GP" src="//cdn.livetvcdn.net/img/icons/motogp.gif"> </td><td> <a class="live" href="/dex/eventinfo/527321_spanish_grand_prix/">Gro&#223;er Preis von Spanien</a><br><a class="live" href="/dex/eventinfo/527321_spanish_grand_prix/"><img src=//cdn.livetvcdn.net/img/live.gif></a><span class="live"> &nbsp;  </span><br> <span class="evdesc">11:00 (Moto GP)</span> </td></tr></table> </td></tr>
+															<tr><td OnMouseOver="$('#cv528118').show();" OnMouseOut="$('#cv528118').hide();" colspan=2 height=38 valign=top>  <table cellpadding=1 cellspacing=2 width="100%"><tr><td width=34 align="center" valign="top"> <img width=27 height=25 alt="Futsal. Ukrainische Extra-Liga" src="//cdn.livetvcdn.net/img/icons/futsal.gif"> </td><td> <a class="live" href="/dex/eventinfo/528118_energiya_lviv_hit/">Energiya Lviv &ndash;  HIT</a><br><a class="live" href="/dex/eventinfo/528118_energiya_lviv_hit/"><img src=//cdn.livetvcdn.net/img/live.gif></a><span class="live"> &nbsp;  </span><br> <span class="evdesc">11:00 (Ukrainische Extra-Liga)</span> </td></tr></table> </td></tr>
+															<tr><td OnMouseOver="$('#cv528165').show();" OnMouseOut="$('#cv528165').hide();" colspan=2 height=38 valign=top>  <table cellpadding=1 cellspacing=2 width="100%"><tr><td width=34 align="center" valign="top"> <img width=27 height=25 alt="Basketball. Japanische BJ League" src="//cdn.livetvcdn.net/img/icons/bj.gif"> </td><td> <a class="live" href="/dex/eventinfo/528165_okinawa_osaka/">Okinawa &ndash;  Osaka</a><br><a class="live" href="/dex/eventinfo/528165_okinawa_osaka/"><img src=//cdn.livetvcdn.net/img/live.gif></a><span class="live"> &nbsp; 2:0 </span><br> <span class="evdesc">11:00 (Japanische BJ League)</span> </td></tr></table> </td></tr>
+															<tr><td OnMouseOver="$('#cv528351').show();" OnMouseOut="$('#cv528351').hide();" colspan=2 height=38 valign=top>  <table cellpadding=1 cellspacing=2 width="100%"><tr><td width=34 align="center" valign="top"> <img width=27 height=25 alt="Fu&#223;ball. Tschechische U-21 Liga" src="//cdn.livetvcdn.net/img/icons/cz.gif"> </td><td> <a class="live" href="/dex/eventinfo/528351_karvina_u_21_trinec_u_21/">Karvina U-21 &ndash;  Trinec U-21</a><br><a class="live" href="/dex/eventinfo/528351_karvina_u_21_trinec_u_21/"><img src=//cdn.livetvcdn.net/img/live.gif></a><span class="live"> &nbsp; 1:0 </span><br> <span class="evdesc">11:00 (Tschechische U-21 Liga)</span> </td></tr></table> </td></tr>
+															<tr><td OnMouseOver="$('#cv525642').show();" OnMouseOut="$('#cv525642').hide();" colspan=2 height=38 valign=top>  <table cellpadding=1 cellspacing=2 width="100%"><tr><td width=34 align="center" valign="top"> <img width=27 height=25 alt="Handball. Frauen. Tschechische WHIL" src="//cdn.livetvcdn.net/img/icons/hb.gif"> </td><td> <a class="live" href="/dex/eventinfo/525642_presov_slovan_duslo_sala/">Presov &ndash;  Slovan Duslo Sala</a><br><a class="live" href="/dex/eventinfo/525642_presov_slovan_duslo_sala/"><img src=//cdn.livetvcdn.net/img/live.gif></a><span class="live"> &nbsp;  </span><br> <span class="evdesc">11:00 (Tschechische WHIL)</span> </td></tr></table> </td></tr>
+															<tr><td OnMouseOver="$('#cv528612').show();" OnMouseOut="$('#cv528612').hide();" colspan=2 height=38 valign=top>  <table cellpadding=1 cellspacing=2 width="100%"><tr><td width=34 align="center" valign="top"> <img width=27 height=25 alt="Motorsport. GT4 European Series" src="//cdn.livetvcdn.net/img/icons/gt4.gif"> </td><td> <a class="live" href="/dex/eventinfo/528612_gt4_brands_hatch/">GT4, Brands Hatch</a><br><a class="live" href="/dex/eventinfo/528612_gt4_brands_hatch/"><img src=//cdn.livetvcdn.net/img/live.gif></a><span class="live"> &nbsp;  </span><br> <span class="evdesc">11:00 (GT4 European Series)</span> </td></tr></table> </td></tr>
+															<tr><td OnMouseOver="$('#cv528624').show();" OnMouseOut="$('#cv528624').hide();" colspan=2 height=38 valign=top>  <table cellpadding=1 cellspacing=2 width="100%"><tr><td width=34 align="center" valign="top"> <img width=27 height=25 alt="Feldhockey. Deutsche Bundesliga" src="//cdn.livetvcdn.net/img/icons/field.gif"> </td><td> <a class="live" href="/dex/eventinfo/528624_munchner_mariendorfer/">Munchner &ndash;  Mariendorfer</a><br><a class="live" href="/dex/eventinfo/528624_munchner_mariendorfer/"><img src=//cdn.livetvcdn.net/img/live.gif></a><span class="live"> &nbsp;  </span><br> <span class="evdesc">11:00 (Deutsche Bundesliga)</span> </td></tr></table> </td></tr>
+														</table>
+													</span>
+
+												</td>
+											</tr>
+											<tr>
+												<td height=23 background="//cdn.livetvcdn.net/img/l_b.gif" align="right" valign="top">
+
+													<a class="white" href="/dex/allupcoming/">Alle anzeigen - <img title="Alle bevorstehenden Übertragungen anzeigen" src="//cdn.livetvcdn.net/img/s_w.gif"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+												</td>
+											</tr>
+										</table>
+
+
+										<script>
+
+											function closev(eid) {
+
+												$('#cv' + eid).hide();
+
+												$('#cw' + eid).load('/ajax/closev.php?lng=de&id=' + eid + '&' + Math.random());
+
+												$('#cw' + eid).show();
+
+												return false;
+											}
+
+										</script>
+
+
+
+
+										<br>
+
+
+
+									</td>
+									<td valign="top">
+
+										<table cellpadding="0" cellspacing="0" border class="main">
+											<tr>
+												<td bgcolor="#ffffff" valign=top>
+
+													<table width="100%" cellpadding=0 cellspacing=0>
+														<tr>
+															<td bgcolor="#e10000" height=38>
+
+																<table cellpadding=0 cellspacing=0>
+																	<tr>
+																		<td width=14>
+
+																			&nbsp;
+
+																		</td>
+																		<td>
+
+																			<span class="sporttitle"><b>Alle Übertragungen</b></span>
+
+																		</td>
+																	</tr>
+																</table>
+
+															</td>
+														</tr>
+														<tr>
+															<td>
+
+																<table width="100%" cellpadding=0 cellspacing=0>
+																	<tr>
+																		<td valign="top">
+
+																			<table width="100%" cellpadding=12 cellspacing=0>
+																				<tr>
+																					<td valign="top">
+
+																						LiveStreams können sich bis zum Anfang der Übertragung ändern, neue Streams können jeder Zeit hinzugefügt werden. Achten Sie auch darauf das Spiele meistens ca. einen Tag vor Anpfiff auf der Seite annonciert werden, in einigen Fällen sogar vor ein paar Stunden.
+																						<br><br>
+
+																						<center></center><br>
+																						<table width="100%" cellpadding=0 cellspacing=0>
+																							<tr>
+																								<td width="30%" valign="top">
+
+																									<table width="100%" align="center">
+																										<tr>
+																											<td colspan=6 height=40>
+
+																												<table cellpadding=0 cellspacing=0 height=27 width="94%" background="//cdn.livetvcdn.net/img/sbgg2.gif" style="background-position: right;">
+																													<tr>
+																														<td background="//cdn.livetvcdn.net/img/sbggg.gif" width=27><a class="main" href="/dex/allupcomingsports/1/"><img style="margin: 2px;" width=22 src="//cdn.livetvcdn.net/img/sport/1.gif"></a></td>
+																														<td>
+
+																															&nbsp;&nbsp;
+																															<a class="main" href="/dex/allupcomingsports/1/"><b>Fu&#223;ball</b></a>
+
+																														</td>
+																														<td width=44 align="center">
+
+																															<a class="small" href="/dex/allupcomingsports/1/"><b>388</b></a>
+
+																														</td>
+																													</tr>
+																												</table>
+
+																											</td>
+																										</tr>
+
+																										<tr>
+																											<td colspan=6 height=40>
+
+																												<table cellpadding=0 cellspacing=0 height=27 width="94%" background="//cdn.livetvcdn.net/img/sbgg2.gif" style="background-position: right;">
+																													<tr>
+																														<td background="//cdn.livetvcdn.net/img/sbggg.gif" width=27><a class="main" href="/dex/allupcomingsports/2/"><img style="margin: 2px;" width=22 src="//cdn.livetvcdn.net/img/sport/2.gif"></a></td>
+																														<td>
+
+																															&nbsp;&nbsp;
+																															<a class="main" href="/dex/allupcomingsports/2/"><b>Eishockey</b></a>
+
+																														</td>
+																														<td width=44 align="center">
+
+																															<a class="small" href="/dex/allupcomingsports/2/"><b>43</b></a>
+
+																														</td>
+																													</tr>
+																												</table>
+
+																											</td>
+																										</tr>
+
+																										<tr>
+																											<td colspan=6 height=40>
+
+																												<table cellpadding=0 cellspacing=0 height=27 width="94%" background="//cdn.livetvcdn.net/img/sbgg2.gif" style="background-position: right;">
+																													<tr>
+																														<td background="//cdn.livetvcdn.net/img/sbggg.gif" width=27><a class="main" href="/dex/allupcomingsports/3/"><img style="margin: 2px;" width=22 src="//cdn.livetvcdn.net/img/sport/3.gif"></a></td>
+																														<td>
+
+																															&nbsp;&nbsp;
+																															<a class="main" href="/dex/allupcomingsports/3/"><b>Basketball</b></a>
+
+																														</td>
+																														<td width=44 align="center">
+
+																															<a class="small" href="/dex/allupcomingsports/3/"><b>74</b></a>
+
+																														</td>
+																													</tr>
+																												</table>
+
+																											</td>
+																										</tr>
+
+																										<tr>
+																											<td colspan=6 height=40>
+
+																												<table cellpadding=0 cellspacing=0 height=27 width="94%" background="//cdn.livetvcdn.net/img/sbgg2.gif" style="background-position: right;">
+																													<tr>
+																														<td background="//cdn.livetvcdn.net/img/sbggg.gif" width=27><a class="main" href="/dex/allupcomingsports/4/"><img style="margin: 2px;" width=22 src="//cdn.livetvcdn.net/img/sport/4.gif"></a></td>
+																														<td>
+
+																															&nbsp;&nbsp;
+																															<a class="main" href="/dex/allupcomingsports/4/"><b>Tennis</b></a>
+
+																														</td>
+																														<td width=44 align="center">
+
+																															<a class="small" href="/dex/allupcomingsports/4/"><b>41</b></a>
+
+																														</td>
+																													</tr>
+																												</table>
+
+																											</td>
+																										</tr>
+
+																										<tr>
+																											<td colspan=6 height=40>
+
+																												<table cellpadding=0 cellspacing=0 height=27 width="94%" background="//cdn.livetvcdn.net/img/sbgg2.gif" style="background-position: right;">
+																													<tr>
+																														<td background="//cdn.livetvcdn.net/img/sbggg.gif" width=27><a class="main" href="/dex/allupcomingsports/5/"><img style="margin: 2px;" width=22 src="//cdn.livetvcdn.net/img/sport/5.gif"></a></td>
+																														<td>
+
+																															&nbsp;&nbsp;
+																															<a class="main" href="/dex/allupcomingsports/5/"><b>Volleyball</b></a>
+
+																														</td>
+																														<td width=44 align="center">
+
+																															<a class="small" href="/dex/allupcomingsports/5/"><b>12</b></a>
+
+																														</td>
+																													</tr>
+																												</table>
+
+																											</td>
+																										</tr>
+
+																										<tr>
+																											<td colspan=6 height=40>
+
+																												<table cellpadding=0 cellspacing=0 height=27 width="94%" background="//cdn.livetvcdn.net/img/sbgg2.gif" style="background-position: right;">
+																													<tr>
+																														<td background="//cdn.livetvcdn.net/img/sbggg.gif" width=27><a class="main" href="/dex/allupcomingsports/7/"><img style="margin: 2px;" width=22 src="//cdn.livetvcdn.net/img/sport/7.gif"></a></td>
+																														<td>
+
+																															&nbsp;&nbsp;
+																															<a class="main" href="/dex/allupcomingsports/7/"><b>Motorsport</b></a>
+
+																														</td>
+																														<td width=44 align="center">
+
+																															<a class="small" href="/dex/allupcomingsports/7/"><b>18</b></a>
+
+																														</td>
+																													</tr>
+																												</table>
+
+																											</td>
+																										</tr>
+
+																										<tr>
+																											<td colspan=6 height=40>
+
+																												<table cellpadding=0 cellspacing=0 height=27 width="94%" background="//cdn.livetvcdn.net/img/sbgg2.gif" style="background-position: right;">
+																													<tr>
+																														<td background="//cdn.livetvcdn.net/img/sbggg.gif" width=27><a class="main" href="/dex/allupcomingsports/9/"><img style="margin: 2px;" width=22 src="//cdn.livetvcdn.net/img/sport/9.gif"></a></td>
+																														<td>
+
+																															&nbsp;&nbsp;
+																															<a class="main" href="/dex/allupcomingsports/9/"><b>Leichtathletik</b></a>
+
+																														</td>
+																														<td width=44 align="center">
+
+																															<a class="small" href="/dex/allupcomingsports/9/"><b>1</b></a>
+
+																														</td>
+																													</tr>
+																												</table>
+
+																											</td>
+																										</tr>
+
+																										<tr>
+																											<td colspan=6 height=40>
+
+																												<table cellpadding=0 cellspacing=0 height=27 width="94%" background="//cdn.livetvcdn.net/img/sbgg2.gif" style="background-position: right;">
+																													<tr>
+																														<td background="//cdn.livetvcdn.net/img/sbggg.gif" width=27><a class="main" href="/dex/allupcomingsports/12/"><img style="margin: 2px;" width=22 src="//cdn.livetvcdn.net/img/sport/12.gif"></a></td>
+																														<td>
+
+																															&nbsp;&nbsp;
+																															<a class="main" href="/dex/allupcomingsports/12/"><b>Futsal</b></a>
+
+																														</td>
+																														<td width=44 align="center">
+
+																															<a class="small" href="/dex/allupcomingsports/12/"><b>11</b></a>
+
+																														</td>
+																													</tr>
+																												</table>
+
+																											</td>
+																										</tr>
+
+																										<tr>
+																											<td colspan=6 height=40>
+
+																												<table cellpadding=0 cellspacing=0 height=27 width="94%" background="//cdn.livetvcdn.net/img/sbgg2.gif" style="background-position: right;">
+																													<tr>
+																														<td background="//cdn.livetvcdn.net/img/sbggg.gif" width=27><a class="main" href="/dex/allupcomingsports/13/"><img style="margin: 2px;" width=22 src="//cdn.livetvcdn.net/img/sport/13.gif"></a></td>
+																														<td>
+
+																															&nbsp;&nbsp;
+																															<a class="main" href="/dex/allupcomingsports/13/"><b>Handball</b></a>
+
+																														</td>
+																														<td width=44 align="center">
+
+																															<a class="small" href="/dex/allupcomingsports/13/"><b>20</b></a>
+
+																														</td>
+																													</tr>
+																												</table>
+
+																											</td>
+																										</tr>
+
+																										<tr>
+																											<td colspan=6 height=40>
+
+																												<table cellpadding=0 cellspacing=0 height=27 width="94%" background="//cdn.livetvcdn.net/img/sbgg2.gif" style="background-position: right;">
+																													<tr>
+																														<td background="//cdn.livetvcdn.net/img/sbggg.gif" width=27><a class="main" href="/dex/allupcomingsports/17/"><img style="margin: 2px;" width=22 src="//cdn.livetvcdn.net/img/sport/17.gif"></a></td>
+																														<td>
+
+																															&nbsp;&nbsp;
+																															<a class="main" href="/dex/allupcomingsports/17/"><b>Rugby League</b></a>
+
+																														</td>
+																														<td width=44 align="center">
+
+																															<a class="small" href="/dex/allupcomingsports/17/"><b>3</b></a>
+
+																														</td>
+																													</tr>
+																												</table>
+
+																											</td>
+																										</tr>
+
+																										<tr>
+																											<td colspan=6 height=40>
+
+																												<table cellpadding=0 cellspacing=0 height=27 width="94%" background="//cdn.livetvcdn.net/img/sbgg2.gif" style="background-position: right;">
+																													<tr>
+																														<td background="//cdn.livetvcdn.net/img/sbggg.gif" width=27><a class="main" href="/dex/allupcomingsports/19/"><img style="margin: 2px;" width=22 src="//cdn.livetvcdn.net/img/sport/19.gif"></a></td>
+																														<td>
+
+																															&nbsp;&nbsp;
+																															<a class="main" href="/dex/allupcomingsports/19/"><b>Baseball</b></a>
+
+																														</td>
+																														<td width=44 align="center">
+
+																															<a class="small" href="/dex/allupcomingsports/19/"><b>70</b></a>
+
+																														</td>
+																													</tr>
+																												</table>
+
+																											</td>
+																										</tr>
+
+																										<tr>
+																											<td colspan=6 height=40>
+
+																												<table cellpadding=0 cellspacing=0 height=27 width="94%" background="//cdn.livetvcdn.net/img/sbgg2.gif" style="background-position: right;">
+																													<tr>
+																														<td background="//cdn.livetvcdn.net/img/sbggg.gif" width=27><a class="main" href="/dex/allupcomingsports/21/"><img style="margin: 2px;" width=22 src="//cdn.livetvcdn.net/img/sport/21.gif"></a></td>
+																														<td>
+
+																															&nbsp;&nbsp;
+																															<a class="main" href="/dex/allupcomingsports/21/"><b>Beachvolleyball</b></a>
+
+																														</td>
+																														<td width=44 align="center">
+
+																															<a class="small" href="/dex/allupcomingsports/21/"><b>1</b></a>
+
+																														</td>
+																													</tr>
+																												</table>
+
+																											</td>
+																										</tr>
+
+																										<tr>
+																											<td colspan=6 height=40>
+
+																												<table cellpadding=0 cellspacing=0 height=27 width="94%" background="//cdn.livetvcdn.net/img/sbgg2.gif" style="background-position: right;">
+																													<tr>
+																														<td background="//cdn.livetvcdn.net/img/sbggg.gif" width=27><a class="main" href="/dex/allupcomingsports/23/"><img style="margin: 2px;" width=22 src="//cdn.livetvcdn.net/img/sport/23.gif"></a></td>
+																														<td>
+
+																															&nbsp;&nbsp;
+																															<a class="main" href="/dex/allupcomingsports/23/"><b>Beach Soccer</b></a>
+
+																														</td>
+																														<td width=44 align="center">
+
+																															<a class="small" href="/dex/allupcomingsports/23/"><b>2</b></a>
+
+																														</td>
+																													</tr>
+																												</table>
+
+																											</td>
+																										</tr>
+
+																										<tr>
+																											<td colspan=6 height=40>
+
+																												<table cellpadding=0 cellspacing=0 height=27 width="94%" background="//cdn.livetvcdn.net/img/sbgg2.gif" style="background-position: right;">
+																													<tr>
+																														<td background="//cdn.livetvcdn.net/img/sbggg.gif" width=27><a class="main" href="/dex/allupcomingsports/24/"><img style="margin: 2px;" width=22 src="//cdn.livetvcdn.net/img/sport/24.gif"></a></td>
+																														<td>
+
+																															&nbsp;&nbsp;
+																															<a class="main" href="/dex/allupcomingsports/24/"><b>Verschiedenes</b></a>
+
+																														</td>
+																														<td width=44 align="center">
+
+																															<a class="small" href="/dex/allupcomingsports/24/"><b>2</b></a>
+
+																														</td>
+																													</tr>
+																												</table>
+
+																											</td>
+																										</tr>
+
+																										<tr>
+																											<td colspan=6 height=40>
+
+																												<table cellpadding=0 cellspacing=0 height=27 width="94%" background="//cdn.livetvcdn.net/img/sbgg2.gif" style="background-position: right;">
+																													<tr>
+																														<td background="//cdn.livetvcdn.net/img/sbggg.gif" width=27><a class="main" href="/dex/allupcomingsports/27/"><img style="margin: 2px;" width=22 src="//cdn.livetvcdn.net/img/sport/27.gif"></a></td>
+																														<td>
+
+																															&nbsp;&nbsp;
+																															<a class="main" href="/dex/allupcomingsports/27/"><b>American Football</b></a>
+
+																														</td>
+																														<td width=44 align="center">
+
+																															<a class="small" href="/dex/allupcomingsports/27/"><b>1</b></a>
+
+																														</td>
+																													</tr>
+																												</table>
+
+																											</td>
+																										</tr>
+
+																										<tr>
+																											<td colspan=6 height=40>
+
+																												<table cellpadding=0 cellspacing=0 height=27 width="94%" background="//cdn.livetvcdn.net/img/sbgg2.gif" style="background-position: right;">
+																													<tr>
+																														<td background="//cdn.livetvcdn.net/img/sbggg.gif" width=27><a class="main" href="/dex/allupcomingsports/30/"><img style="margin: 2px;" width=22 src="//cdn.livetvcdn.net/img/sport/30.gif"></a></td>
+																														<td>
+
+																															&nbsp;&nbsp;
+																															<a class="main" href="/dex/allupcomingsports/30/"><b>Darts</b></a>
+
+																														</td>
+																														<td width=44 align="center">
+
+																															<a class="small" href="/dex/allupcomingsports/30/"><b>1</b></a>
+
+																														</td>
+																													</tr>
+																												</table>
+
+																											</td>
+																										</tr>
+
+																										<tr>
+																											<td colspan=6 height=40>
+
+																												<table cellpadding=0 cellspacing=0 height=27 width="94%" background="//cdn.livetvcdn.net/img/sbgg2.gif" style="background-position: right;">
+																													<tr>
+																														<td background="//cdn.livetvcdn.net/img/sbggg.gif" width=27><a class="main" href="/dex/allupcomingsports/32/"><img style="margin: 2px;" width=22 src="//cdn.livetvcdn.net/img/sport/32.gif"></a></td>
+																														<td>
+
+																															&nbsp;&nbsp;
+																															<a class="main" href="/dex/allupcomingsports/32/"><b>Unihockey</b></a>
+
+																														</td>
+																														<td width=44 align="center">
+
+																															<a class="small" href="/dex/allupcomingsports/32/"><b>4</b></a>
+
+																														</td>
+																													</tr>
+																												</table>
+
+																											</td>
+																										</tr>
+
+																										<tr>
+																											<td colspan=6 height=40>
+
+																												<table cellpadding=0 cellspacing=0 height=27 width="94%" background="//cdn.livetvcdn.net/img/sbgg2.gif" style="background-position: right;">
+																													<tr>
+																														<td background="//cdn.livetvcdn.net/img/sbggg.gif" width=27><a class="main" href="/dex/allupcomingsports/37/"><img style="margin: 2px;" width=22 src="//cdn.livetvcdn.net/img/sport/37.gif"></a></td>
+																														<td>
+
+																															&nbsp;&nbsp;
+																															<a class="main" href="/dex/allupcomingsports/37/"><b>Golf</b></a>
+
+																														</td>
+																														<td width=44 align="center">
+
+																															<a class="small" href="/dex/allupcomingsports/37/"><b>3</b></a>
+
+																														</td>
+																													</tr>
+																												</table>
+
+																											</td>
+																										</tr>
+
+																										<tr>
+																											<td colspan=6 height=40>
+
+																												<table cellpadding=0 cellspacing=0 height=27 width="94%" background="//cdn.livetvcdn.net/img/sbgg2.gif" style="background-position: right;">
+																													<tr>
+																														<td background="//cdn.livetvcdn.net/img/sbggg.gif" width=27><a class="main" href="/dex/allupcomingsports/38/"><img style="margin: 2px;" width=22 src="//cdn.livetvcdn.net/img/sport/38.gif"></a></td>
+																														<td>
+
+																															&nbsp;&nbsp;
+																															<a class="main" href="/dex/allupcomingsports/38/"><b>Feldhockey</b></a>
+
+																														</td>
+																														<td width=44 align="center">
+
+																															<a class="small" href="/dex/allupcomingsports/38/"><b>3</b></a>
+
+																														</td>
+																													</tr>
+																												</table>
+
+																											</td>
+																										</tr>
+
+																										<tr>
+																											<td colspan=6 height=40>
+
+																												<table cellpadding=0 cellspacing=0 height=27 width="94%" background="//cdn.livetvcdn.net/img/sbgg2.gif" style="background-position: right;">
+																													<tr>
+																														<td background="//cdn.livetvcdn.net/img/sbggg.gif" width=27><a class="main" href="/dex/allupcomingsports/39/"><img style="margin: 2px;" width=22 src="//cdn.livetvcdn.net/img/sport/39.gif"></a></td>
+																														<td>
+
+																															&nbsp;&nbsp;
+																															<a class="main" href="/dex/allupcomingsports/39/"><b>Tischtennis</b></a>
+
+																														</td>
+																														<td width=44 align="center">
+
+																															<a class="small" href="/dex/allupcomingsports/39/"><b>14</b></a>
+
+																														</td>
+																													</tr>
+																												</table>
+
+																											</td>
+																										</tr>
+
+																										<tr>
+																											<td colspan=6 height=40>
+
+																												<table cellpadding=0 cellspacing=0 height=27 width="94%" background="//cdn.livetvcdn.net/img/sbgg2.gif" style="background-position: right;">
+																													<tr>
+																														<td background="//cdn.livetvcdn.net/img/sbggg.gif" width=27><a class="main" href="/dex/allupcomingsports/40/"><img style="margin: 2px;" width=22 src="//cdn.livetvcdn.net/img/sport/40.gif"></a></td>
+																														<td>
+
+																															&nbsp;&nbsp;
+																															<a class="main" href="/dex/allupcomingsports/40/"><b>Radsport</b></a>
+
+																														</td>
+																														<td width=44 align="center">
+
+																															<a class="small" href="/dex/allupcomingsports/40/"><b>2</b></a>
+
+																														</td>
+																													</tr>
+																												</table>
+
+																											</td>
+																										</tr>
+
+																										<tr>
+																											<td colspan=6 height=40>
+
+																												<table cellpadding=0 cellspacing=0 height=27 width="94%" background="//cdn.livetvcdn.net/img/sbgg2.gif" style="background-position: right;">
+																													<tr>
+																														<td background="//cdn.livetvcdn.net/img/sbggg.gif" width=27><a class="main" href="/dex/allupcomingsports/41/"><img style="margin: 2px;" width=22 src="//cdn.livetvcdn.net/img/sport/41.gif"></a></td>
+																														<td>
+
+																															&nbsp;&nbsp;
+																															<a class="main" href="/dex/allupcomingsports/41/"><b>Cricket</b></a>
+
+																														</td>
+																														<td width=44 align="center">
+
+																															<a class="small" href="/dex/allupcomingsports/41/"><b>4</b></a>
+
+																														</td>
+																													</tr>
+																												</table>
+
+																											</td>
+																										</tr>
+
+																										<tr>
+																											<td colspan=6 height=40>
+
+																												<table cellpadding=0 cellspacing=0 height=27 width="94%" background="//cdn.livetvcdn.net/img/sbgg2.gif" style="background-position: right;">
+																													<tr>
+																														<td background="//cdn.livetvcdn.net/img/sbggg.gif" width=27><a class="main" href="/dex/allupcomingsports/48/"><img style="margin: 2px;" width=22 src="//cdn.livetvcdn.net/img/sport/48.gif"></a></td>
+																														<td>
+
+																															&nbsp;&nbsp;
+																															<a class="main" href="/dex/allupcomingsports/48/"><b>Gewichtheben</b></a>
+
+																														</td>
+																														<td width=44 align="center">
+
+																															<a class="small" href="/dex/allupcomingsports/48/"><b>13</b></a>
+
+																														</td>
+																													</tr>
+																												</table>
+
+																											</td>
+																										</tr>
+
+																										<tr>
+																											<td colspan=6 height=40>
+
+																												<table cellpadding=0 cellspacing=0 height=27 width="94%" background="//cdn.livetvcdn.net/img/sbgg2.gif" style="background-position: right;">
+																													<tr>
+																														<td background="//cdn.livetvcdn.net/img/sbggg.gif" width=27><a class="main" href="/dex/allupcomingsports/52/"><img style="margin: 2px;" width=22 src="//cdn.livetvcdn.net/img/sport/52.gif"></a></td>
+																														<td>
+
+																															&nbsp;&nbsp;
+																															<a class="main" href="/dex/allupcomingsports/52/"><b>Australian Football</b></a>
+
+																														</td>
+																														<td width=44 align="center">
+
+																															<a class="small" href="/dex/allupcomingsports/52/"><b>1</b></a>
+
+																														</td>
+																													</tr>
+																												</table>
+
+																											</td>
+																										</tr>
+
+																										<tr>
+																											<td colspan=6 height=40>
+
+																												<table cellpadding=0 cellspacing=0 height=27 width="94%" background="//cdn.livetvcdn.net/img/sbgg2.gif" style="background-position: right;">
+																													<tr>
+																														<td background="//cdn.livetvcdn.net/img/sbggg.gif" width=27><a class="main" href="/dex/allupcomingsports/60/"><img style="margin: 2px;" width=22 src="//cdn.livetvcdn.net/img/sport/60.gif"></a></td>
+																														<td>
+
+																															&nbsp;&nbsp;
+																															<a class="main" href="/dex/allupcomingsports/60/"><b>Bowls</b></a>
+
+																														</td>
+																														<td width=44 align="center">
+
+																															<a class="small" href="/dex/allupcomingsports/60/"><b>1</b></a>
+
+																														</td>
+																													</tr>
+																												</table>
+
+																											</td>
+																										</tr>
+
+																										<tr>
+																											<td colspan=6 height=40>
+
+																												<table cellpadding=0 cellspacing=0 height=27 width="94%" background="//cdn.livetvcdn.net/img/sbgg2.gif" style="background-position: right;">
+																													<tr>
+																														<td background="//cdn.livetvcdn.net/img/sbggg.gif" width=27><a class="main" href="/dex/allupcomingsports/72/"><img style="margin: 2px;" width=22 src="//cdn.livetvcdn.net/img/sport/72.gif"></a></td>
+																														<td>
+
+																															&nbsp;&nbsp;
+																															<a class="main" href="/dex/allupcomingsports/72/"><b>Pferdesport</b></a>
+
+																														</td>
+																														<td width=44 align="center">
+
+																															<a class="small" href="/dex/allupcomingsports/72/"><b>5</b></a>
+
+																														</td>
+																													</tr>
+																												</table>
+
+																											</td>
+																										</tr>
+
+																										<tr>
+																											<td colspan=6 height=40>
+
+																												<table cellpadding=0 cellspacing=0 height=27 width="94%" background="//cdn.livetvcdn.net/img/sbgg2.gif" style="background-position: right;">
+																													<tr>
+																														<td background="//cdn.livetvcdn.net/img/sbggg.gif" width=27><a class="main" href="/dex/allupcomingsports/73/"><img style="margin: 2px;" width=22 src="//cdn.livetvcdn.net/img/sport/73.gif"></a></td>
+																														<td>
+
+																															&nbsp;&nbsp;
+																															<a class="main" href="/dex/allupcomingsports/73/"><b>Windhundrennen</b></a>
+
+																														</td>
+																														<td width=44 align="center">
+
+																															<a class="small" href="/dex/allupcomingsports/73/"><b>1</b></a>
+
+																														</td>
+																													</tr>
+																												</table>
+
+																											</td>
+																										</tr>
+
+																										<tr>
+																											<td colspan=6 height=40>
+
+																												<table cellpadding=0 cellspacing=0 height=27 width="94%" background="//cdn.livetvcdn.net/img/sbgg2.gif" style="background-position: right;">
+																													<tr>
+																														<td background="//cdn.livetvcdn.net/img/sbggg.gif" width=27><a class="main" href="/dex/allupcomingsports/75/"><img style="margin: 2px;" width=22 src="//cdn.livetvcdn.net/img/sport/75.gif"></a></td>
+																														<td>
+
+																															&nbsp;&nbsp;
+																															<a class="main" href="/dex/allupcomingsports/75/"><b>Kampfsport</b></a>
+
+																														</td>
+																														<td width=44 align="center">
+
+																															<a class="small" href="/dex/allupcomingsports/75/"><b>1</b></a>
+
+																														</td>
+																													</tr>
+																												</table>
+
+																											</td>
+																										</tr>
+																									</table>
+																								</td>
+																								<td valign="top">
+
+																									<table width="100%" cellpadding=0 cellspacing=0 style="margin-top: 7px;">
+																										<tr>
+																											<td background="//cdn.livetvcdn.net/img/aubg.gif" width=39 height=39 align="center"><img src=//cdn.livetvcdn.net/img/sport/4.gif></td>
+																											<td bgcolor="#f0f0f0">
+
+																												&nbsp;&nbsp;&nbsp;
+																												<span class="sltitle">Tennis</span>
+
+																											</td>
+																											<td width=90 bgcolor="#f0f0f0">
+
+																												<a onclick="window.open(this.href, this.target, 'width=600,height=420,'+' location=yes,toolbar=no,menubar=no,status=no'); return false;" title="facebook" href="http://www.facebook.com/share.php?u=http%3A%2F%2Flivetv.sx%2Fdex%2Fallupcomingsports%2F4%2F"><img width=16 height=16 src="//cdn.livetvcdn.net/img/soc/fb.png"></a>&nbsp; <a onclick="window.open(this.href, this.target, 'width=600,height=420,'+' location=yes,toolbar=no,menubar=no,status=no'); return false;" title="Twitter" href="http://twitter.com/home?status=Tennis+%2F+Bevorstehende+Video-%C3%9Cbertragungen%20http%3A%2F%2Flivetv.sx%2Fdex%2Fallupcomingsports%2F4%2F"><img width=16 height=16 src="//cdn.livetvcdn.net/img/soc/twitter.png"></a>&nbsp; <a onclick="window.open(this.href, this.target, 'width=600,height=420,'+' location=yes,toolbar=no,menubar=no,status=no'); return false;" title="Google+" href="https://plus.google.com/share?url=http%3A%2F%2Flivetv.sx%2Fdex%2Fallupcomingsports%2F4%2F"><img width=16 height=16 src="//cdn.livetvcdn.net/img/soc/google.png"></a>
+
+																											</td>
+																										</tr>
+																									</table>
+																									<table align="center" width="90%">
+																							</tr>
+																							<tr><td colspan=4 height=48><br><b>7 Mai, Sonntag</b><hr></td></tr>
+																							<tr>
+																								<td colspan=2 height=38 valign=top width="33%">
+
+																									<table cellpadding=1 cellspacing=2 width="100%">
+																										<tr>
+																											<td width=34 align="center" valign="top">
+
+																												<img width=27 height=25 alt="ATP Challenger Tour" src="//cdn.livetvcdn.net/img/icons/tennis.gif">
+
+																											</td>
+																											<td>
+
+																												<a class="live" href="/dex/eventinfo/527395_atp_challenger_ostrava/">ATP Challenger, Ostrava</a>
+																												<br><img src="//cdn.livetvcdn.net/img/live.gif"><br>
+																												<span class="evdesc">
+																													7 Mai um 10:00
+																													<br>
+																													(ATP Challenger Tour)
+																												</span>
+
+																											</td>
+																										</tr>
+																									</table>
+
+																								</td>
+
+																								<td colspan=2 height=38 valign=top width="33%">
+
+																									<table cellpadding=1 cellspacing=2 width="100%">
+																										<tr>
+																											<td width=34 align="center" valign="top">
+
+																												<img width=27 height=25 alt="ATP Challenger Tour" src="//cdn.livetvcdn.net/img/icons/tennis.gif">
+
+																											</td>
+																											<td>
+
+																												<a class="live" href="/dex/eventinfo/528762_marco_cecchinato_stefano_travaglia/">Marco Cecchinato &ndash; Stefano Travaglia</a>
+																												<br><img src="//cdn.livetvcdn.net/img/live.gif"><br>
+																												<span class="evdesc">
+																													7 Mai um 10:00
+																													<br>
+																													(ATP Challenger Tour)
+																												</span>
+
+																											</td>
+																										</tr>
+																									</table>
+
+																								</td>
+																							</tr>
+																							<tr>
+																								<td colspan=2 height=38 valign=top width="33%">
+
+																									<table cellpadding=1 cellspacing=2 width="100%">
+																										<tr>
+																											<td width=34 align="center" valign="top">
+
+																												<img width=27 height=25 alt="ITF Tour" src="//cdn.livetvcdn.net/img/icons/tennis.gif">
+
+																											</td>
+																											<td>
+
+																												<a class="live" href="/dex/eventinfo/528791_itf_tour_santa_margherita_di_pula/">ITF Tour, Santa Margherita Di Pula</a>
+																												<br><img src="//cdn.livetvcdn.net/img/live.gif"><br>
+																												<span class="evdesc">
+																													7 Mai um 10:00
+																													<br>
+																													(ITF Tour)
+																												</span>
+
+																											</td>
+																										</tr>
+																									</table>
+
+																								</td>
+
+																								<td colspan=2 height=38 valign=top width="33%">
+
+																									<table cellpadding=1 cellspacing=2 width="100%">
+																										<tr>
+																											<td width=34 align="center" valign="top">
+
+																												<img width=27 height=25 alt="ATP Tour" src="//cdn.livetvcdn.net/img/icons/tennis.gif">
+
+																											</td>
+																											<td>
+
+																												<a class="live" href="/dex/eventinfo/527392_atp_tour_munich/">ATP Tour, M&#252;nchen</a>
+																												<br><img src="//cdn.livetvcdn.net/img/live.gif"><br>
+																												<span class="evdesc">
+																													7 Mai um 11:00
+																													<br>
+																													(ATP Tour)
+																												</span>
+
+																											</td>
+																										</tr>
+																									</table>
+
+																								</td>
+																							</tr>
+																							<tr>
+																								<td colspan=2 height=38 valign=top width="33%">
+
+																									<table cellpadding=1 cellspacing=2 width="100%">
+																										<tr>
+																											<td width=34 align="center" valign="top">
+
+																												<img width=27 height=25 alt="WTA Tour" src="//cdn.livetvcdn.net/img/icons/tennis.gif">
+
+																											</td>
+																											<td>
+
+																												<a class="live" href="/dex/eventinfo/527394_wta_tour_madrid/">WTA Tour, Madrid</a>
+																												<br><img src="//cdn.livetvcdn.net/img/live.gif"><br>
+																												<span class="evdesc">
+																													7 Mai um 11:00
+																													<br>
+																													(WTA Tour)
+																												</span>
+
+																											</td>
+																										</tr>
+																									</table>
+
+																								</td>
+
+																								<td colspan=2 height=38 valign=top width="33%">
+
+																									<table cellpadding=1 cellspacing=2 width="100%">
+																										<tr>
+																											<td width=34 align="center" valign="top">
+
+																												<img width=27 height=25 alt="ATP Tour" src="//cdn.livetvcdn.net/img/icons/tennis.gif">
+
+																											</td>
+																											<td>
+
+																												<a class="live" href="/dex/eventinfo/528759_jcabal_rfarah_jchardy_fmartin/">J.Cabal/R.Farah &ndash; J.Chardy/F.Martin</a>
+																												<br>
+																												<span class="evdesc">
+																													7 Mai um 11:10
+																													<br>
+																													(ATP Tour)
+																												</span>
+
+																											</td>
+																										</tr>
+																									</table>
+
+																								</td>
+																							</tr>
+																							<tr>
+																								<td colspan=2 height=38 valign=top width="33%">
+
+																									<table cellpadding=1 cellspacing=2 width="100%">
+																										<tr>
+																											<td width=34 align="center" valign="top">
+
+																												<img width=27 height=25 alt="WTA Tour" src="//cdn.livetvcdn.net/img/icons/tennis.gif">
+
+																											</td>
+																											<td>
+
+																												<a class="live" href="/dex/eventinfo/528763_cici_bellis_daria_gavrilova/">CiCi Bellis &ndash; Daria Gavrilova</a>
+																												<br>
+																												<span class="evdesc">
+																													7 Mai um 11:10
+																													<br>
+																													(WTA Tour)
+																												</span>
+
+																											</td>
+																										</tr>
+																									</table>
+
+																								</td>
+
+																								<td colspan=2 height=38 valign=top width="33%">
+
+																									<table cellpadding=1 cellspacing=2 width="100%">
+																										<tr>
+																											<td width=34 align="center" valign="top">
+
+																												<img width=27 height=25 alt="WTA Tour" src="//cdn.livetvcdn.net/img/icons/tennis.gif">
+
+																											</td>
+																											<td>
+
+																												<a class="live" href="/dex/eventinfo/528764_lauren_davis_monica_puig/">Lauren Davis &ndash; Monica Puig</a>
+																												<br>
+																												<span class="evdesc">
+																													7 Mai um 11:10
+																													<br>
+																													(WTA Tour)
+																												</span>
+
+																											</td>
+																										</tr>
+																									</table>
+
+																								</td>
+																							</tr>
+																							<tr>
+																								<td colspan=2 height=38 valign=top width="33%">
+
+																									<table cellpadding=1 cellspacing=2 width="100%">
+																										<tr>
+																											<td width=34 align="center" valign="top">
+
+																												<img width=27 height=25 alt="WTA Tour" src="//cdn.livetvcdn.net/img/icons/tennis.gif">
+
+																											</td>
+																											<td>
+
+																												<a class="live" href="/dex/eventinfo/528765_angelique_kerber_timea_babos/">Angelique Kerber &ndash; Timea Babos</a>
+																												<br>
+																												<span class="evdesc">
+																													7 Mai um 11:10
+																													<br>
+																													(WTA Tour)
+																												</span>
+
+																											</td>
+																										</tr>
+																									</table>
+
+																								</td>
+
+																								<td colspan=2 height=38 valign=top width="33%">
+
+																									<table cellpadding=1 cellspacing=2 width="100%">
+																										<tr>
+																											<td width=34 align="center" valign="top">
+
+																												<img width=27 height=25 alt="WTA Tour" src="//cdn.livetvcdn.net/img/icons/tennis.gif">
+
+																											</td>
+																											<td>
+
+																												<a class="live" href="/dex/eventinfo/528766_ana_konjuh_kristina_mladenovic/">Ana Konjuh &ndash; Kristina Mladenovic</a>
+																												<br>
+																												<span class="evdesc">
+																													7 Mai um 11:10
+																													<br>
+																													(WTA Tour)
+																												</span>
+
+																											</td>
+																										</tr>
+																									</table>
+
+																								</td>
+																							</tr>
+																							<tr>
+																								<td colspan=2 height=38 valign=top width="33%">
+
+																									<table cellpadding=1 cellspacing=2 width="100%">
+																										<tr>
+																											<td width=34 align="center" valign="top">
+
+																												<img width=27 height=25 alt="ATP Tour" src="//cdn.livetvcdn.net/img/icons/tennis.gif">
+
+																											</td>
+																											<td>
+
+																												<a class="live" href="/dex/eventinfo/527393_atp_tour_madrid/">ATP Tour, Madrid</a>
+																												<br>
+																												<span class="evdesc">
+																													7 Mai um 12:30
+																													<br>
+																													(ATP Tour)
+																												</span>
+
+																											</td>
+																										</tr>
+																									</table>
+
+																								</td>
+
+																								<td colspan=2 height=38 valign=top width="33%">
+
+																									<table cellpadding=1 cellspacing=2 width="100%">
+																										<tr>
+																											<td width=34 align="center" valign="top">
+
+																												<img width=27 height=25 alt="WTA Tour" src="//cdn.livetvcdn.net/img/icons/tennis.gif">
+
+																											</td>
+																											<td>
+
+																												<a class="live" href="/dex/eventinfo/528767_maria_sharapova_mirjana_lucic_baroni/">Maria Sharapova &ndash; Mirjana Lucic-Baroni</a>
+																												<br>
+																												<span class="evdesc">
+																													7 Mai um 12:30
+																													<br>
+																													(WTA Tour)
+																												</span>
+
+																											</td>
+																										</tr>
+																									</table>
+
+																								</td>
+																							</tr>
+																							<tr>
+																								<td colspan=2 height=38 valign=top width="33%">
+
+																									<table cellpadding=1 cellspacing=2 width="100%">
+																										<tr>
+																											<td width=34 align="center" valign="top">
+
+																												<img width=27 height=25 alt="WTA Tour" src="//cdn.livetvcdn.net/img/icons/tennis.gif">
+
+																											</td>
+																											<td>
+
+																												<a class="live" href="/dex/eventinfo/528768_yaroslava_shvedova_svetlana_kuznetsova/">Yaroslava Shvedova &ndash; Svetlana Kuznetsova</a>
+																												<br>
+																												<span class="evdesc">
+																													7 Mai um 12:30
+																													<br>
+																													(WTA Tour)
+																												</span>
+
+																											</td>
+																										</tr>
+																									</table>
+
+																								</td>
+
+																								<td colspan=2 height=38 valign=top width="33%">
+
+																									<table cellpadding=1 cellspacing=2 width="100%">
+																										<tr>
+																											<td width=34 align="center" valign="top">
+
+																												<img width=27 height=25 alt="ATP Tour" src="//cdn.livetvcdn.net/img/icons/tennis.gif">
+
+																											</td>
+																											<td>
+
+																												<a class="live" href="/dex/eventinfo/528785_joao_sousa_fabio_fognini/">Joao Sousa &ndash; Fabio Fognini</a>
+																												<br>
+																												<span class="evdesc">
+																													7 Mai um 12:30
+																													<br>
+																													(ATP Tour)
+																												</span>
+
+																											</td>
+																										</tr>
+																									</table>
+
+																								</td>
+																							</tr>
+																							<tr>
+																								<td colspan=2 height=38 valign=top width="33%">
+
+																									<table cellpadding=1 cellspacing=2 width="100%">
+																										<tr>
+																											<td width=34 align="center" valign="top">
+
+																												<img width=27 height=25 alt="ATP Tour" src="//cdn.livetvcdn.net/img/icons/tennis.gif">
+
+																											</td>
+																											<td>
+
+																												<a class="live" href="/dex/eventinfo/527396_atp_tour_istanbul/">ATP Tour, Istanbul</a>
+																												<br>
+																												<span class="evdesc">
+																													7 Mai um 13:00
+																													<br>
+																													(ATP Tour)
+																												</span>
+
+																											</td>
+																										</tr>
+																									</table>
+
+																								</td>
+
+																								<td colspan=2 height=38 valign=top width="33%">
+
+																									<table cellpadding=1 cellspacing=2 width="100%">
+																										<tr>
+																											<td width=34 align="center" valign="top">
+
+																												<img width=27 height=25 alt="ATP Tour" src="//cdn.livetvcdn.net/img/icons/tennis.gif">
+
+																											</td>
+																											<td>
+
+																												<a class="live" href="/dex/eventinfo/528758_guido_pella_alexander_zverev/">Guido Pella &ndash; Alexander Zverev</a>
+																												<br>
+																												<span class="evdesc">
+																													7 Mai um 13:30
+																													<br>
+																													(ATP Tour)
+																												</span>
+
+																											</td>
+																										</tr>
+																									</table>
+
+																								</td>
+																							</tr>
+																							<tr>
+																								<td colspan=2 height=38 valign=top width="33%">
+
+																									<table cellpadding=1 cellspacing=2 width="100%">
+																										<tr>
+																											<td width=34 align="center" valign="top">
+
+																												<img width=27 height=25 alt="ATP Tour" src="//cdn.livetvcdn.net/img/icons/tennis.gif">
+
+																											</td>
+																											<td>
+
+																												<a class="live" href="/dex/eventinfo/528760_rharrison_mvenus_dmarrero_trobredo/">R.Harrison/M.Venus &ndash; D.Marrero/T.Robredo</a>
+																												<br>
+																												<span class="evdesc">
+																													7 Mai um 14:00
+																													<br>
+																													(ATP Tour)
+																												</span>
+
+																											</td>
+																										</tr>
+																									</table>
+
+																								</td>
+
+																								<td colspan=2 height=38 valign=top width="33%">
+
+																									<table cellpadding=1 cellspacing=2 width="100%">
+																										<tr>
+																											<td width=34 align="center" valign="top">
+
+																												<img width=27 height=25 alt="WTA Tour" src="//cdn.livetvcdn.net/img/icons/tennis.gif">
+
+																											</td>
+																											<td>
+
+																												<a class="live" href="/dex/eventinfo/528769_monica_niculescu_caroline_wozniacki/">Monica Niculescu &ndash; Caroline Wozniacki</a>
+																												<br>
+																												<span class="evdesc">
+																													7 Mai um 14:00
+																													<br>
+																													(WTA Tour)
+																												</span>
+
+																											</td>
+																										</tr>
+																									</table>
+
+																								</td>
+																							</tr>
+																							<tr>
+																								<td colspan=2 height=38 valign=top width="33%">
+
+																									<table cellpadding=1 cellspacing=2 width="100%">
+																										<tr>
+																											<td width=34 align="center" valign="top">
+
+																												<img width=27 height=25 alt="WTA Tour" src="//cdn.livetvcdn.net/img/icons/tennis.gif">
+
+																											</td>
+																											<td>
+
+																												<a class="live" href="/dex/eventinfo/528770_samantha_stosur_sara_sorribes_tormo/">Samantha Stosur &ndash; Sara Sorribes Tormo</a>
+																												<br>
+																												<span class="evdesc">
+																													7 Mai um 14:00
+																													<br>
+																													(WTA Tour)
+																												</span>
+
+																											</td>
+																										</tr>
+																									</table>
+
+																								</td>
+
+																								<td colspan=2 height=38 valign=top width="33%">
+
+																									<table cellpadding=1 cellspacing=2 width="100%">
+																										<tr>
+																											<td width=34 align="center" valign="top">
+
+																												<img width=27 height=25 alt="ATP Tour" src="//cdn.livetvcdn.net/img/icons/tennis.gif">
+
+																											</td>
+																											<td>
+
+																												<a class="live" href="/dex/eventinfo/527397_atp_tour_estoril/">ATP Tour, Estoril</a>
+																												<br>
+																												<span class="evdesc">
+																													7 Mai um 14:30
+																													<br>
+																													(ATP Tour)
+																												</span>
+
+																											</td>
+																										</tr>
+																									</table>
+
+																								</td>
+																							</tr>
+																							<tr>
+																								<td colspan=2 height=38 valign=top width="33%">
+
+																									<table cellpadding=1 cellspacing=2 width="100%">
+																										<tr>
+																											<td width=34 align="center" valign="top">
+
+																												<img width=27 height=25 alt="ATP Tour" src="//cdn.livetvcdn.net/img/icons/tennis.gif">
+
+																											</td>
+																											<td>
+
+																												<a class="live" href="/dex/eventinfo/528786_karen_khachanov_david_goffin/">Karen Khachanov &ndash; David Goffin</a>
+																												<br>
+																												<span class="evdesc">
+																													7 Mai um 14:30
+																													<br>
+																													(ATP Tour)
+																												</span>
+
+																											</td>
+																										</tr>
+																									</table>
+
+																								</td>
+
+																								<td colspan=2 height=38 valign=top width="33%">
+
+																									<table cellpadding=1 cellspacing=2 width="100%">
+																										<tr>
+																											<td width=34 align="center" valign="top">
+
+																												<img width=27 height=25 alt="WTA Tour" src="//cdn.livetvcdn.net/img/icons/tennis.gif">
+
+																											</td>
+																											<td>
+
+																												<a class="live" href="/dex/eventinfo/528771_anastasia_pavlyuchenkova_sorana_cirstea/">Anastasia Pavlyuchenkova &ndash; Sorana Cirstea</a>
+																												<br>
+																												<span class="evdesc">
+																													7 Mai um 15:30
+																													<br>
+																													(WTA Tour)
+																												</span>
+
+																											</td>
+																										</tr>
+																									</table>
+
+																								</td>
+																							</tr>
+																							<tr>
+																								<td colspan=2 height=38 valign=top width="33%">
+
+																									<table cellpadding=1 cellspacing=2 width="100%">
+																										<tr>
+																											<td width=34 align="center" valign="top">
+
+																												<img width=27 height=25 alt="WTA Tour" src="//cdn.livetvcdn.net/img/icons/tennis.gif">
+
+																											</td>
+																											<td>
+
+																												<a class="live" href="/dex/eventinfo/528772_barbora_strycova_lucie_safarova/">Barbora Strycova &ndash; Lucie Safarova</a>
+																												<br>
+																												<span class="evdesc">
+																													7 Mai um 15:30
+																													<br>
+																													(WTA Tour)
+																												</span>
+
+																											</td>
+																										</tr>
+																									</table>
+
+																								</td>
+
+																								<td colspan=2 height=38 valign=top width="33%">
+
+																									<table cellpadding=1 cellspacing=2 width="100%">
+																										<tr>
+																											<td width=34 align="center" valign="top">
+
+																												<img width=27 height=25 alt="WTA Tour" src="//cdn.livetvcdn.net/img/icons/tennis.gif">
+
+																											</td>
+																											<td>
+
+																												<a class="live" href="/dex/eventinfo/528773_carla_suarez_navarro_shuai_peng/">Carla Suarez Navarro &ndash; Shuai Peng</a>
+																												<br>
+																												<span class="evdesc">
+																													7 Mai um 15:30
+																													<br>
+																													(WTA Tour)
+																												</span>
+
+																											</td>
+																										</tr>
+																									</table>
+
+																								</td>
+																							</tr>
+																							<tr>
+																								<td colspan=2 height=38 valign=top width="33%">
+
+																									<table cellpadding=1 cellspacing=2 width="100%">
+																										<tr>
+																											<td width=34 align="center" valign="top">
+
+																												<img width=27 height=25 alt="WTA Tour" src="//cdn.livetvcdn.net/img/icons/tennis.gif">
+
+																											</td>
+																											<td>
+
+																												<a class="live" href="/dex/eventinfo/527398_wta_tour_madrid/">WTA Tour, Madrid</a>
+																												<br>
+																												<span class="evdesc">
+																													7 Mai um 16:00
+																													<br>
+																													(WTA Tour)
+																												</span>
+
+																											</td>
+																										</tr>
+																									</table>
+
+																								</td>
+
+																								<td colspan=2 height=38 valign=top width="33%">
+
+																									<table cellpadding=1 cellspacing=2 width="100%">
+																										<tr>
+																											<td width=34 align="center" valign="top">
+
+																												<img width=27 height=25 alt="WTA Tour" src="//cdn.livetvcdn.net/img/icons/tennis.gif">
+
+																											</td>
+																											<td>
+
+																												<a class="live" href="/dex/eventinfo/528774_kristyna_pliskova_simona_halep/">Kristyna Pliskova &ndash; Simona Halep</a>
+																												<br>
+																												<span class="evdesc">
+																													7 Mai um 16:00
+																													<br>
+																													(WTA Tour)
+																												</span>
+
+																											</td>
+																										</tr>
+																									</table>
+
+																								</td>
+																							</tr>
+																							<tr>
+																								<td colspan=2 height=38 valign=top width="33%">
+
+																									<table cellpadding=1 cellspacing=2 width="100%">
+																										<tr>
+																											<td width=34 align="center" valign="top">
+
+																												<img width=27 height=25 alt="ATP Tour" src="//cdn.livetvcdn.net/img/icons/tennis.gif">
+
+																											</td>
+																											<td>
+
+																												<a class="live" href="/dex/eventinfo/528787_milos_raonic_marin_cilic/">Milos Raonic &ndash; Marin Cilic</a>
+																												<br>
+																												<span class="evdesc">
+																													7 Mai um 16:00
+																													<br>
+																													(ATP Tour)
+																												</span>
+
+																											</td>
+																										</tr>
+																									</table>
+
+																								</td>
+
+																								<td colspan=2 height=38 valign=top width="33%">
+
+																									<table cellpadding=1 cellspacing=2 width="100%">
+																										<tr>
+																											<td width=34 align="center" valign="top">
+
+																												<img width=27 height=25 alt="ATP Tour" src="//cdn.livetvcdn.net/img/icons/tennis.gif">
+
+																											</td>
+																											<td>
+
+																												<a class="live" href="/dex/eventinfo/528788_pablo_carreno_busta_gilles_muller/">Pablo Carreno-Busta &ndash; Gilles Muller</a>
+																												<br>
+																												<span class="evdesc">
+																													7 Mai um 16:00
+																													<br>
+																													(ATP Tour)
+																												</span>
+
+																											</td>
+																										</tr>
+																									</table>
+
+																								</td>
+																							</tr>
+																							<tr>
+																								<td colspan=2 height=38 valign=top width="33%">
+
+																									<table cellpadding=1 cellspacing=2 width="100%">
+																										<tr>
+																											<td width=34 align="center" valign="top">
+
+																												<img width=27 height=25 alt="ITF Tour" src="//cdn.livetvcdn.net/img/icons/tennis.gif">
+
+																											</td>
+																											<td>
+
+																												<a class="live" href="/dex/eventinfo/528792_itf_tour_charleston/">ITF Tour, Charleston<br>Frauen</a>
+																												<br>
+																												<span class="evdesc">
+																													7 Mai um 16:00
+																													<br>
+																													(ITF Tour)
+																												</span>
+
+																											</td>
+																										</tr>
+																									</table>
+
+																								</td>
+
+																								<td colspan=2 height=38 valign=top width="33%">
+
+																									<table cellpadding=1 cellspacing=2 width="100%">
+																										<tr>
+																											<td width=34 align="center" valign="top">
+
+																												<img width=27 height=25 alt="ATP Tour" src="//cdn.livetvcdn.net/img/icons/tennis.gif">
+
+																											</td>
+																											<td>
+
+																												<a class="live" href="/dex/eventinfo/527399_atp_tour_madrid/">ATP Tour, Madrid</a>
+																												<br>
+																												<span class="evdesc">
+																													7 Mai um 16:30
+																													<br>
+																													(ATP Tour)
+																												</span>
+
+																											</td>
+																										</tr>
+																									</table>
+
+																								</td>
+																							</tr>
+																							<tr>
+																								<td colspan=2 height=38 valign=top width="33%">
+
+																									<table cellpadding=1 cellspacing=2 width="100%">
+																										<tr>
+																											<td width=34 align="center" valign="top">
+
+																												<img width=27 height=25 alt="WTA Tour" src="//cdn.livetvcdn.net/img/icons/tennis.gif">
+
+																											</td>
+																											<td>
+
+																												<a class="live" href="/dex/eventinfo/528775_dominika_cibulkova_jelena_jankovic/">Dominika Cibulkova &ndash; Jelena Jankovic</a>
+																												<br>
+																												<span class="evdesc">
+																													7 Mai um 17:00
+																													<br>
+																													(WTA Tour)
+																												</span>
+
+																											</td>
+																										</tr>
+																									</table>
+
+																								</td>
+
+																								<td colspan=2 height=38 valign=top width="33%">
+
+																									<table cellpadding=1 cellspacing=2 width="100%">
+																										<tr>
+																											<td width=34 align="center" valign="top">
+
+																												<img width=27 height=25 alt="WTA Tour" src="//cdn.livetvcdn.net/img/icons/tennis.gif">
+
+																											</td>
+																											<td>
+
+																												<a class="live" href="/dex/eventinfo/528776_garbine_muguruza_timea_bacsinszky/">Garbine Muguruza &ndash; Timea Bacsinszky</a>
+																												<br>
+																												<span class="evdesc">
+																													7 Mai um 17:30
+																													<br>
+																													(WTA Tour)
+																												</span>
+
+																											</td>
+																										</tr>
+																									</table>
+
+																								</td>
+																							</tr>
+																							<tr>
+																								<td colspan=2 height=38 valign=top width="33%">
+
+																									<table cellpadding=1 cellspacing=2 width="100%">
+																										<tr>
+																											<td width=34 align="center" valign="top">
+
+																												<img width=27 height=25 alt="ATP Challenger Tour" src="//cdn.livetvcdn.net/img/icons/tennis.gif">
+
+																											</td>
+																											<td>
+
+																												<a class="live" href="/dex/eventinfo/527400_atp_challenger_savannah/">ATP Challenger, Savannah</a>
+																												<br>
+																												<span class="evdesc">
+																													7 Mai um 18:00
+																													<br>
+																													(ATP Challenger Tour)
+																												</span>
+
+																											</td>
+																										</tr>
+																									</table>
+
+																								</td>
+
+																								<td colspan=2 height=38 valign=top width="33%">
+
+																									<table cellpadding=1 cellspacing=2 width="100%">
+																										<tr>
+																											<td width=34 align="center" valign="top">
+
+																												<img width=27 height=25 alt="ATP Challenger Tour" src="//cdn.livetvcdn.net/img/icons/tennis.gif">
+
+																											</td>
+																											<td>
+
+																												<a class="live" href="/dex/eventinfo/528789_joao_pedro_sorgi_tennys_sandgren/">Joao Pedro Sorgi &ndash; Tennys Sandgren</a>
+																												<br>
+																												<span class="evdesc">
+																													7 Mai um 21:00
+																													<br>
+																													(ATP Challenger Tour)
+																												</span>
+
+																											</td>
+																										</tr>
+																									</table>
+
+																								</td>
+																							</tr>
+																				</tr>
+																				<tr><td colspan=4 height=48><br><b>8 Mai, Montag</b><hr></td></tr>
+																				<tr>
+																					<td colspan=2 height=38 valign=top width="33%">
+
+																						<table cellpadding=1 cellspacing=2 width="100%">
+																							<tr>
+																								<td width=34 align="center" valign="top">
+
+																									<img width=27 height=25 alt="ITF Tour" src="//cdn.livetvcdn.net/img/icons/tennis.gif">
+
+																								</td>
+																								<td>
+
+																									<a class="live" href="/dex/eventinfo/528426_itf_tour_fukuoka/">ITF Tour, Fukuoka</a>
+																									<br>
+																									<span class="evdesc">
+																										8 Mai um 3:00
+																										<br>
+																										(ITF Tour)
+																									</span>
+
+																								</td>
+																							</tr>
+																						</table>
+
+																					</td>
+
+																					<td colspan=2 height=38 valign=top width="33%">
+
+																						<table cellpadding=1 cellspacing=2 width="100%">
+																							<tr>
+																								<td width=34 align="center" valign="top">
+
+																									<img width=27 height=25 alt="ITF Tour" src="//cdn.livetvcdn.net/img/icons/tennis.gif">
+
+																								</td>
+																								<td>
+
+																									<a class="live" href="/dex/eventinfo/528427_itf_tour_hua_hun/">ITF Tour, Hua Hun</a>
+																									<br>
+																									<span class="evdesc">
+																										8 Mai um 5:00
+																										<br>
+																										(ITF Tour)
+																									</span>
+
+																								</td>
+																							</tr>
+																						</table>
+
+																					</td>
+																				</tr>
+																				<tr>
+																					<td colspan=2 height=38 valign=top width="33%">
+
+																						<table cellpadding=1 cellspacing=2 width="100%">
+																							<tr>
+																								<td width=34 align="center" valign="top">
+
+																									<img width=27 height=25 alt="ITF Tour" src="//cdn.livetvcdn.net/img/icons/tennis.gif">
+
+																								</td>
+																								<td>
+
+																									<a class="live" href="/dex/eventinfo/528428_itf_tour_cagnes_sur_mer/">ITF Tour, Cagnes Sur Mer</a>
+																									<br>
+																									<span class="evdesc">
+																										8 Mai um 10:00
+																										<br>
+																										(ITF Tour)
+																									</span>
+
+																								</td>
+																							</tr>
+																						</table>
+
+																					</td>
+
+																					<td colspan=2 height=38 valign=top width="33%">
+
+																						<table cellpadding=1 cellspacing=2 width="100%">
+																							<tr>
+																								<td width=34 align="center" valign="top">
+
+																									<img width=27 height=25 alt="ATP Challenger Tour" src="//cdn.livetvcdn.net/img/icons/tennis.gif">
+
+																								</td>
+																								<td>
+
+																									<a class="live" href="/dex/eventinfo/528425_atp_challenger_aix_en_provence/">ATP Challenger, ATP ×åëëåíäæåð, Åêñ-àí-Ïðîâàíñ</a>
+																									<br>
+																									<span class="evdesc">
+																										8 Mai um 10:30
+																										<br>
+																										(ATP Challenger Tour)
+																									</span>
+
+																								</td>
+																							</tr>
+																						</table>
+
+																					</td>
+																				</tr>
+																				<tr>
+																					<td colspan=2 height=38 valign=top width="33%">
+
+																						<table cellpadding=1 cellspacing=2 width="100%">
+																							<tr>
+																								<td width=34 align="center" valign="top">
+
+																									<img width=27 height=25 alt="ATP Tour" src="//cdn.livetvcdn.net/img/icons/tennis.gif">
+
+																								</td>
+																								<td>
+
+																									<a class="live" href="/dex/eventinfo/527401_atp_tour_madrid/">ATP Tour, Madrid</a>
+																									<br>
+																									<span class="evdesc">
+																										8 Mai um 12:00
+																										<br>
+																										(ATP Tour)
+																									</span>
+
+																								</td>
+																							</tr>
+																						</table>
+
+																					</td>
+
+																					<td colspan=2 height=38 valign=top width="33%">
+
+																						<table cellpadding=1 cellspacing=2 width="100%">
+																							<tr>
+																								<td width=34 align="center" valign="top">
+
+																									<img width=27 height=25 alt="ATP Tour" src="//cdn.livetvcdn.net/img/icons/tennis.gif">
+
+																								</td>
+																								<td>
+
+																									<a class="live" href="/dex/eventinfo/527402_atp_tour_madrid/">ATP Tour, Madrid</a>
+																									<br>
+																									<span class="evdesc">
+																										8 Mai um 12:00
+																										<br>
+																										(ATP Tour)
+																									</span>
+
+																								</td>
+																							</tr>
+																						</table>
+
+																					</td>
+																				</tr>
+																				<tr>
+																					<td colspan=2 height=38 valign=top width="33%">
+
+																						<table cellpadding=1 cellspacing=2 width="100%">
+																							<tr>
+																								<td width=34 align="center" valign="top">
+
+																									<img width=27 height=25 alt="WTA Tour" src="//cdn.livetvcdn.net/img/icons/tennis.gif">
+
+																								</td>
+																								<td>
+
+																									<a class="live" href="/dex/eventinfo/527403_wta_tour_madrid/">WTA Tour, Madrid</a>
+																									<br>
+																									<span class="evdesc">
+																										8 Mai um 12:00
+																										<br>
+																										(WTA Tour)
+																									</span>
+
+																								</td>
+																							</tr>
+																						</table>
+
+																					</td>
+																			</table>
+																		</td>
+																	</tr>
+																</table>
+
+																<br><br>
+
+																<table width="100%" cellpadding=0 cellspacing=0>
+																	<tr>
+																		<td>
+
+																			<a href="/dex/archive/">Archiv der Übertragungen <img src="//cdn.livetvcdn.net/img/s_b.gif"></a>
+
+																		</td>
+																		<td align="right">
+
+																			<a href=//cdn.livetvcdn.net/rss/upcoming_de.xml><img src="//cdn.livetvcdn.net/img/rss20.gif"></a>
+
+																		</td>
+																	</tr>
+																</table>
+
+															</td>
+														</tr>
+													</table>
+
+
+													<br>
+
+												</td>
+											</tr>
+										</table>
+
+									</td>
+								</tr>
+							</table>
+
+						</td>
+					</tr>
+				</table>
+
+
+			</td>
+		</tr>
+	</table>
+
+	<br>
+
+	</td>
+	</tr>
+	<tr>
+		<td>
+
+			<table width="100%" cellpadding=0 cellspacing=4 style="margin-bottom: 5px;">
+				<tr>
+					<td>
+
+						<table width="100%" bgcolor="#737373" cellpadding=0 cellspacing=1>
+							<tr>
+								<td bgcolor="#ffffff" valign="top" width=270>
+
+									<table width="100%" cellpadding=4 cellspacing=1>
+										<tr>
+											<td bgcolor="#2862a8">
+												<span class="whitetitle">WETTEN</span>
+											</td>
+										</tr>
+										<tr>
+											<td>
+
+												<table width="100%" height=98>
+
+													<tr>
+														<td width=24 height=24 valign="top" bgcolor="#c3c3c3" background="//cdn.livetvcdn.net/img/avatarsmall.gif"><img alt="daver" border=1 class="avatarsmall" width=22 src="//cdn.livetvcdn.net/img/noavatar.gif"></td>
+														<td>
+
+															<a href="/dex/userinfo/710697/">daver</a>
+
+														</td>
+														<td>
+
+															23 Punkte <font color="#929292">(69%)</font>
+
+														</td>
+													</tr>
+
+													<tr>
+														<td width=24 height=24 valign="top" bgcolor="#c3c3c3" background="//cdn.livetvcdn.net/img/avatarsmall.gif"><img alt="Âàðâàð7" border=1 class="avatarsmall" width=22 src="//cdn.livetvcdn.net/img/avatars/1523205.jpg?nocache=16788"></td>
+														<td>
+
+															<a href="/dex/userinfo/1523205/">Varvar7</a>
+
+														</td>
+														<td>
+
+															23 Punkte <font color="#929292">(69%)</font>
+
+														</td>
+													</tr>
+
+													<tr>
+														<td width=24 height=24 valign="top" bgcolor="#c3c3c3" background="//cdn.livetvcdn.net/img/avatarsmall.gif"><img alt="LORDLEXXSpbRUS" border=1 class="avatarsmall" width=22 src="//cdn.livetvcdn.net/img/avatars/23998.jpg?nocache=21087"></td>
+														<td>
+
+															<a href="/dex/userinfo/23998/">LORDLEXXSpbRUS</a>
+
+														</td>
+														<td>
+
+															22.5 Punkte <font color="#929292">(69%)</font>
+
+														</td>
+													</tr>
+													<tr>
+														<td>
+															&nbsp;
+														</td>
+														<td colspan=2 align="right">
+
+															<a class="small" href="/dex/betsrating/">Rating anzeigen <img alt="Rating anzeigen" src="//cdn.livetvcdn.net/img/s_b.gif"></a>
+
+															&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+															<a class="small" href="/dex/allbetable/">Wette abschließen <img alt="Wette abschließen" src="//cdn.livetvcdn.net/img/s_b.gif"></a>
+
+															&nbsp;&nbsp;&nbsp;
+
+														</td>
+													</tr>
+												</table>
+
+
+											</td>
+										</tr>
+									</table>
+
+								</td>
+								<td bgcolor="#ffffff" valign="top">
+
+									<table width="100%" cellpadding=4 cellspacing=1>
+										<tr>
+											<td bgcolor="#2862a8">
+												<span class="whitetitle">LETZTE FORENBEITRÄGE</span>
+											</td>
+										</tr>
+										<tr>
+											<td>
+
+												<table>
+
+													<tr>
+														<td width=15 valign=top>
+
+															<img src="//cdn.livetvcdn.net/img/f.gif">
+
+														</td>
+														<td>
+
+															<a href="/dex/forum/showthread/306/0/#post5663">Das Spiel mit der Filzkugel, also TENNIS ist hier das Hauptthema !</a><br>
+															<span class="date">Letzer Beitrag 1 Stunden her</span>
+
+														</td>
+													</tr>
+
+													<tr>
+														<td width=15 valign=top>
+
+															<img src="//cdn.livetvcdn.net/img/f.gif">
+
+														</td>
+														<td>
+
+															<a href="/dex/forum/showthread/285/3/#post5662">Paul Arschdai live im Forum mit Fäns</a><br>
+															<span class="date">Letzer Beitrag 1 Stunden her</span>
+
+														</td>
+													</tr>
+
+													<tr>
+														<td width=15 valign=top>
+
+															<img src="//cdn.livetvcdn.net/img/f.gif">
+
+														</td>
+														<td>
+
+															<a href="/dex/forum/showthread/305/3/#post5660">Opfer des Monats April</a><br>
+															<span class="date">Letzer Beitrag 1 Stunden her</span>
+
+														</td>
+													</tr>
+												</table>
+
+											</td>
+										</tr>
+									</table>
+
+								</td>
+								<td bgcolor="#ffffff" valign="top">
+
+									<table width="100%" cellpadding=4 cellspacing=1>
+										<tr>
+											<td bgcolor="#2862a8">
+												<span class="whitetitle">ANZEIGEN AUF LiveTV</span>
+											</td>
+										</tr>
+										<tr>
+											<td align="center">
+
+												<br>
+
+
+											</td>
+										</tr>
+									</table>
+
+								</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+			</table>
+
+		</td>
+	</tr>
+	<tr>
+		<td height=25>
+
+			<table width="100%" height=25 cellpadding=0 cellspacing=0>
+				<td>
+				<td width=107 background="//cdn.livetvcdn.net/img/b.gif">
+
+					&nbsp;
+
+				</td>
+				<td background="//cdn.livetvcdn.net/img/b2.gif">
+
+					<table width="99%" align="center">
+						<tr>
+							<td>
+
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+								<a class="bottom" href="/dex/license/">Nutzungsbedingungen</a>
+
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+								<!--<a class="bottom" href="http://livetv-media.com/dex/">Internet TV und Radio</a> -->
+
+
+
+
+
+
+								<a class="bottom" href="/dex/webmasterinfo/">Informer für Ihre Website</a>
+
+
+							</td>
+							<td align=right>
+
+								<a class="bottom" href="#top">Zum Seitenanfang</a>
+
+								&nbsp;&nbsp;
+
+							</td>
+						</tr>
+					</table>
+
+				</td>
+	</tr>
+	</table>
+
+	</td>
+	</tr>
+	<tr>
+		<td bgcolor="#ffffff" height=70>
+
+			<noindex>
+
+				<table cellpadding=0 cellspacing=0 WIDTH="100%" height=74 bgcolor="#ffffff">
+					<tr>
+						<td width=17>
+							&nbsp;
+
+						</td>
+						<td>
+
+
+							<div class="cart">
+								<a href="#" OnClick="$('#bugoverlay').fadeIn(); $.post('/ajax/bug.php', { url: document.URL, lng: 'de' }, function(data){ $('#bug').html(data).show(); }); return false;" class="bottomgray"><b>Einen Fehler gefunden?</b><br>Lassen Sie uns den Fehler beheben!</a>
+							</div>
+							<div id="bug"></div>
+
+						</td>
+						<td></td>
+						<td align=right>
+
+							<span class="bottomgray">
+								© 2006-2017 <b>LiveTV</b>. Alle Rechte vorbehalten. <br>Alle Vereinsnamen, Sendernamen sowie Logos sind Eigentum der jeweiligen Inhaber.
+							</span>
+
+						</td>
+						<td align="centet" width=204>
+
+							&nbsp;
+
+							<noindex>
+
+
+								<!-- Rating@Mail.ru counter -->
+								<script type="text/javascript">
+//<![CDATA[
+									(function (w, n, d, r, s) {
+										(new Image).src = '//d3.c3.b1.a1.top.mail.ru/counter?id=1127324;js=13' +
+											((r = d.referrer) ? ';r=' + escape(r) : '') + ((s = w.screen) ? ';s=' + s.width + '*' + s.height : '') + ';_=' + Math.random();
+									})(window, navigator, document);//]]>
+								</script><noscript>
+									<div style="position:absolute;left:-10000px;">
+										<img src="//d3.c3.b1.a1.top.mail.ru/counter?id=1127324;js=na"
+											 style="border:0;" height="1" width="1" alt="Ðåéòèíã@Mail.ru" />
+									</div>
+								</noscript>
+								<!-- //Rating@Mail.ru counter -->
+								<!-- begin of Top100 code -->
+								<img src="//counter.rambler.ru/top100.cnt?962536" width="1" height="1" border="0">
+								<a href="//top100.rambler.ru/home?id=962536"><img style="opacity: .3; filter:Gray(), Alpha(Opacity=28 Style=0);" src="//top100-images.rambler.ru/top100/w1.gif" alt="Rambler's Top100" width="88" height="31" border="0" /></a>
+								<!-- end of Top100 logo -->
+								&nbsp;
+
+								<!--LiveInternet counter-->
+								<script type="text/javascript">
+<!--
+document.write("<a href='//www.liveinternet.ru/click' "+
+"target=_blank><img style='opacity: .3; filter:Gray(), Alpha(Opacity=28 Style=0);' src='//counter.yadro.ru/hit?t16.1;r"+
+escape(document.referrer)+((typeof(screen)=="undefined")?"":
+";s"+screen.width+"*"+screen.height+"*"+(screen.colorDepth?
+screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
+";"+Math.random()+
+"' alt='' title='LiveInternet: ïîêàçàíî ÷èñëî ïðîñìîòðîâ çà 24"+
+" ÷àñà, ïîñåòèòåëåé çà 24 ÷àñà è çà ñåãîäíÿ' "+
+"border=0 width=88 height=31><\/a>")//--></script><!--/LiveInternet-->
+
+							</noindex>
+						</td>
+					</tr>
+				</table>
+
+			</noindex>
+
+			<img src="//cdn.livetvcdn.net/img/980.gif" width=980 height=1>
+
+		</td>
+	</tr>
+	</table>
+
+
+	</td>
+	<td style="display: block;"></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+</body>
+<!-- Google Analytics -->
+
+
+<script type="text/javascript">
+	var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+	document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+	var pageTracker = _gat._getTracker("UA-321536-3");
+	pageTracker._initData();
+	pageTracker._trackPageview();
+</script>
+
+
+<!-- Google Analytics -->
+
+</html>

@@ -1,0 +1,39 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2010
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TennisExplorer.Android", "TennisExplorer\TennisExplorer.Android\TennisExplorer.Android.csproj", "{059A0789-182D-415B-AB2E-41F6BFBB0275}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TennisExplorer", "TennisExplorer\TennisExplorer\TennisExplorer.csproj", "{C50D399D-2F4A-4087-9232-8CEF59D75FAF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TennisExplorer.Test", "TennisExplorer.Test\TennisExplorer.Test.csproj", "{EE36A7ED-2D74-4ACC-82F2-F26D42F45224}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{059A0789-182D-415B-AB2E-41F6BFBB0275}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{059A0789-182D-415B-AB2E-41F6BFBB0275}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{059A0789-182D-415B-AB2E-41F6BFBB0275}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{059A0789-182D-415B-AB2E-41F6BFBB0275}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{059A0789-182D-415B-AB2E-41F6BFBB0275}.Release|Any CPU.Build.0 = Release|Any CPU
+		{059A0789-182D-415B-AB2E-41F6BFBB0275}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{C50D399D-2F4A-4087-9232-8CEF59D75FAF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C50D399D-2F4A-4087-9232-8CEF59D75FAF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C50D399D-2F4A-4087-9232-8CEF59D75FAF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C50D399D-2F4A-4087-9232-8CEF59D75FAF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EE36A7ED-2D74-4ACC-82F2-F26D42F45224}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE36A7ED-2D74-4ACC-82F2-F26D42F45224}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EE36A7ED-2D74-4ACC-82F2-F26D42F45224}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EE36A7ED-2D74-4ACC-82F2-F26D42F45224}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B41E33C0-5635-4322-A6AD-91BC8861A397}
+	EndGlobalSection
+EndGlobal
