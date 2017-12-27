@@ -14,6 +14,7 @@
 
     <ContentPage.Content>
         <StackLayout>
+            <ActivityIndicator IsRunning="{Binding IsBusy}" IsVisible="{Binding IsBusy}" />
             <ListView ItemsSource="{Binding Matches}" SeparatorVisibility="Default" SeparatorColor="Black" HasUnevenRows="True">
                 <ListView.ItemTemplate>
                     <DataTemplate>
