@@ -2,18 +2,23 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="TennisExplorer.Pages.MenuPage"
-             Title="Menu Page Title"
-             BackgroundColor="#81c784"
+             Title="Navigation"
              xmlns:behaviors="clr-namespace:Xam.Behaviors;assembly=Xam.Behaviors"
-             x:Name="MenuPage">
+             xmlns:custom="clr-namespace:TennisExplorer.CustomElements"
+             x:Name="MenuPage"
+             BackgroundColor="White"
+             Padding="0">
     <ContentPage.Content>
-        <StackLayout>
-            <ListView ItemsSource="{Binding NavigationEntries}" SelectedItem="{Binding SelectedNavigationEntry, Mode=TwoWay}">
+        <StackLayout Margin="0" Padding="0" BackgroundColor="White">
+            <ListView ItemsSource="{Binding NavigationEntries}" Margin="0,30,0,0"
+                SelectedItem="{Binding SelectedNavigationEntry, Mode=TwoWay}">
                 <ListView.ItemTemplate>
                     <DataTemplate>
-                        <ViewCell>
-                            <Label Text="{Binding Name}" />
-                        </ViewCell>
+                        <custom:ExtendedViewCell SelectedBackgroundColor="#c8e6c9">
+                            <StackLayout Margin="20,0,0,0" VerticalOptions="Center">
+                                <Label Text="{Binding Name}" />
+                            </StackLayout>
+                        </custom:ExtendedViewCell>
                     </DataTemplate>
                 </ListView.ItemTemplate>
 

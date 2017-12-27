@@ -70,6 +70,7 @@ namespace TennisExplorer.Infrastructure
             };
 
             Master = menuPageNav;
+            Detail = new FreshNavigationContainer(NavigationEntries.First().Page);
         }
 
         public void NotifyChildrenPageWasPopped()
