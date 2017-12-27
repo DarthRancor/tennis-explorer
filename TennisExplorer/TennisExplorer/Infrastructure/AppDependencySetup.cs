@@ -1,9 +1,7 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.DependencyInjection.Extensions;
-using Neleus.DependencyInjection.Extensions;
 using System;
+using System.Collections.Concurrent;
 using System.Linq;
-using System.Reflection;
 using TennisExplorer.Entity.Repository;
 using TennisExplorer.Services;
 
@@ -13,12 +11,13 @@ namespace TennisExplorer.Infrastructure
     {
         private static IServiceProvider _provider;
         private static IServiceCollection _services;
+        private static ConcurrentDictionary<string, object> _namedRegistrations = new ConcurrentDictionary<string, object>();
 
         public static void ConfigureDependencies(IServiceCollection services)
         {
             services.AddSingleton<TennisMatchRetriever>();
             RegisterServiceIfNotPresent<IHtmlDownloader, HtmlDownloader>(services);
-            
+
             services.AddScoped<ITennisMatchService, TennisMatchService>();
             services.AddScoped<FavoriteService>();
             services.AddScoped<FavoriteRepository>();
@@ -47,27 +46,17 @@ namespace TennisExplorer.Infrastructure
             return _provider.GetService(type);
         }
 
-        public static object Resolve(string name)
+        public static TService Resolve<TService>(string name)
         {
-            var names = _services.Select(d => d.ServiceType.Name).ToList();
-            var test = names.Where(n => n.Contains(name)).ToList();
-            var navigation = names.Where(n => n.Contains(FreshMvvm.Constants.DefaultNavigationServiceName)).ToList();
-            return _services.Where(d => d.ServiceType.Name == name).FirstOrDefault();
+            var service = _namedRegistrations[name];
+            return (TService) service;
         }
 
         public static void Register(object instance, string name)
         {
-            // _services.AddByName<IService>()
-            MethodInfo addByNameMethod = _services.GetType().GetMethod("AddByName");
-            MethodInfo addByNameGenericMethod = addByNameMethod.MakeGenericMethod(instance.GetType());
-            var servicesByNameBuilder = addByNameGenericMethod.Invoke(_services, null);
+            var test = _namedRegistrations.AddOrUpdate(name, instance, (key, oldValue) => instance);
 
-            // .Add<ServiceA>("key1")
-            MethodInfo addMethod = servicesByNameBuilder.GetType().GetMethod("Add");
-            MethodInfo addMethodGenericMethod = addMethod.MakeGenericMethod(instance.GetType());
-            var addedMethod = addMethodGenericMethod.Invoke(servicesByNameBuilder, new object[] { name });
-
-            //_services.AddSingleton(instance.GetType(), instance);
+            _services.AddSingleton(instance.GetType(), instance);
             _provider = BuildServiceProvider();
         }
 

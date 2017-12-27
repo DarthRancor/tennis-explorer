@@ -14,9 +14,9 @@ namespace TennisExplorer.PageModels
             _tennisMatchService = tennisMatchService;
         }
 
-        public override void Init(object initData)
+        protected override void ViewIsAppearing(object sender, EventArgs e)
         {
-            base.Init(initData);
+            base.ViewIsAppearing(sender, e);
             Matches = new List<Models.TennisMatch>
             {
                 new Models.TennisMatch { Players = "Kerber - Hingis", Time = "13.07.2017 15:30", Tour = "ATP", IsFavorite = true},

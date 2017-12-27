@@ -10,7 +10,6 @@ namespace TennisExplorer.Infrastructure
     {
         public IRegisterOptions Register<RegisterType>(RegisterType instance) where RegisterType : class
         {
-            //AppDependencySetup.
             return null;
         }
 
@@ -32,8 +31,8 @@ namespace TennisExplorer.Infrastructure
 
         public ResolveType Resolve<ResolveType>(string name) where ResolveType : class
         {
-            var test = AppDependencySetup.Resolve(name);
-            return test as ResolveType;
+            var service = AppDependencySetup.Resolve<ResolveType>(name);
+            return service;
         }
 
         public void Unregister<RegisterType>()

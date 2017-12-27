@@ -1,6 +1,9 @@
 ﻿using FreshMvvm;
 using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
+using TennisExplorer.Models;
 using Xamarin.Forms;
 
 namespace TennisExplorer.Infrastructure
@@ -8,12 +11,7 @@ namespace TennisExplorer.Infrastructure
     public class MasterDetailNavigationContainer : MasterDetailPage, IFreshNavigationService
     {
         public string NavigationServiceName { get; private set; }
-
-        private FreshNavigationContainer _navHome;
-        private FreshNavigationContainer _navFavorites;
-
-        private Page _todaysMatchesPage;
-        private Page _favoritesPage;
+        public List<NavigationEntry> NavigationEntries { get; private set; }
 
         public MasterDetailNavigationContainer()
         {
@@ -31,13 +29,34 @@ namespace TennisExplorer.Infrastructure
 
         protected void InitializeNavigationEntries()
         {
-            _favoritesPage = FreshPageModelResolver.ResolvePageModel<PageModels.FavoritesPageModel>();
-            _navFavorites = new FreshNavigationContainer(_favoritesPage);
+            var defaultNavigationEntry = new NavigationEntry
+            {
+                PageModel = AppDependencySetup.Resolve<PageModels.TodaysMatchesPageModel>(),
+                Page = FreshPageModelResolver.ResolvePageModel<PageModels.TodaysMatchesPageModel>(),
+                Name = "Matches Today"
+            };
 
-            _todaysMatchesPage = FreshPageModelResolver.ResolvePageModel<PageModels.TodaysMatchesPageModel>();
-            _navHome = new FreshNavigationContainer(_todaysMatchesPage);
+            NavigationEntries = new List<NavigationEntry>
+            {
+                defaultNavigationEntry,
+                new NavigationEntry
+                {
+                    PageModel = AppDependencySetup.Resolve<PageModels.FavoritesPageModel>(),
+                    Page = FreshPageModelResolver.ResolvePageModel<PageModels.FavoritesPageModel>(),
+                    Name = "Favorites"
+                }
+            };
 
-            Detail = _navHome;
+            Detail = new FreshNavigationContainer(defaultNavigationEntry.Page);
+        }
+
+        public void NavigateToPage(NavigationEntry entry)
+        {
+            var page = NavigationEntries.Single(e => e == entry).Page;
+            
+            var navigationContainer = new NavigationPage(page);
+            Detail = navigationContainer;
+            IsPresented = false;
         }
 
         protected void CreateMenuPage(string menuPageTitle)
@@ -51,35 +70,6 @@ namespace TennisExplorer.Infrastructure
             };
 
             Master = menuPageNav;
-
-            //var listView = new ListView
-            //{
-            //    ItemsSource = new string[] { "Matches Today", "Favorites" }
-            //};
-
-            //listView.ItemSelected += (sender, args) =>
-            //{
-
-            //    switch ((string)args.SelectedItem)
-            //    {
-            //        case "Matches Today":
-            //            Detail = _navHome;
-            //            break;
-
-            //        case "Favorites":
-            //            Detail = _navFavorites;
-            //            break;
-
-            //        default:
-            //            break;
-            //    }
-
-            //    IsPresented = false;
-            //};
-
-            //menuPage.Content = listView;
-
-            //Master = new NavigationPage(menuPage) { Title = "Menu" };
         }
 
         public void NotifyChildrenPageWasPopped()
@@ -97,9 +87,9 @@ namespace TennisExplorer.Infrastructure
             throw new NotImplementedException();
         }
 
-        public virtual async Task PushPage(Page page, FreshBasePageModel model, bool modal = false, bool animate = true)
+        public virtual Task PushPage(Page page, FreshBasePageModel model, bool modal = false, bool animate = true)
         {
-            await Navigation.PushModalAsync(new NavigationPage(page), animate);
+            throw new NotImplementedException();
         }
 
         public Task<FreshBasePageModel> SwitchSelectedRootPageModel<T>() where T : FreshBasePageModel

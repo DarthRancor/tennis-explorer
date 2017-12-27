@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using Xamarin.Forms;
 
 namespace TennisExplorer.PageModels
@@ -11,6 +10,7 @@ namespace TennisExplorer.PageModels
         public List<Models.NavigationEntry> NavigationEntries { get; private set; }
 
         private Models.NavigationEntry _selectedNavigationEntry;
+        
         public Models.NavigationEntry SelectedNavigationEntry
         {
             get { return _selectedNavigationEntry; }
@@ -24,20 +24,18 @@ namespace TennisExplorer.PageModels
         protected override void ViewIsAppearing(object sender, EventArgs e)
         {
             base.ViewIsAppearing(sender, e);
-            NavigationEntries = new List<Models.NavigationEntry>
-            {
-                new Models.NavigationEntry { Name = "Matches Today", PageModel = Infrastructure.AppDependencySetup.Resolve<TodaysMatchesPageModel>() },
-                new Models.NavigationEntry { Name = "Favorites", PageModel = Infrastructure.AppDependencySetup.Resolve<FavoritesPageModel>() }
-            };
+            var navigationContainer = Infrastructure.AppDependencySetup.Resolve<Infrastructure.MasterDetailNavigationContainer>();
+            NavigationEntries = navigationContainer.NavigationEntries.ToList();
         }
 
         public Command<Models.NavigationEntry> NavigateToPageCommand
         {
             get
             {
-                return new Command<Models.NavigationEntry>(async (entry) =>
+                return new Command<Models.NavigationEntry>((entry) =>
                 {
-                    await CoreMethods.PushPageModel(entry.PageModel.GetType());
+                    var navigationContainer = Infrastructure.AppDependencySetup.Resolve<Infrastructure.MasterDetailNavigationContainer>();
+                    navigationContainer.NavigateToPage(entry);
                 });
             }
         }
