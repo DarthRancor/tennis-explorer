@@ -29,32 +29,30 @@ namespace TennisExplorer.Infrastructure
 
         protected void InitializeNavigationEntries()
         {
-            var defaultNavigationEntry = new NavigationEntry
-            {
-                PageModel = AppDependencySetup.Resolve<PageModels.TodaysMatchesPageModel>(),
-                Page = FreshPageModelResolver.ResolvePageModel<PageModels.TodaysMatchesPageModel>(),
-                Name = "Matches Today"
-            };
-
             NavigationEntries = new List<NavigationEntry>
             {
-                defaultNavigationEntry,
+                new NavigationEntry
+                {
+                    PageModel = AppDependencySetup.Resolve<PageModels.TodaysMatchesPageModel>(),
+                    Page = FreshPageModelResolver.ResolvePageModel<PageModels.TodaysMatchesPageModel>(),
+                    Name = "Matches Today",
+                    Icon = "ic_today_black_24dp.png"
+                },
                 new NavigationEntry
                 {
                     PageModel = AppDependencySetup.Resolve<PageModels.FavoritesPageModel>(),
                     Page = FreshPageModelResolver.ResolvePageModel<PageModels.FavoritesPageModel>(),
-                    Name = "Favorites"
+                    Name = "Favorites",
+                    Icon = "ic_grade_black_24dp.png"
                 }
             };
-
-            Detail = new FreshNavigationContainer(defaultNavigationEntry.Page);
         }
 
         public void NavigateToPage(NavigationEntry entry)
         {
             var page = NavigationEntries.Single(e => e == entry).Page;
-            
-            var navigationContainer = new NavigationPage(page);
+
+            var navigationContainer = CreateNavigationPage<NavigationPage>(entry.Name, page);
             Detail = navigationContainer;
             IsPresented = false;
         }
@@ -62,15 +60,19 @@ namespace TennisExplorer.Infrastructure
         protected void CreateMenuPage(string menuPageTitle)
         {
             var menuPage = FreshPageModelResolver.ResolvePageModel<PageModels.MenuPageModel>();
-            var menuPageNav = new NavigationPage(menuPage)
-            {
-                Title = "Master",
-                BarBackgroundColor = Color.FromHex("#81c784"),
-                BarTextColor = Color.Black
-            };
 
-            Master = menuPageNav;
-            Detail = new FreshNavigationContainer(NavigationEntries.First().Page);
+            Master = CreateNavigationPage<NavigationPage>(menuPageTitle, menuPage);
+            NavigateToPage(NavigationEntries.First());
+        }
+
+        private TNavigationPage CreateNavigationPage<TNavigationPage>(string title, Page page) where TNavigationPage : NavigationPage
+        {
+            var navigationPage = (TNavigationPage)Activator.CreateInstance(typeof(TNavigationPage), page);
+            navigationPage.Title = title;
+            navigationPage.BarBackgroundColor = Color.FromHex("#81c784");
+            navigationPage.BarTextColor = Color.Black;
+
+            return navigationPage;
         }
 
         public void NotifyChildrenPageWasPopped()

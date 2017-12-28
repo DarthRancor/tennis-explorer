@@ -18,7 +18,7 @@
             <ListView ItemsSource="{Binding Matches}" SeparatorVisibility="Default" SeparatorColor="Black" HasUnevenRows="True">
                 <ListView.ItemTemplate>
                     <DataTemplate>
-                        <ViewCell>
+                        <custom:ExtendedViewCell>
                             <StackLayout Padding="0,5,0,5">
                                 <StackLayout Orientation="Horizontal">
                                     <Label Text="{Binding Players}" FontSize="Large" FontAttributes="Bold" 
@@ -29,7 +29,7 @@
                                 </StackLayout>
                                 <Label Text="{Binding Time}" FontSize="Medium" StyleClass="Inverse" />
                             </StackLayout>
-                        </ViewCell>
+                        </custom:ExtendedViewCell>
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>

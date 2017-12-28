@@ -16,6 +16,7 @@ namespace TennisExplorer.Droid
 			base.OnCreate(bundle);
 
 			global::Xamarin.Forms.Forms.Init(this, bundle);
+            
 
 			var services = new Microsoft.Extensions.DependencyInjection.ServiceCollection();
 			AppDependencySetup.ConfigureDependencies(services);

@@ -8,7 +8,16 @@ namespace TennisExplorer.CustomElements
 
         public Color SelectedBackgroundColor
         {
-            get { return (Color)GetValue(SelectedBackgroundColorProperty); }
+            get
+            {
+                var backgroundColor = (Color) GetValue(SelectedBackgroundColorProperty);
+                if (backgroundColor == Color.Default)
+                {
+                    backgroundColor = Color.FromHex("#c8e6c9");
+                }
+
+                return backgroundColor;
+            }
             set { SetValue(SelectedBackgroundColorProperty, value); }
         }
     }
