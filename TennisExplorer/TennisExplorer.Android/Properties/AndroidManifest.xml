@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" package="com.companyname.TennisExplorer" android:installLocation="auto">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" package="ds.development.TennisExplorer" android:installLocation="auto">
 	<uses-sdk android:minSdkVersion="23" />
 	<application android:label="TennisExplorer.Android"></application>
 </manifest>
