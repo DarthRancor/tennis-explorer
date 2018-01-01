@@ -12,13 +12,15 @@
     <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="2.0.0" />
     <PackageReference Include="Neleus.DependencyInjection.Extensions" Version="1.0.0" />
     <PackageReference Include="PropertyChanged.Fody" Version="2.2.4" />
-    <PackageReference Include="Xam.Behaviors" Version="1.0.1" />
     <PackageReference Include="Xamarin.Forms" Version="2.5.0.121934" />
   </ItemGroup>
 
   <ItemGroup>
     <Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="App.xaml.cs">
       <DependentUpon>*.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Pages\Menu\MenuDrawerMasterPage.xaml.cs">
+      <DependentUpon>MenuDrawerMasterPage.xaml</DependentUpon>
     </Compile>
     <Compile Update="Pages\TodaysMatchesPage.xaml.cs">
       <DependentUpon>TodaysMatchesPage.xaml</DependentUpon>
@@ -29,7 +31,10 @@
     <EmbeddedResource Update="Pages\FavoritesPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Pages\MenuPage.xaml">
+    <EmbeddedResource Update="Pages\Menu\TennisExplorerMasterDetailPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Pages\Menu\MenuDrawerMasterPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Pages\TodaysMatchesPage.xaml">

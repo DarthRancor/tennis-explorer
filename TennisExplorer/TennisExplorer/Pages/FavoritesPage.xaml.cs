@@ -9,12 +9,21 @@ using Xamarin.Forms.Xaml;
 
 namespace TennisExplorer.Pages
 {
-	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class FavoritesPage : ContentPage
-	{
-		public FavoritesPage ()
-		{
-			InitializeComponent ();
-		}
-	}
+    [XamlCompilation(XamlCompilationOptions.Compile)]
+    public partial class FavoritesPage : ContentPage
+    {
+        public FavoritesPage()
+        {
+            InitializeComponent();
+
+        }
+
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+            var parent = base.Parent;
+            var navigation = base.Navigation;
+            
+        }
+    }
 }

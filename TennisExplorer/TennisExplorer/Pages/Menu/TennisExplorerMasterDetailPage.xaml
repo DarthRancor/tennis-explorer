@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TennisExplorer.Pages.Menu.TennisExplorerMasterDetailPage"
+             xmlns:pages="clr-namespace:TennisExplorer.Pages.Menu">
+  <!-- Master and Detail are set in Codebehind for FreshMvvm Resolving strategy -->
+</MasterDetailPage>

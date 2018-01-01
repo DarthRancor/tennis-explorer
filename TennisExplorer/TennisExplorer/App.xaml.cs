@@ -39,7 +39,7 @@ namespace TennisExplorer
 
         private void InitializeNavigation()
         {
-            MainPage = new Infrastructure.MasterDetailNavigationContainer();
+            MainPage = new Pages.Menu.TennisExplorerMasterDetailPage();
         }
     }
 }

@@ -24,10 +24,13 @@ namespace TennisExplorer.Infrastructure
 
             services.AddScoped<PageModels.TodaysMatchesPageModel>();
             services.AddScoped<PageModels.FavoritesPageModel>();
-            services.AddScoped<PageModels.MenuPageModel>();
+            services.AddSingleton<PageModels.Menu.TennisExplorerMasterDetailPageModel>();
+            services.AddSingleton<PageModels.Menu.MenuDrawerMasterPageModel>();
+            
             services.AddScoped<Pages.TodaysMatchesPage>();
             services.AddScoped<Pages.FavoritesPage>();
-            services.AddScoped<Pages.MenuPage>();
+            services.AddSingleton<Pages.Menu.TennisExplorerMasterDetailPage>();
+            services.AddSingleton<Pages.Menu.MenuDrawerMasterPage>();
 
             services.AddDbContext<Entity.TennisMatchSpyDbContext>();
             services.AddEntityFrameworkSqlite();
