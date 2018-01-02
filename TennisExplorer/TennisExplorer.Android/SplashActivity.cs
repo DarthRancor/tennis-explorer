@@ -2,17 +2,21 @@
 using Android.Content;
 using Android.OS;
 using Android.Support.V7.App;
+using Android.Widget;
 using System.Threading.Tasks;
 using TennisExplorer.Infrastructure;
 
 namespace TennisExplorer.Droid
 {
-    [Activity(Theme = "@style/MyTheme.Splash", MainLauncher = true, NoHistory = true)]
-    public class SplashActivity : AppCompatActivity
+    // @style/MyTheme.Splash
+    [Activity(Theme = "@android:style/Theme.NoTitleBar", MainLauncher = true, Immersive = true, NoHistory = true)]
+    public class SplashActivity : Activity
     {
         protected override void OnCreate(Bundle bundle)
         {
             base.OnCreate(bundle);
+            SetContentView(Resource.Layout.SplashScreen);
+            FindViewById<TextView>(Resource.Id.txtAppVersion).Text = $"Version {PackageManager.GetPackageInfo(PackageName, 0).VersionName}";
         }
 
         // Launches the startup task
@@ -23,10 +27,6 @@ namespace TennisExplorer.Droid
             {
                 StartActivity(new Intent(Application.Context, typeof(MainActivity)));
             });
-            //Task startupWork = new Task(() => { InitializeApplication(); });
-            //startupWork.Start();
-
-           
         }
 
         // Prevent the back button from canceling the startup process

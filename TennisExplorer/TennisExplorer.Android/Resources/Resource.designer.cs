@@ -2331,26 +2331,26 @@ namespace TennisExplorer.Droid
 			// aapt resource value: 0x7f020053
 			public const int avd_hide_password = 2130837587;
 			
+			// aapt resource value: 0x7f020134
+			public const int avd_hide_password_1 = 2130837812;
+			
 			// aapt resource value: 0x7f020135
-			public const int avd_hide_password_1 = 2130837813;
+			public const int avd_hide_password_2 = 2130837813;
 			
 			// aapt resource value: 0x7f020136
-			public const int avd_hide_password_2 = 2130837814;
-			
-			// aapt resource value: 0x7f020137
-			public const int avd_hide_password_3 = 2130837815;
+			public const int avd_hide_password_3 = 2130837814;
 			
 			// aapt resource value: 0x7f020054
 			public const int avd_show_password = 2130837588;
 			
+			// aapt resource value: 0x7f020137
+			public const int avd_show_password_1 = 2130837815;
+			
 			// aapt resource value: 0x7f020138
-			public const int avd_show_password_1 = 2130837816;
+			public const int avd_show_password_2 = 2130837816;
 			
 			// aapt resource value: 0x7f020139
-			public const int avd_show_password_2 = 2130837817;
-			
-			// aapt resource value: 0x7f02013a
-			public const int avd_show_password_3 = 2130837818;
+			public const int avd_show_password_3 = 2130837817;
 			
 			// aapt resource value: 0x7f020055
 			public const int design_bottom_navigation_item_background = 2130837589;
@@ -3000,11 +3000,11 @@ namespace TennisExplorer.Droid
 			// aapt resource value: 0x7f02012c
 			public const int notification_icon_background = 2130837804;
 			
-			// aapt resource value: 0x7f020133
-			public const int notification_template_icon_bg = 2130837811;
+			// aapt resource value: 0x7f020132
+			public const int notification_template_icon_bg = 2130837810;
 			
-			// aapt resource value: 0x7f020134
-			public const int notification_template_icon_low_bg = 2130837812;
+			// aapt resource value: 0x7f020133
+			public const int notification_template_icon_low_bg = 2130837811;
 			
 			// aapt resource value: 0x7f02012d
 			public const int notification_tile_bg = 2130837805;
@@ -3016,13 +3016,10 @@ namespace TennisExplorer.Droid
 			public const int splash_logo = 2130837807;
 			
 			// aapt resource value: 0x7f020130
-			public const int splash_screen = 2130837808;
+			public const int tooltip_frame_dark = 2130837808;
 			
 			// aapt resource value: 0x7f020131
-			public const int tooltip_frame_dark = 2130837809;
-			
-			// aapt resource value: 0x7f020132
-			public const int tooltip_frame_light = 2130837810;
+			public const int tooltip_frame_light = 2130837809;
 			
 			static Drawable()
 			{
@@ -3283,6 +3280,9 @@ namespace TennisExplorer.Droid
 			// aapt resource value: 0x7f09008b
 			public const int largeLabel = 2131296395;
 			
+			// aapt resource value: 0x7f0900c6
+			public const int layoutSpinner = 2131296454;
+			
 			// aapt resource value: 0x7f090048
 			public const int left = 2131296328;
 			
@@ -3298,14 +3298,14 @@ namespace TennisExplorer.Droid
 			// aapt resource value: 0x7f090060
 			public const int list_item = 2131296352;
 			
-			// aapt resource value: 0x7f0900c9
-			public const int masked = 2131296457;
+			// aapt resource value: 0x7f0900ce
+			public const int masked = 2131296462;
 			
 			// aapt resource value: 0x7f0900b8
 			public const int media_actions = 2131296440;
 			
-			// aapt resource value: 0x7f0900c7
-			public const int message = 2131296455;
+			// aapt resource value: 0x7f0900cc
+			public const int message = 2131296460;
 			
 			// aapt resource value: 0x7f090030
 			public const int middle = 2131296304;
@@ -3421,6 +3421,9 @@ namespace TennisExplorer.Droid
 			// aapt resource value: 0x7f09000b
 			public const int parent_matrix = 2131296267;
 			
+			// aapt resource value: 0x7f0900c7
+			public const int pbSpinningCircle = 2131296455;
+			
 			// aapt resource value: 0x7f09004c
 			public const int pin = 2131296332;
 			
@@ -3514,8 +3517,8 @@ namespace TennisExplorer.Droid
 			// aapt resource value: 0x7f090024
 			public const int showTitle = 2131296292;
 			
-			// aapt resource value: 0x7f0900c5
-			public const int sliding_tabs = 2131296453;
+			// aapt resource value: 0x7f0900ca
+			public const int sliding_tabs = 2131296458;
 			
 			// aapt resource value: 0x7f09008a
 			public const int smallLabel = 2131296394;
@@ -3531,6 +3534,9 @@ namespace TennisExplorer.Droid
 			
 			// aapt resource value: 0x7f090063
 			public const int spacer = 2131296355;
+			
+			// aapt resource value: 0x7f0900c5
+			public const int splashLogo = 2131296453;
 			
 			// aapt resource value: 0x7f090008
 			public const int split_action_bar = 2131296264;
@@ -3592,8 +3598,8 @@ namespace TennisExplorer.Droid
 			// aapt resource value: 0x7f09006e
 			public const int title_template = 2131296366;
 			
-			// aapt resource value: 0x7f0900c6
-			public const int toolbar = 2131296454;
+			// aapt resource value: 0x7f0900cb
+			public const int toolbar = 2131296459;
 			
 			// aapt resource value: 0x7f09003d
 			public const int top = 2131296317;
@@ -3619,6 +3625,12 @@ namespace TennisExplorer.Droid
 			// aapt resource value: 0x7f090013
 			public const int transition_transform = 2131296275;
 			
+			// aapt resource value: 0x7f0900c9
+			public const int txtAppVersion = 2131296457;
+			
+			// aapt resource value: 0x7f0900c8
+			public const int txtLoading = 2131296456;
+			
 			// aapt resource value: 0x7f09002c
 			public const int uniform = 2131296300;
 			
@@ -3631,8 +3643,8 @@ namespace TennisExplorer.Droid
 			// aapt resource value: 0x7f090016
 			public const int view_offset_helper = 2131296278;
 			
-			// aapt resource value: 0x7f0900c8
-			public const int visible = 2131296456;
+			// aapt resource value: 0x7f0900cd
+			public const int visible = 2131296461;
 			
 			// aapt resource value: 0x7f0900aa
 			public const int volume_item_container = 2131296426;
@@ -3923,16 +3935,19 @@ namespace TennisExplorer.Droid
 			public const int select_dialog_singlechoice_material = 2130903104;
 			
 			// aapt resource value: 0x7f030041
-			public const int support_simple_spinner_dropdown_item = 2130903105;
+			public const int SplashScreen = 2130903105;
 			
 			// aapt resource value: 0x7f030042
-			public const int Tabbar = 2130903106;
+			public const int support_simple_spinner_dropdown_item = 2130903106;
 			
 			// aapt resource value: 0x7f030043
-			public const int Toolbar = 2130903107;
+			public const int Tabbar = 2130903107;
 			
 			// aapt resource value: 0x7f030044
-			public const int tooltip = 2130903108;
+			public const int Toolbar = 2130903108;
+			
+			// aapt resource value: 0x7f030045
+			public const int tooltip = 2130903109;
 			
 			static Layout()
 			{
@@ -4685,9 +4700,6 @@ namespace TennisExplorer.Droid
 			
 			// aapt resource value: 0x7f0b019a
 			public const int MainTheme_Base = 2131427738;
-			
-			// aapt resource value: 0x7f0b019d
-			public const int MyTheme_Splash = 2131427741;
 			
 			// aapt resource value: 0x7f0b002d
 			public const int Platform_AppCompat = 2131427373;
