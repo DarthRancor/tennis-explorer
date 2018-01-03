@@ -24,7 +24,7 @@ namespace TennisExplorer.Test.IntegrationTest
 		{
 			var foundFavorites = await _favoriteService.GetAllFavorites();
 
-			Assert.AreEqual(FavoriteDataCreator.Data.ElementAt(0).Id, foundFavorites.ElementAt(0).Id); 
+			Assert.AreEqual(FavoriteDataCreator.Data.ElementAt(0).Id, foundFavorites.ElementAt(0).Id);
 			Assert.AreEqual(FavoriteDataCreator.Data.ElementAt(0).Name, foundFavorites.ElementAt(0).Name);
 			Assert.AreEqual(FavoriteDataCreator.Data.ElementAt(1).Id, foundFavorites.ElementAt(1).Id);
 			Assert.AreEqual(FavoriteDataCreator.Data.ElementAt(1).Name, foundFavorites.ElementAt(1).Name);
@@ -33,75 +33,94 @@ namespace TennisExplorer.Test.IntegrationTest
 		[TestMethod]
 		public async Task DeleteFavorite_ShouldRemoveExisting()
 		{
-			var favoriteToDelete = FavoriteDataCreator.Data.Single(f => f.Name == "Kerber");
-			
+			// create a new entry that will be deleted
+			var favoriteToDelete = new Favorite { Name = "Becker" };
+			await _favoriteService.SaveFavorite(favoriteToDelete);
+
 			await _favoriteService.DeleteFavorite(favoriteToDelete.Id);
 
-			var favoriteStillExists = Context.Favorites.Any(f => f.Name == favoriteToDelete.Name);
-			Assert.IsFalse(favoriteStillExists);
+			using (var database = GetDatabase())
+			{
+				var favoriteExists = database.GetCollection<Favorite>().Exists(f => f.Name == favoriteToDelete.Name);
+				Assert.IsFalse(favoriteExists);
+			}
 		}
 
 		[TestMethod]
 		[ExpectedException(typeof(ArgumentException))]
 		public async Task DeleteFavorite_ShouldThrowForNotExisting()
 		{
-			await _favoriteService.DeleteFavorite(-1);
+			await _favoriteService.DeleteFavorite(Guid.NewGuid());
 		}
 
 		[TestMethod]
-		public async Task CreateFavorite_ShouldCreateNewForNotExisting()
+		public async Task SaveFavorite_ShouldCreateNewForNotExisting()
 		{
 			var newFavorite = new Favorite
 			{
-				Name = "Zverev"
+				Name = "A. Zverev"
 			};
 
-			await _favoriteService.CreateFavorite(newFavorite);
+			await _favoriteService.SaveFavorite(newFavorite);
 
-			Assert.IsTrue(newFavorite.Id > 0);
-			Assert.IsTrue(Context.Favorites.Any(f => f.Name == newFavorite.Name));
-		}
-
-		[TestMethod]
-		[ExpectedException(typeof(ServiceException))]
-		public async Task CreateFavorite_ShouldThrowForInvalidNewFavorite()
-		{
-			var newFavorite = new Favorite
+			using (var database = GetDatabase())
 			{
-				Name = null
-			};
 
-			await _favoriteService.CreateFavorite(newFavorite);
+				Assert.IsTrue(newFavorite.Id != Guid.Empty);
+				var favoriteExists = database.GetCollection<Favorite>().Exists(f => f.Name == newFavorite.Name);
+				Assert.IsTrue(favoriteExists);
+
+				// cleanup
+				await _favoriteService.DeleteFavorite(newFavorite.Id);
+			}
 		}
 
-		[TestMethod]
-		[ExpectedException(typeof(ServiceException))]
-		public async Task CreateFavorite_ShouldThrowForNotUniqueName()
-		{
-			// take a name that already exists
-			var favoriteToCreate = new Favorite
-			{
-				Name = FavoriteDataCreator.Data.ElementAt(0).Name
-			};
+		//[TestMethod]
+		//[ExpectedException(typeof(ServiceException))]
+		//public async Task CreateFavorite_ShouldThrowForInvalidNewFavorite()
+		//{
+		//	var newFavorite = new Favorite
+		//	{
+		//		Name = null
+		//	};
 
-			await _favoriteService.CreateFavorite(favoriteToCreate);
-		}
+		//	await _favoriteService.CreateFavorite(newFavorite);
+		//}
+
+		//[TestMethod]
+		//[ExpectedException(typeof(ServiceException))]
+		//public async Task CreateFavorite_ShouldThrowForNotUniqueName()
+		//{
+		//	// take a name that already exists
+		//	var favoriteToCreate = new Favorite
+		//	{
+		//		Name = FavoriteDataCreator.Data.ElementAt(0).Name
+		//	};
+
+		//	await _favoriteService.CreateFavorite(favoriteToCreate);
+		//}
 
 		[TestMethod]
-		public async Task ChangeFavorite_ShouldUpdateExisting()
+		public async Task SaveFavorite_ShouldUpdateExisting()
 		{
 			var favoriteToChange = FavoriteDataCreator.Data.Single(f => f.Name == "Kerber");
+			var originalName = favoriteToChange.Name;
 			favoriteToChange.Name = "Kerber 2";
 
-			await _favoriteService.ChangeFavorite(favoriteToChange);
+			await _favoriteService.SaveFavorite(favoriteToChange);
 
-			var updatedFavorite = await Context.Favorites.FindAsync(favoriteToChange.Id);
-			Assert.AreEqual(favoriteToChange.Name, updatedFavorite.Name);
+			using (var database = GetDatabase())
+			{
+
+				var updatedFavorite = database.GetCollection<Favorite>().FindById(favoriteToChange.Id);
+				Assert.AreEqual(favoriteToChange.Name, updatedFavorite.Name);
+			}
 
 			// Undo changes
-			favoriteToChange.Name = "Kerber";
+			favoriteToChange.Name = originalName;
+			await _favoriteService.SaveFavorite(favoriteToChange);
 		}
 
-		
+
 	}
 }

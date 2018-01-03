@@ -29,14 +29,14 @@ namespace TennisExplorer.Services
 
 		public async Task<List<TennisMatch>> GetTennisMatchesForDateAsync(DateTime date)
 		{
-			//var matches = await tennisMatchRetriever.GetTennisMatchesForDateAsync(date);
-			await Task.Delay(3000);
-			var matches = new List<Models.TennisMatch>
-			{
-				new Models.TennisMatch { Players = "Kerber - Hingis", Time = "13.07.2017 15:30", Tour = "ATP", IsFavorite = true},
-				new Models.TennisMatch { Players = "Test3 - Test4", Time = "13.07.2017 15:45"},
-				new Models.TennisMatch { Players = "Test3 - Test4", Time = "13.07.2017 15:45"}
-			};
+			var matches = await tennisMatchRetriever.GetTennisMatchesForDateAsync(date);
+			//await Task.Delay(3000);
+			//var matches = new List<Models.TennisMatch>
+			//{
+			//	new Models.TennisMatch { Players = "Kerber - Hingis", Time = "13.07.2017 15:30", Tour = "ATP", IsFavorite = true},
+			//	new Models.TennisMatch { Players = "Test3 - Test4", Time = "13.07.2017 15:45"},
+			//	new Models.TennisMatch { Players = "Test3 - Test4", Time = "13.07.2017 15:45"}
+			//};
 
 			return matches;
 		}

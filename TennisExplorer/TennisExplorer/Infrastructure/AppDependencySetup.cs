@@ -21,7 +21,7 @@ namespace TennisExplorer.Infrastructure
             services.AddScoped<ITennisMatchService, TennisMatchService>();
             services.AddScoped<FavoriteService>();
             services.AddScoped<FavoriteRepository>();
-
+            
             services.AddScoped<PageModels.TodaysMatchesPageModel>();
             services.AddScoped<PageModels.FavoritesPageModel>();
             services.AddSingleton<PageModels.Menu.TennisExplorerMasterDetailPageModel>();
@@ -31,9 +31,6 @@ namespace TennisExplorer.Infrastructure
             services.AddScoped<Pages.FavoritesPage>();
             services.AddSingleton<Pages.Menu.TennisExplorerMasterDetailPage>();
             services.AddSingleton<Pages.Menu.MenuDrawerMasterPage>();
-
-            services.AddDbContext<Entity.TennisMatchSpyDbContext>();
-            services.AddEntityFrameworkSqlite();
 
             _services = services;
             _provider = BuildServiceProvider();

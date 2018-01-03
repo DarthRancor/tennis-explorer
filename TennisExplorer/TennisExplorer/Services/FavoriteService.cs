@@ -1,11 +1,10 @@
-﻿using Microsoft.Data.Sqlite;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
 using System.Threading.Tasks;
 using TennisExplorer.Entity;
 using TennisExplorer.Entity.Repository;
 using TennisExplorer.Infrastructure;
+using System.Linq;
 
 namespace TennisExplorer.Services
 {
@@ -18,46 +17,26 @@ namespace TennisExplorer.Services
 			_favoriteRepository = favoriteRepository;
 		}
 
-		public async Task<List<Favorite>> GetAllFavorites()
+		public async Task<IEnumerable<Favorite>> GetAllFavorites()
 		{
-			return await _favoriteRepository.GetAll();
+			var favorites = await Task.Run(() =>
+			{
+                // order by in service level until litedb v5 is released (sorting not yet supported natively)
+				return _favoriteRepository.GetAll().OrderBy(f => f.Name).ToList();
+			});
+
+			return favorites;
 		}
 
-		public async Task CreateFavorite(Favorite favorite)
+		public async Task SaveFavorite(Favorite favorite)
 		{
 			try
 			{
-				ValidateEntity(favorite);
-				await _favoriteRepository.Add(favorite);
-			}
-			catch (Exception e)
-			{
-				HandleSqlException(e);
-				throw new ServiceException("Ein Fehler ist aufgetreten: " + e.Message);
-			}
-		}
-
-		private void HandleSqlException(Exception e)
-		{
-			if (e.InnerException is SqliteException)
-			{
-				throw new ServiceException("Ein Fehler ist aufgetreten: " + e.InnerException.Message);
-			}
-		}
-
-		public async Task ChangeFavorite(Favorite favorite)
-		{
-			try
-			{
-				ValidateEntity(favorite);
-				Favorite existingFavorite = await _favoriteRepository.Find(favorite.Id);
-				if (favorite == null)
+				//ValidateEntity(favorite);
+				await Task.Run(() =>
 				{
-					throw new ArgumentException("Dieser Eintrag existiert nicht");
-				}
-
-				existingFavorite.Name = favorite.Name;
-				await _favoriteRepository.Change(favorite);
+					_favoriteRepository.Save(favorite);
+				});
 			}
 			catch (Exception e)
 			{
@@ -65,32 +44,40 @@ namespace TennisExplorer.Services
 			}
 		}
 
-		public async Task DeleteFavorite(int id)
+		public async Task DeleteFavorite(Guid id)
 		{
-			await _favoriteRepository.Delete(id);
-		}
-
-		private void ValidateEntity(object instance)
-		{
-			var validationResults = new List<ValidationResult>();
-			var isValid = Validator.TryValidateObject(instance, new ValidationContext(instance), validationResults);
-
-			if (!isValid)
+			var paramName = nameof(id) ;
+			await Task.Run(() =>
 			{
-				var error = GetMessageFromValidation(validationResults);
-				throw new ServiceException(error);
-			}
+				var wasDeleted = _favoriteRepository.Delete(id);
+				if (!wasDeleted)
+				{
+					throw new ArgumentException($"This favorite does not exist: {id}", paramName);
+				}
+			});
 		}
 
-		private string GetMessageFromValidation(ICollection<ValidationResult> validationResults)
-		{
-			var message = string.Empty;
-			foreach (var validationError in validationResults)
-			{
-				message += $"{Environment.NewLine}{validationError.ErrorMessage}";
-			}
+		//private void ValidateEntity(object instance)
+		//{
+		//	var validationResults = new List<ValidationResult>();
+		//	var isValid = Validator.TryValidateObject(instance, new ValidationContext(instance), validationResults);
 
-			return message;
-		}
+		//	if (!isValid)
+		//	{
+		//		var error = GetMessageFromValidation(validationResults);
+		//		throw new ServiceException(error);
+		//	}
+		//}
+
+		//private string GetMessageFromValidation(ICollection<ValidationResult> validationResults)
+		//{
+		//	var message = string.Empty;
+		//	foreach (var validationError in validationResults)
+		//	{
+		//		message += $"{Environment.NewLine}{validationError.ErrorMessage}";
+		//	}
+
+		//	return message;
+		//}
 	}
 }

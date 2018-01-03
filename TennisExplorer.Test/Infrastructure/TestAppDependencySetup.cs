@@ -16,7 +16,7 @@ namespace TennisExplorer.Test
 			var config = new ApplicationConfiguration()
 			{
 				AppBasePath = GetDatabasePath(),
-				DatabaseName = "TennisMatchSpyTestSQLite.db"
+				DatabaseName = "TennisMatchSpyTest.db"
 			};
 			services.AddSingleton(config);
 
