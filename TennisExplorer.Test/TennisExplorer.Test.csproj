@@ -21,6 +21,9 @@
     <None Update="Mock\TennisMatchSite.html">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Update="Mock\TennisMatchSite2.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
 </Project>

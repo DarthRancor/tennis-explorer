@@ -18,6 +18,9 @@
     <Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="App.xaml.cs">
       <DependentUpon>*.xaml</DependentUpon>
     </Compile>
+    <Compile Update="Pages\FavoritesListPage.xaml.cs">
+      <DependentUpon>FavoritesListPage.xaml</DependentUpon>
+    </Compile>
     <Compile Update="Pages\Menu\MenuDrawerMasterPage.xaml.cs">
       <DependentUpon>MenuDrawerMasterPage.xaml</DependentUpon>
     </Compile>
@@ -27,7 +30,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Update="Pages\FavoritesPage.xaml">
+    <EmbeddedResource Update="Pages\FavoritesListPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Pages\Menu\TennisExplorerMasterDetailPage.xaml">

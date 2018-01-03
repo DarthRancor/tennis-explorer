@@ -9,13 +9,15 @@
         <ResourceDictionary>
             <custom:LabelTextVisibilityConverter x:Key="labelTextVisibilityConverter" />
             <custom:LabelTextHighlighterConverter x:Key="labelTextHighlighterConverter" />
+			<custom:InverseBoolConverter x:Key="inverseBoolConverter" />
         </ResourceDictionary>
     </ContentPage.Resources>
 
     <ContentPage.Content>
         <StackLayout>
             <ActivityIndicator IsRunning="{Binding IsBusy}" IsVisible="{Binding IsBusy}" />
-            <ListView ItemsSource="{Binding Matches}" SeparatorVisibility="Default" SeparatorColor="Black" HasUnevenRows="True">
+            <ListView ItemsSource="{Binding Matches}" SeparatorVisibility="Default" SeparatorColor="Black" HasUnevenRows="True"
+				 IsVisible="{Binding MatchesFound}">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <custom:ExtendedViewCell>
@@ -33,6 +35,8 @@
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
-        </StackLayout>
+
+			<Label Text="No matches for today found..." IsVisible="{Binding MatchesFound, Converter={StaticResource inverseBoolConverter}}" />
+		</StackLayout>
     </ContentPage.Content>
 </ContentPage>

@@ -20,7 +20,7 @@ namespace TennisExplorer.Test
 			};
 			services.AddSingleton(config);
 
-			services.AddSingleton<IHtmlDownloader, LocalHtmlDownloader>();
+			//services.AddSingleton<IHtmlDownloader, LocalHtmlDownloader>();
 			services.AddSingleton<DatabaseInitializer>();
 
 			AppDependencySetup.ConfigureDependencies(services);

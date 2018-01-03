@@ -14,7 +14,7 @@ namespace TennisExplorer.PageModels.Menu
 
         public override void Init(object initData)
         {
-            NavigationEntries = new ObservableCollection<Models.NavigationEntry>(new[]
+			NavigationEntries = new ObservableCollection<Models.NavigationEntry>(new[]
             {
                 new Models.NavigationEntry
                 {
@@ -25,8 +25,8 @@ namespace TennisExplorer.PageModels.Menu
                 },
                 new Models.NavigationEntry
                 {
-                    PageModel = Infrastructure.AppDependencySetup.Resolve<FavoritesPageModel>(),
-                    Page = FreshPageModelResolver.ResolvePageModel<FavoritesPageModel>(),
+                    PageModel = Infrastructure.AppDependencySetup.Resolve<FavoritesListPageModel>(),
+                    Page = FreshPageModelResolver.ResolvePageModel<FavoritesListPageModel>(),
                     Title = "Favorites",
                     Icon = "ic_grade_black_24dp.png"
                 }

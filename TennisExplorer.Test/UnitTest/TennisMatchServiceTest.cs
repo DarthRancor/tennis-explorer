@@ -20,13 +20,16 @@ namespace TennisExplorer.Test.UnitTest
 		[TestMethod]
 		public async Task GetTennisMatchesForDateAsync_ShouldFindSomeMatches()
 		{
-			var matches = await _tennisMatchService.GetTennisMatchesForDateAsync(new DateTime(2017, 5, 7));
+			var matches = await _tennisMatchService.GetTodaysTennisMatchesAsync();
 			Assert.IsTrue(matches.Any());
 
-			// check that some of the matched are found
-			Assert.IsTrue(matches.Any(m => m.Players.Equals("Ana Konjuh – Kristina Mladenovic")));
-			Assert.IsTrue(matches.Any(m => m.Players.Equals("Maria Sharapova – Mirjana Lucic-Baroni")));
-			Assert.IsTrue(matches.Any(m => m.Players.Equals("Guido Pella – Alexander Zverev")));
+			//var matches = await _tennisMatchService.GetTennisMatchesForDateAsync(new DateTime(2017, 5, 7));
+			//Assert.IsTrue(matches.Any());
+
+			//// check that some of the matched are found
+			//Assert.IsTrue(matches.Any(m => m.Players.Equals("Ana Konjuh – Kristina Mladenovic")));
+			//Assert.IsTrue(matches.Any(m => m.Players.Equals("Maria Sharapova – Mirjana Lucic-Baroni")));
+			//Assert.IsTrue(matches.Any(m => m.Players.Equals("Guido Pella – Alexander Zverev")));
 		}
 
 		[TestMethod]

@@ -48,8 +48,7 @@ namespace TennisExplorer.Services
 
 		private string GetFormattedDateForMatches(DateTime date)
 		{
-			CultureInfo culture = new CultureInfo("de-DE");
-			var formattedDate = date.ToString("d MMMM, dddd", culture);
+			var formattedDate = date.ToString("d MMMM, dddd", CultureInfo.CurrentCulture);
 			return formattedDate;
 		}
 
