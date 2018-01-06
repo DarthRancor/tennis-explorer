@@ -2,6 +2,7 @@
 using System.Globalization;
 using System.Net;
 using System.Net.Http;
+using System.Text;
 using System.Threading.Tasks;
 
 namespace TennisExplorer.Services
@@ -20,10 +21,13 @@ namespace TennisExplorer.Services
 				handler.AutomaticDecompression = DecompressionMethods.GZip | DecompressionMethods.Deflate;
 				using (HttpClient client = new HttpClient(handler, false))
 				{
-					//client.DefaultRequestHeaders.AcceptLanguage.Add(new System.Net.Http.Headers.StringWithQualityHeaderValue(CultureInfo.CurrentCulture.Name));
-					var source = await client.GetStringAsync("http://livetv.sx/dex/allupcomingsports/4");
+					var byteMarkup = await client.GetByteArrayAsync("http://livetv.sx/dex/allupcomingsports/4");
+
+					// get utf8
+					var encodedMarkup = Encoding.UTF8.GetString(byteMarkup, 0, byteMarkup.Length);
+
 					var htmlDocument = new HtmlDocument();
-					htmlDocument.LoadHtml(source);
+					htmlDocument.LoadHtml(encodedMarkup);
 
 					return htmlDocument;
 				}

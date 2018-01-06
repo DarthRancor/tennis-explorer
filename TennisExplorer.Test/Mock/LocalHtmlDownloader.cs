@@ -11,7 +11,7 @@ namespace TennisExplorer.Test.Infrastructure
 	{
 		public Task<HtmlDocument> DownloadWebSiteContentAsync()
 		{
-			var localFileBytes = File.ReadAllBytes("Mock\\TennisMatchSite2.html");
+			var localFileBytes = File.ReadAllBytes("Mock\\TennisMatchSite.html");
 			string source = Encoding.GetEncoding("utf-8").GetString(localFileBytes, 0, localFileBytes.Length - 1);
 			source = WebUtility.HtmlDecode(source);
 			HtmlDocument html = new HtmlDocument();

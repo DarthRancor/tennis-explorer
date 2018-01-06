@@ -21,14 +21,14 @@ namespace TennisExplorer.Services
 		{
 			var html = await htmlDownloader.DownloadWebSiteContentAsync();
 			var rows = GetMatchTableRowsForDate(html, date);
-			var matchElements = GetMatchElements(rows);
+			var matchElements = GetMatchElements(rows).ToList();
 
 			int id = 1;
 			var matches = matchElements.Select(node => ParseMatchDetails(node, id++)).ToList();
 			return matches;
 		}
 
-		private IList<HtmlNode> GetMatchTableRowsForDate(HtmlDocument html, DateTime date)
+		private List<HtmlNode> GetMatchTableRowsForDate(HtmlDocument html, DateTime date)
 		{
 			var formattedDate = GetFormattedDateForMatches(date);
 			var todaysMatchElement = GetNodeWithMatchesForDate(html, formattedDate);
@@ -48,7 +48,8 @@ namespace TennisExplorer.Services
 
 		private string GetFormattedDateForMatches(DateTime date)
 		{
-			var formattedDate = date.ToString("d MMMM, dddd", CultureInfo.CurrentCulture);
+			// use the german format as the url is pointing to the german language
+			var formattedDate = date.ToString("d MMMM, dddd", new CultureInfo("de-DE"));
 			return formattedDate;
 		}
 
@@ -58,14 +59,20 @@ namespace TennisExplorer.Services
 			return dateRowQuery.FirstOrDefault();
 		}
 
-		private IList<HtmlNode> GetMatchElements(IList<HtmlNode> matchRows)
+		private List<HtmlNode> GetMatchElements(List<HtmlNode> matchRows)
 		{
-			// get the "event descriptions" and only those that are concrete matches (they contain " – ") 
+			// get the "event descriptions" and only those that are concrete matches (they contain " &ndash; ") 
 			var matchSpans = matchRows.SelectMany(row => row.Descendants("span")
 																.Where(s => s.GetAttributeValue("class", "") == "evdesc")).ToList();
 
-			var matchDescriptions = matchSpans.Where(s => GetPlayersForMatchElement(s).InnerHtml.Contains(" – "));
+			var matchDescriptions = matchSpans.Where(span => IsMatch(span));
 			return matchDescriptions.ToList();
+		}
+
+		private bool IsMatch(HtmlNode span)
+		{
+			var playersElement = GetPlayersForMatchElement(span).InnerHtml;
+			return playersElement.Contains(" &ndash; ") || playersElement.Contains(" – ");
 		}
 
 		private HtmlNode GetPlayersForMatchElement(HtmlNode matchSpan)
@@ -81,9 +88,11 @@ namespace TennisExplorer.Services
 			tennisMatch.Id = id;
 			
 			var timeAndTour = node.InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "");
-			var indexOfTour = timeAndTour.IndexOf("("); // pattern is <time>(<tour>)
-			var tour = timeAndTour.Substring(indexOfTour);
-			tennisMatch.Time = timeAndTour.Substring(0, indexOfTour);
+			// pattern is: <time>(<tour>)
+			var splitted = timeAndTour.Split('(');
+
+			var tour = splitted[1].Replace(")", "");
+			tennisMatch.Time = splitted[0];
 			tennisMatch.Tour = DecodeValue(tour);
 
 			var playersElement = GetPlayersForMatchElement(node);

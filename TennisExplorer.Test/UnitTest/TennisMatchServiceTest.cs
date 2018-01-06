@@ -20,16 +20,13 @@ namespace TennisExplorer.Test.UnitTest
 		[TestMethod]
 		public async Task GetTennisMatchesForDateAsync_ShouldFindSomeMatches()
 		{
-			var matches = await _tennisMatchService.GetTodaysTennisMatchesAsync();
+			var matches = await _tennisMatchService.GetTennisMatchesForDateAsync(new DateTime(2017, 5, 7));
 			Assert.IsTrue(matches.Any());
 
-			//var matches = await _tennisMatchService.GetTennisMatchesForDateAsync(new DateTime(2017, 5, 7));
-			//Assert.IsTrue(matches.Any());
-
-			//// check that some of the matched are found
-			//Assert.IsTrue(matches.Any(m => m.Players.Equals("Ana Konjuh – Kristina Mladenovic")));
-			//Assert.IsTrue(matches.Any(m => m.Players.Equals("Maria Sharapova – Mirjana Lucic-Baroni")));
-			//Assert.IsTrue(matches.Any(m => m.Players.Equals("Guido Pella – Alexander Zverev")));
+			// check that some of the matched are found
+			Assert.IsTrue(matches.Any(m => m.Players.Equals("Ana Konjuh – Kristina Mladenovic")));
+			Assert.IsTrue(matches.Any(m => m.Players.Equals("Maria Sharapova – Mirjana Lucic-Baroni")));
+			Assert.IsTrue(matches.Any(m => m.Players.Equals("Guido Pella – Alexander Zverev")));
 		}
 
 		[TestMethod]
@@ -48,7 +45,7 @@ namespace TennisExplorer.Test.UnitTest
 			Assert.IsNotNull(matchToCheck);
 			Assert.AreEqual("Angelique Kerber – Timea Babos", matchToCheck.Players);
 			Assert.AreEqual("7 Mai um 11:10", matchToCheck.Time);
-			Assert.AreEqual("(WTA Tour)", matchToCheck.Tour);
+			Assert.AreEqual("WTA Tour", matchToCheck.Tour);
 			Assert.AreEqual(5, matchToCheck.Id);
 		}
 	}

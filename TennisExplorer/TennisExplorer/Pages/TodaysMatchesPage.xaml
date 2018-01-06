@@ -1,42 +1,40 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="TennisExplorer.Pages.TodaysMatchesPage"
-             xmlns:custom="clr-namespace:TennisExplorer.CustomElements"
-             Title="Matches Today">
+			 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+			 x:Class="TennisExplorer.Pages.TodaysMatchesPage"
+			 xmlns:custom="clr-namespace:TennisExplorer.CustomElements"
+			 Title="Matches Today">
 
-    <ContentPage.Resources>
-        <ResourceDictionary>
-            <custom:LabelTextVisibilityConverter x:Key="labelTextVisibilityConverter" />
-            <custom:LabelTextHighlighterConverter x:Key="labelTextHighlighterConverter" />
+	<ContentPage.Resources>
+		<ResourceDictionary>
+			<custom:LabelTextVisibilityConverter x:Key="labelTextVisibilityConverter" />
+			<custom:LabelTextHighlighterConverter x:Key="labelTextHighlighterConverter" />
 			<custom:InverseBoolConverter x:Key="inverseBoolConverter" />
-        </ResourceDictionary>
-    </ContentPage.Resources>
+		</ResourceDictionary>
+	</ContentPage.Resources>
 
-    <ContentPage.Content>
-        <StackLayout>
-            <ActivityIndicator IsRunning="{Binding IsBusy}" IsVisible="{Binding IsBusy}" />
-            <ListView ItemsSource="{Binding Matches}" SeparatorVisibility="Default" SeparatorColor="Black" HasUnevenRows="True"
+	<ContentPage.Content>
+		<StackLayout>
+			<ActivityIndicator IsRunning="{Binding IsBusy}" IsVisible="{Binding IsBusy}" />
+			<ListView ItemsSource="{Binding Matches}" SeparatorVisibility="Default" HasUnevenRows="True"
 				 IsVisible="{Binding MatchesFound}">
-                <ListView.ItemTemplate>
-                    <DataTemplate>
-                        <custom:ExtendedViewCell>
-                            <StackLayout Padding="0,5,0,5">
-                                <StackLayout Orientation="Horizontal">
-                                    <Label Text="{Binding Players}" FontSize="Large" FontAttributes="Bold" 
-                                        BackgroundColor="{Binding ., Converter={StaticResource labelTextHighlighterConverter}}" />
-                                    <Label FontSize="Medium" VerticalTextAlignment="Center" 
-                                        Text="{Binding Tour, StringFormat=' ({0})'}"
-                                        IsVisible="{Binding Tour, Converter={StaticResource labelTextVisibilityConverter}}"/>
-                                </StackLayout>
-                                <Label Text="{Binding Time}" FontSize="Medium" StyleClass="Inverse" />
-                            </StackLayout>
-                        </custom:ExtendedViewCell>
-                    </DataTemplate>
-                </ListView.ItemTemplate>
-            </ListView>
+				<ListView.ItemTemplate>
+					<DataTemplate>
+						<custom:ExtendedViewCell>
+							<StackLayout Padding="0,10,0,10">
+								<Label Text="{Binding Players}" FontSize="Medium" FontAttributes="Bold" 
+									BackgroundColor="{Binding ., Converter={StaticResource labelTextHighlighterConverter}}" />
+								
+								<Label Text="{Binding Time}" FontSize="Small" StyleClass="Inverse" />
+								<Label Text="{Binding Tour}" FontSize="Small" StyleClass="Inverse" IsVisible="{Binding Tour, Converter={StaticResource labelTextVisibilityConverter}}" />
+
+							</StackLayout>
+						</custom:ExtendedViewCell>
+					</DataTemplate>
+				</ListView.ItemTemplate>
+			</ListView>
 
 			<Label Text="No matches for today found..." IsVisible="{Binding MatchesFound, Converter={StaticResource inverseBoolConverter}}" />
 		</StackLayout>
-    </ContentPage.Content>
+	</ContentPage.Content>
 </ContentPage>
