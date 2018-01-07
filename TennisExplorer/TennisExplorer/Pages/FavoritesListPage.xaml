@@ -2,14 +2,20 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
 			 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
 			 xmlns:custom="clr-namespace:TennisExplorer.CustomElements"
-			 x:Class="TennisExplorer.Pages.FavoritesListPage">
+			 x:Class="TennisExplorer.Pages.FavoritesListPage"
+			 Title="Favorites">
+
+	<ContentPage.Resources>
+		<ResourceDictionary>
+			<custom:InverseBoolConverter x:Key="inverseBoolConverter" />
+		</ResourceDictionary>
+	</ContentPage.Resources>
+
 	<ContentPage.Content>
 		<StackLayout>
-			<Label Text="Welcome to Xamarin.Forms!"
-				VerticalOptions="CenterAndExpand" 
-				HorizontalOptions="CenterAndExpand" />
-
-			<ListView HasUnevenRows="true" ItemsSource="{Binding Favorites}" SelectedItem="{Binding SelectedFavorite, Mode=TwoWay}" Margin="0,20,0,0">
+			<ListView HasUnevenRows="true" ItemsSource="{Binding Favorites}"
+				SelectedItem="{Binding SelectedFavorite, Mode=TwoWay}" 
+				 IsVisible="{Binding FavoritesFound}" Margin="0,20,0,0">
 
 				<ListView.ItemTemplate>
 					<DataTemplate>
@@ -24,6 +30,8 @@
 					Command="{Binding NavigateToPageCommand}" />
 				</ListView.Behaviors>-->
 			</ListView>
+
+			<Label Text="No favorites added yet. If you add some players you will get notifications for upcoming matches." IsVisible="{Binding FavoritesFound, Converter={StaticResource inverseBoolConverter}}" />
 		</StackLayout>
 	</ContentPage.Content>
 </ContentPage>

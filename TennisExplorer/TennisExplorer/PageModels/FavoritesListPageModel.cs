@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.ObjectModel;
+using System.Linq;
 using TennisExplorer.Services;
 
 namespace TennisExplorer.PageModels
@@ -10,6 +11,7 @@ namespace TennisExplorer.PageModels
 
 		public ObservableCollection<Entity.Favorite> Favorites { get; set; }
 		public Entity.Favorite SelectedFavorite { get; set; }
+		public bool FavoritesFound { get; set; } = true;
 
 		public FavoritesListPageModel(FavoriteService favoriteService)
 		{
@@ -26,6 +28,7 @@ namespace TennisExplorer.PageModels
 		{
 			var allFavorites = await _favoriteService.GetAllFavorites();
 			Favorites = new ObservableCollection<Entity.Favorite>(allFavorites);
+			FavoritesFound = Favorites.Any();
 		}
 	}
 }
