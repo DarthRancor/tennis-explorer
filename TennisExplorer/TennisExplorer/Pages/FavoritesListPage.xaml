@@ -31,7 +31,9 @@
 				</ListView.Behaviors>-->
 			</ListView>
 
-			<Label Text="No favorites added yet. If you add some players you will get notifications for upcoming matches." IsVisible="{Binding FavoritesFound, Converter={StaticResource inverseBoolConverter}}" />
+			<Label Text="No favorites added yet. If you add some players, you will get notifications for upcoming matches." IsVisible="{Binding FavoritesFound, Converter={StaticResource inverseBoolConverter}}" />
+
+			<Button Text="Add" VerticalOptions="EndAndExpand"></Button>
 		</StackLayout>
 	</ContentPage.Content>
 </ContentPage>
