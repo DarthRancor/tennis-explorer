@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.IO;
 
 namespace TennisExplorer.Infrastructure
 {
@@ -9,5 +7,10 @@ namespace TennisExplorer.Infrastructure
 		public string AppBasePath { get; set; }
 
 		public string DatabaseName { get; set; }
+
+		public string DatabaseFullPath
+		{
+			get { return Path.Combine(AppBasePath, DatabaseName); }
+		}
 	}
 }

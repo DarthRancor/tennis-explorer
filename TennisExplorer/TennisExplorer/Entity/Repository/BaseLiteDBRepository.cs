@@ -6,7 +6,7 @@ namespace TennisExplorer.Entity.Repository
 	public class BaseLiteDBRepository<TEntity> : LiteDB.LiteRepository
 	{
 		public BaseLiteDBRepository(Infrastructure.ApplicationConfiguration applicationConfiguration)
-			: base(applicationConfiguration.DatabaseName)
+			: base(applicationConfiguration.DatabaseFullPath)
 		{
 
 		}

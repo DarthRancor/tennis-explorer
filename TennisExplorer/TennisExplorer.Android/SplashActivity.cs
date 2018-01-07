@@ -5,38 +5,50 @@ using Android.Support.V7.App;
 using Android.Widget;
 using System.Threading.Tasks;
 using TennisExplorer.Infrastructure;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace TennisExplorer.Droid
 {
-    // @style/MyTheme.Splash
-    [Activity(Theme = "@android:style/Theme.NoTitleBar", MainLauncher = true, Immersive = true, NoHistory = true)]
-    public class SplashActivity : Activity
-    {
-        protected override void OnCreate(Bundle bundle)
-        {
-            base.OnCreate(bundle);
-            SetContentView(Resource.Layout.SplashScreen);
-            FindViewById<TextView>(Resource.Id.txtAppVersion).Text = $"Version {PackageManager.GetPackageInfo(PackageName, 0).VersionName}";
-        }
+	// @style/MyTheme.Splash
+	[Activity(Theme = "@android:style/Theme.NoTitleBar", MainLauncher = true, Immersive = true, NoHistory = true)]
+	public class SplashActivity : Activity
+	{
+		protected override void OnCreate(Bundle bundle)
+		{
+			base.OnCreate(bundle);
+			SetContentView(Resource.Layout.SplashScreen);
+			FindViewById<TextView>(Resource.Id.txtAppVersion).Text = $"Version {PackageManager.GetPackageInfo(PackageName, 0).VersionName}";
+		}
 
-        // Launches the startup task
-        protected override void OnResume()
-        {
-            base.OnResume();
-            InitializeApplication().ContinueWith((task) =>
-            {
-                StartActivity(new Intent(Application.Context, typeof(MainActivity)));
-            });
-        }
+		// Launches the startup task
+		protected override void OnResume()
+		{
+			base.OnResume();
+			InitializeApplication().ContinueWith((task) =>
+			{
+				StartActivity(new Intent(Application.Context, typeof(MainActivity)));
+			});
+		}
 
-        // Prevent the back button from canceling the startup process
-        public override void OnBackPressed() { }
-        
-        private async Task InitializeApplication()
-        {
-            // initialize the depenendencies from here to enable native services
-            var services = new Microsoft.Extensions.DependencyInjection.ServiceCollection();
-            await Bootstrapper.InitializeApplicationDependencies(services);
-        }
-    }
+		// Prevent the back button from canceling the startup process
+		public override void OnBackPressed() { }
+		
+		private async Task InitializeApplication()
+		{
+			// initialize the depenendencies from here to enable native services
+			var services = new ServiceCollection();
+			var config = new ApplicationConfiguration()
+			{
+				AppBasePath = GetDatabasePath(),
+				DatabaseName = "TennisMatchExplorer.db"
+			};
+			services.AddSingleton(config);
+			await Bootstrapper.InitializeApplicationDependencies(services);
+		}
+
+		private string GetDatabasePath()
+		{
+			return System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal);
+		}
+	}
 }
