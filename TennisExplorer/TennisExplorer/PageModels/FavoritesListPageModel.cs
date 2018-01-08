@@ -2,6 +2,7 @@
 using System.Collections.ObjectModel;
 using System.Linq;
 using TennisExplorer.Services;
+using Xamarin.Forms;
 
 namespace TennisExplorer.PageModels
 {
@@ -30,5 +31,47 @@ namespace TennisExplorer.PageModels
 			Favorites = new ObservableCollection<Entity.Favorite>(allFavorites);
 			FavoritesFound = Favorites.Any();
 		}
+
+		public Command AddFavoriteCommand
+		{
+			get
+			{
+				return new Command(async () =>
+				{
+					await CoreMethods.PushPageModel<FavoriteSavePageModel>(null, modal: true);
+				});
+			}
+		}
+
+		public Command<Entity.Favorite> EditFavoriteCommand
+		{
+			get
+			{
+				return new Command<Entity.Favorite>(async (favorite) =>
+				{
+					await CoreMethods.PushPageModel<FavoriteSavePageModel>(favorite, modal: true);
+				});
+			}
+		}
+
+		public Command<Entity.Favorite> DeleteFavoriteCommand
+		{
+			get
+			{
+				return new Command<Entity.Favorite>(async (favorite) =>
+				{
+					var question = $"Are you sure you want to delete this player: {favorite.Name}?";
+					var shouldDelete = await CoreMethods.DisplayAlert("Delete favorite player", question, "Yes", "No");
+					if (shouldDelete)
+					{
+						await _favoriteService.DeleteFavorite(favorite.Id);
+						BindFavorites();
+					}
+				});
+			}
+		}
+
+
+
 	}
 }

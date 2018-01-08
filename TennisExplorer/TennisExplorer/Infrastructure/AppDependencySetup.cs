@@ -22,13 +22,15 @@ namespace TennisExplorer.Infrastructure
 			services.AddScoped<ITennisMatchService, TennisMatchService>();
 			services.AddScoped<FavoriteService>();
 
-			services.AddScoped<PageModels.TodaysMatchesPageModel>();
-			services.AddScoped<PageModels.FavoritesListPageModel>();
+			services.AddTransient<PageModels.TodaysMatchesPageModel>();
+			services.AddTransient<PageModels.FavoritesListPageModel>();
+			services.AddTransient<PageModels.FavoriteSavePageModel>();
 			services.AddSingleton<PageModels.Menu.TennisExplorerMasterDetailPageModel>();
 			services.AddSingleton<PageModels.Menu.MenuDrawerMasterPageModel>();
 
-			services.AddScoped<Pages.TodaysMatchesPage>();
-			services.AddScoped<Pages.FavoritesListPage>();
+			services.AddTransient<Pages.TodaysMatchesPage>();
+			services.AddTransient<Pages.FavoritesListPage>();
+			services.AddTransient<Pages.FavoriteSavePage>();
 			services.AddSingleton<Pages.Menu.TennisExplorerMasterDetailPage>();
 			services.AddSingleton<Pages.Menu.MenuDrawerMasterPage>();
 

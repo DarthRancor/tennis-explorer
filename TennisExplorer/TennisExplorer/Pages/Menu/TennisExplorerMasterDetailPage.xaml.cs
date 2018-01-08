@@ -40,9 +40,16 @@ namespace TennisExplorer.Pages.Menu
 			throw new NotImplementedException();
 		}
 
-		public Task PopPage(bool modal = false, bool animate = true)
+		public async Task PopPage(bool modal = false, bool animate = true)
 		{
-			throw new NotImplementedException();
+			if (modal)
+			{
+				await Detail.Navigation.PopModalAsync(animate);
+			}
+			else
+			{
+				await Detail.Navigation.PopAsync(animate);
+			}
 		}
 
 		public Task PopToRoot(bool animate = true)
@@ -52,7 +59,14 @@ namespace TennisExplorer.Pages.Menu
 
 		public virtual async Task PushPage(Page page, FreshBasePageModel model, bool modal = false, bool animate = true)
 		{
-			await Navigation.PushModalAsync(new NavigationPage(page), animate);
+			if (modal)
+			{
+				await Detail.Navigation.PushModalAsync(page, animate);
+			}
+			else
+			{
+				await Detail.Navigation.PushAsync(page, animate);
+			}
 		}
 
 		public void NavigateToPage(Models.NavigationEntry navigationEntry)
