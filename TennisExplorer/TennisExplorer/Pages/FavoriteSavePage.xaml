@@ -2,17 +2,17 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
 			 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
 			 x:Class="TennisExplorer.Pages.FavoriteSavePage"
-			 BackgroundColor="#AB000000"
+			 BackgroundColor="#BDBDBD"
 			 Padding="20,40,20,40">
 	<ContentPage.Content>
-		<Grid BackgroundColor="White" Padding="20,20,20,20" HeightRequest="400" VerticalOptions="CenterAndExpand">
+		<Grid BackgroundColor="White" Padding="20,20,20,20" HeightRequest="300" VerticalOptions="CenterAndExpand">
 			<Grid.RowDefinitions>
 				<RowDefinition Height="*" />
 				<RowDefinition Height="Auto" />
 			</Grid.RowDefinitions>
 
 			<StackLayout Grid.Row="0">
-				<Label Text="Save a favorite player" Style="{DynamicResource Headline}" Margin="0,0,0,10" />
+				<Label Text="Save a favorite player" Style="{DynamicResource Headline}" Margin="0,0,0,20" />
 				
 				<StackLayout>
 					<Label Text="Favorite Name" />

@@ -14,19 +14,20 @@
 	</ContentPage.Resources>
 
 	<ContentPage.Content>
-		<StackLayout>
+		<StackLayout Padding="0">
 			<ActivityIndicator IsRunning="{Binding IsBusy}" IsVisible="{Binding IsBusy}" />
 			<ListView ItemsSource="{Binding Matches}" SeparatorVisibility="Default" HasUnevenRows="True"
-				 IsVisible="{Binding MatchesFound}">
+				 IsVisible="{Binding MatchesFound}" Margin="-10,0,-10,0">
 				<ListView.ItemTemplate>
 					<DataTemplate>
 						<custom:ExtendedViewCell>
-							<StackLayout Padding="0,10,0,10">
+							<StackLayout Padding="10">
 								<Label Text="{Binding Players}" FontSize="Medium" FontAttributes="Bold" 
 									BackgroundColor="{Binding ., Converter={StaticResource labelTextHighlighterConverter}}" />
-								
-								<Label Text="{Binding Time}" FontSize="Small" StyleClass="Inverse" />
-								<Label Text="{Binding Tour}" FontSize="Small" StyleClass="Inverse" IsVisible="{Binding Tour, Converter={StaticResource labelTextVisibilityConverter}}" />
+
+								<Label Text="{Binding Time}" FontSize="Small" StyleClass="SecondaryText" />
+								<Label Text="{Binding Tour}" FontSize="Small" StyleClass="SecondaryText" 
+									IsVisible="{Binding Tour, Converter={StaticResource labelTextVisibilityConverter}}" />
 
 							</StackLayout>
 						</custom:ExtendedViewCell>

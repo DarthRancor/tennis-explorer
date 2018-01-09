@@ -10,10 +10,12 @@ namespace TennisExplorer.CustomElements
         {
             get
             {
+				var parent = ((ListView) Parent).SelectedItem;
+				
                 var backgroundColor = (Color) GetValue(SelectedBackgroundColorProperty);
                 if (backgroundColor == Color.Default)
                 {
-                    backgroundColor = Color.FromHex("#c8e6c9");
+                    backgroundColor = Color.FromHex("#FFC107");
                 }
 
                 return backgroundColor;

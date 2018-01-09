@@ -14,7 +14,7 @@
 	<ContentPage.Content>
 		<StackLayout>
 			<ListView HasUnevenRows="true" ItemsSource="{Binding Favorites}" x:Name="FavoritesList"
-				SelectedItem="{Binding SelectedFavorite, Mode=TwoWay}" IsVisible="{Binding FavoritesFound}" Margin="0,20,0,0">
+				SelectedItem="{Binding SelectedFavorite, Mode=TwoWay}" IsVisible="{Binding FavoritesFound}"  Margin="-10,0,-10,0">
 				<ListView.ItemTemplate>
 					<DataTemplate>
 						<custom:ExtendedViewCell>
@@ -23,7 +23,7 @@
 								<MenuItem Command="{Binding Path=BindingContext.DeleteFavoriteCommand, Source={x:Reference FavoritesList}}" CommandParameter="{Binding .}" Text="Delete" IsDestructive="True" />
 							</custom:ExtendedViewCell.ContextActions>
 
-							<StackLayout Padding="0,10,0,10">
+							<StackLayout Padding="10">
 								<Label Text="{Binding Name}" FontSize="Medium" />
 							</StackLayout>
 						</custom:ExtendedViewCell>

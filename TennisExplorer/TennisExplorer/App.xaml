@@ -10,9 +10,26 @@
 				<Setter Property="Padding" Value="10" />
 			</Style>
 
+			<Style x:Key="PrimaryColorLight" TargetType="Label">
+				<Setter Property="TextColor" Value="#DCEDC8" />
+			</Style>
+
+			<Style x:Key="SecondaryText" TargetType="Label">
+				<Setter Property="TextColor" Value="#757575" />
+			</Style>
+
+			<Style TargetType="ListView" ApplyToDerivedTypes="True">
+				<Setter Property="SeparatorColor" Value="#BDBDBD" />
+				<Setter Property="SeparatorVisibility" Value="Default" />
+			</Style>
+
 			<Style x:Key="Headline" TargetType="Label">
 				<Setter Property="FontSize" Value="Large" />
-				<Setter Property="TextColor" Value="Accent" />
+			</Style>
+
+			<Style TargetType="Button" ApplyToDerivedTypes="True">
+				<Setter Property="BackgroundColor" Value="#689f38" />
+				<Setter Property="TextColor" Value="White" />
 			</Style>
 		</ResourceDictionary>
 

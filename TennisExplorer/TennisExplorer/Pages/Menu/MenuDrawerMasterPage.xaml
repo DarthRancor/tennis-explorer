@@ -13,12 +13,16 @@
 	</ContentPage.Resources>
 
 	<StackLayout>
-		<StackLayout BackgroundColor="#BF360C" Margin="0">
-			<!-- https://www.flickr.com/photos/ferencsohajda/5139484013/ -->
-			<Image Source="menu_logo.jpg" Aspect="AspectFill" Margin="0" />
-			<StackLayout Padding="20,0,0,15">
-				<Label Text="Tennis Explorer" FontSize="Large" Style="{DynamicResource SubtitleStyle}" TextColor="White" />
-				<Label Text="All matches and your favorite players in one place" FontSize="Small" TextColor="White" Style="{DynamicResource SubtitleStyle}" />
+		<StackLayout BackgroundColor="#8bc34a" HeightRequest="170">
+			<StackLayout Grid.Row="0" VerticalOptions="StartAndExpand">
+				<!-- eventually add a picture -->
+				<!-- https://www.flickr.com/photos/ferencsohajda/5139484013/ -->
+				<!--<Image Source="menu_logo.jpg" Aspect="AspectFill" />-->
+			</StackLayout>
+
+			<StackLayout Margin="30,0,20,20" Grid.Row="1" VerticalOptions="EndAndExpand">
+				<Label Text="Tennis Explorer" FontSize="30" Style="{DynamicResource SubtitleStyle}" TextColor="White" />
+				<Label Text="All matches and your favorite players in one place" FontSize="Small" Style="{DynamicResource PrimaryColorLight}" />
 			</StackLayout>
 		</StackLayout>
 
